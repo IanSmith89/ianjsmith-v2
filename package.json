@@ -34,7 +34,6 @@
     "author": "Ian Smith",
     "license": "MIT",
     "devDependencies": {
-        "babel-core": "^6.23.1",
         "babel-plugin-transform-async-to-generator": "^6.16.0",
         "babel-plugin-transform-decorators-legacy": "^1.3.4",
         "babel-preset-es2015": "^6.22.0",
@@ -58,8 +57,9 @@
     "dependencies": {
         "autoprefixer": "^7.1.2",
         "axios": "^0.15.0",
-        "babel-polyfill": "^6.23.0",
+        "babel-core": "^6.26.0",
         "babel-loader": "^6.3.2",
+        "babel-polyfill": "^6.23.0",
         "body-parser": "^1.17.1",
         "bookshelf": "^0.10.3",
         "bookshelf-camelcase": "^1.1.4",
