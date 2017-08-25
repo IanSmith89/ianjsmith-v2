@@ -1,8 +1,8 @@
 import exampleStore from '../stores/ExampleStore';
 import api from '../api';
 
-export function getPeople() {
-  api.exampleApi.getPeople()
+export function getExample() {
+  api.exampleApi.getExample()
     .then(res => exampleStore.getPeople(res))
     .catch(err => {
       console.error(err);

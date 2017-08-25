@@ -4,11 +4,11 @@ import { observer } from 'mobx-react'
 @observer
 export default class HomeView extends Component {
 	componentDidMount() {
-		this.props.actions2.getPeople();
+		this.props.actions.getExample();
 	}
 
 	render() {
-		const { exampleStore } = this.props
+		const { exampleStore } = this.props;
 
 		return (
 			<div className="page home">

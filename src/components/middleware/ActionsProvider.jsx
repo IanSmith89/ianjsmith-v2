@@ -12,7 +12,7 @@ export default function ActionsProvider(Component) {
     render() {
       return (
         <div id="actionsProvider">
-          <Component {...this.props} actions2={actions} />
+          <Component {...this.props} actions={actions} />
         </div>
       );
     }
