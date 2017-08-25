@@ -34,7 +34,6 @@
     "author": "Ian Smith",
     "license": "MIT",
     "devDependencies": {
-        "autoprefixer": "^6.5.0",
         "babel-core": "^6.23.1",
         "babel-loader": "^6.3.2",
         "babel-plugin-transform-async-to-generator": "^6.16.0",
@@ -61,6 +60,7 @@
         "webpack-dev-server": "2.1.0-beta.8"
     },
     "dependencies": {
+        "autoprefixer": "^7.1.2",
         "axios": "^0.15.0",
         "body-parser": "^1.17.1",
         "bookshelf": "^0.10.3",
