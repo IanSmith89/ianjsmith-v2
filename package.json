@@ -95,6 +95,6 @@
         "type": "git"
     },
     "engines": {
-        "node": "8.4.0"
+        "node": "^7.0.0"
     }
 }
