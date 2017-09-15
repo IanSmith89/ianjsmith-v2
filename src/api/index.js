@@ -1,10 +1,10 @@
 import ApiCore from './ApiCore';
-import ExampleApi from './ExampleApi';
+import WorkApi from './WorkApi';
 
 class API {
     constructor() {
         this.apiCore = new ApiCore();
-        this.exampleApi = new ExampleApi(this.apiCore);
+        this.work = new WorkApi(this.apiCore);
     }
 }
 
