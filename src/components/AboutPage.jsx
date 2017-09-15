@@ -5,13 +5,15 @@ import { observer } from 'mobx-react';
 export default class AboutPage extends React.Component {
     render() {
         return (
-            <div className="container">
-                <div className="row">
-                    <div className="twelve columns">
-                        About Page
+            <main className="about-page">
+                <div className="container">
+                    <div className="row">
+                        <div className="twelve columns">
+                            About Page
+                        </div>
                     </div>
                 </div>
-            </div>
+            </main>
         );
     }
 }

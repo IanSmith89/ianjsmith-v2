@@ -27,28 +27,29 @@ export default class App extends Component {
 								<LazyRoute
 									{...props}
 									actions={this.actions}
+									stores={this.stores}
 									component={import('./WorkPage')}
 								/>
 							)}
 						/>
 						<Route
-							exact
 							path="/about"
 							render={props => (
 								<LazyRoute
 									{...props}
 									actions={this.actions}
+									stores={this.stores}
 									component={import('./AboutPage')}
 								/>
 							)}
 						/>
 						<Route
-							exact
 							path="/projects/:projectId"
 							render={props => (
 								<LazyRoute
 									{...props}
 									actions={this.actions}
+									stores={this.stores}
 									component={import('./ProjectPage')}
 								/>
 							)}

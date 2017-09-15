@@ -11,7 +11,10 @@ export default class Nav extends Component {
                     <div className="row">
                         <div className="twelve columns">
                             <Link to="/">
-                                Home
+                                Ian J. Smith
+                            </Link>
+                            <Link to="/">
+                                Work
                             </Link>
                             <Link to="/about">
                                 About/Contact
