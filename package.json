@@ -38,16 +38,17 @@
         "axios": "^0.15.0",
         "babel-core": "^6.26.0",
         "babel-loader": "^6.3.2",
-        "babel-polyfill": "^6.23.0",
-        "body-parser": "^1.17.1",
         "babel-plugin-transform-async-to-generator": "^6.16.0",
         "babel-plugin-transform-decorators-legacy": "^1.3.4",
+        "babel-polyfill": "^6.23.0",
         "babel-preset-es2015": "^6.22.0",
         "babel-preset-react": "^6.16.0",
         "babel-preset-stage-0": "^6.16.0",
+        "body-parser": "^1.17.1",
         "bookshelf": "^0.10.3",
         "bookshelf-camelcase": "^1.1.4",
         "chai": "^3.5.0",
+        "classnames": "^2.2.5",
         "compression": "^1.6.2",
         "cookie-parser": "^1.4.3",
         "css-loader": "^0.25.0",
@@ -89,7 +90,7 @@
         "whatwg-fetch": "^1.0.0"
     },
     "repository": {
-        "url": "https://github.com/brybrophy/brophy-react-starter.git",
+        "url": "https://github.com/IanSmith89/ianjsmith-v2.git",
         "type": "git"
     },
     "engines": {

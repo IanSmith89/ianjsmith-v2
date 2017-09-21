@@ -1,1 +1,43 @@
-/* If your project large shared components that have to do with layout, such as a footer or top nav, those styles would live here. */
+.footer {
+    background-color: $dark;
+    color: $light;
+    height: 4.5rem;
+    width: 100%;
+
+    &.light {
+        background-color: $light;
+        color: $dark;
+
+        .twelve.columns {
+            .mailto-link {
+                a {
+                    color: $dark;
+                }
+            }
+        }
+    }
+
+    .twelve.columns {
+        align-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 4.5rem;
+        justify-content: flex-start;
+
+        small {
+            font-size: 1.4rem;
+        }
+
+        .mailto-link {
+            margin-left: auto;
+
+            a {
+                color: $light;
+                font-size: 1.4rem;
+                text-decoration: none;
+            }
+        }
+    }
+}

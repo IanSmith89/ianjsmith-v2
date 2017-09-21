@@ -18,12 +18,12 @@
 
 // Components
 @import 'components/dialogBox';
-@import 'components/page';
 
 // Layout
 @import 'layout/footer';
 @import 'layout/topNav';
 
-// Pages
-@import 'pages/home';
-@import 'pages/about';
+// Containers
+@import 'containers/page';
+@import 'containers/home';
+@import 'containers/about';

@@ -1,5 +1,9 @@
-$dark:                  #1B191A;
-$dark-grey:             #242122;
-$grey:                  #7D7D7D;
-$light-grey:            #E0E0E0;
-$light:                 #F9F9F9;
+$dark: rgba(27, 25, 26, 1);
+$dark-grey: rgba(36, 33, 34, 1);
+$grey: rgba(125, 125, 125, 1);
+$light-grey: rgba(224, 224, 224, 1);
+$light: rgba(249, 249, 249, 1);
+
+// low opacity
+$dark-grey-low: rgba(36, 33, 34, 0.8);
+$light-low: rgba(249, 249, 249, 0.8);

@@ -11,12 +11,10 @@ export default class WorkPage extends React.Component {
         const { projects } = this.props.stores.workStore;
 
         return (
-            <main className="home-page">
+            <main className="home page">
                 <div className="container">
                     <div className="row">
-                        <div className="twelve columns">
-                            Work Page
-                        </div>
+                        <div className="twelve columns">Work Page</div>
                     </div>
                 </div>
             </main>
