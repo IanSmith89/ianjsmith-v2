@@ -14,7 +14,7 @@ export default class WorkPage extends React.Component {
             <main className="home page">
                 <div className="container">
                     <div className="row">
-                        <div className="twelve columns">Work Page Staging Test</div>
+                        <div className="twelve columns">Work Page Staging Test Again</div>
                     </div>
                 </div>
             </main>
