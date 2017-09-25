@@ -15,6 +15,8 @@
         "migrate:rollback:test": "env NODE_ENV=test knex migrate:rollback",
         "migrate:rollback": "knex migrate:rollback",
         "nf": "nf start",
+        "publish": "git push heroku master",
+        "publish:staging": "git push heroku-staging staging:master",
         "resetdb": "npm run migrate:rollback && npm run migrate:latest && npm run seed",
         "resetdb:test": "npm run migrate:rollback:test && npm run migrate:latest:test && npm run seed:test",
         "seed:test": "env NODE_ENV=test knex seed:run",
@@ -23,14 +25,7 @@
         "test": "npm run test:server",
         "test:push": "npm test && git push origin HEAD"
     },
-    "keywords": [
-        "React",
-        "React-Router 4",
-        "MobX",
-        "Webpack 2",
-        "ES6",
-        "ES7"
-    ],
+    "keywords": ["React", "React-Router 4", "MobX", "Webpack 2", "ES6", "ES7"],
     "author": "Ian Smith",
     "license": "MIT",
     "dependencies": {
