@@ -1,5 +1,6 @@
 import React from 'react';
 import { observer } from 'mobx-react';
+import { Link } from 'react-router-dom';
 import Scroll from 'react-scroll';
 const ScrollLink = Scroll.Link;
 
@@ -78,17 +79,17 @@ export default class ProjectPage extends React.Component {
                                         src={require('../assets/images/arrow.svg')}
                                         alt="to top arrow"
                                     />
-                                    <span>to top</span>
+                                    to top
                                 </div>
                             </ScrollLink>
-                            <div className="next-project">
-                                <span>next</span>
+                            <Link className="next-project" to={project.nextProjectLink || '#'}>
+                                next
                                 <img
                                     className="arrow"
                                     src={require('../assets/images/arrow.svg')}
                                     alt="next project arrow"
                                 />
-                            </div>
+                            </Link>
                         </div>
                     </section>
                 </div>

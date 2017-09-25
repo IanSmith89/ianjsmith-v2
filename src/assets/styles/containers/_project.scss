@@ -40,8 +40,10 @@
         .to-top,
         .next-project {
             align-items: center;
+            color: $dark-grey;
             display: flex;
             height: auto;
+            text-decoration: none;
             width: auto;
 
             .arrow {
@@ -50,7 +52,6 @@
         }
 
         .to-top {
-            color: $dark-grey;
             cursor: pointer;
 
             .arrow {

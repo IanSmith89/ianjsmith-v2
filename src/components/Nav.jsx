@@ -9,6 +9,7 @@ export default class Nav extends Component {
         super(props);
 
         this.actions = props.actions;
+        this.historyAction = props.history.action;
     }
 
     componentWillMount() {
@@ -19,6 +20,12 @@ export default class Nav extends Component {
     componentWillReceiveProps(nextProps) {
         const { pathname } = nextProps.location;
         this.actions.pageIsActive(pathname);
+    }
+
+    componentWillUpdate(nextProps) {
+        if (this.historyAction !== 'POP') {
+            window.scrollTo(0, 0);
+        }
     }
 
     render() {
