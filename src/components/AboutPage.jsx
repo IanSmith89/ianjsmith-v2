@@ -9,8 +9,8 @@ export default class AboutPage extends React.Component {
                         <div className="six columns">
                             <h1 className="about-intro">
                                 Hey there,<br />I’m Ian Smith, a creative developer and interactive designer based out
-                                of Seattle. I currently create some awesome interfaces and kickass experiences as a
-                                frontend developer for High Seas Consulting, Inc.
+                                of Seattle. I currently create intuitive, responsive interfaces and human centered
+                                experiences as a frontend developer for High Seas Consulting, Inc.
                             </h1>
                         </div>
                     </section>

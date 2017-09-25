@@ -12,14 +12,18 @@ function removeProtocol(str) {
 
 @observer
 export default class ProjectPage extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.projectId = props.match.params.projectId;
+    componentDidMount() {
+        const { projectId } = this.props.match.params;
+        this.props.actions.getProjectById(projectId);
     }
 
-    componentDidMount() {
-        this.props.actions.getProjectById(this.projectId);
+    componentWillUpdate(nextProps) {
+        const { projectId } = nextProps.match.params;
+
+        if (projectId !== this.props.stores.workStore.project.id) {
+            this.props.actions.getProjectById(projectId);
+            window.scrollTo(0, 0);
+        }
     }
 
     componentWillUnmount() {
@@ -35,11 +39,15 @@ export default class ProjectPage extends React.Component {
                     <section className="row">
                         <div className="twelve columns">
                             <div className="project-image-container">
-                                <img
-                                    className="project-image"
-                                    src={require(`../assets/images/${this.projectId}-cover.jpg`)}
-                                    alt="project"
-                                />
+                                {project.id ? (
+                                    <img
+                                        className="project-image"
+                                        src={require(`../assets/images/${project.id}-cover.jpg`)}
+                                        alt="project"
+                                    />
+                                ) : (
+                                    <div className="no-image" />
+                                )}
                             </div>
                         </div>
                     </section>
@@ -82,7 +90,7 @@ export default class ProjectPage extends React.Component {
                                     to top
                                 </div>
                             </ScrollLink>
-                            <Link className="next-project" to={project.nextProjectLink || '#'}>
+                            <Link className="next-project" to={`/projects${project.nextProjectLink}`}>
                                 next
                                 <img
                                     className="arrow"

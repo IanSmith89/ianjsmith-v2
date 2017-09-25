@@ -14,9 +14,9 @@ export default class WorkPage extends React.Component {
         return (
             <main className="home page">
                 <div className="container">
-                    <div className="row">
+                    <div className="flex-container">
                         {projects.map(project => (
-                            <div className="four columns project-link-container" key={project.id}>
+                            <div className="project-link-container" key={project.id}>
                                 <Link className="project-link" to={`/projects/${project.id}`}>
                                     <div className="project-image-container">
                                         <img

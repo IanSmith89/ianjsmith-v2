@@ -83,7 +83,21 @@
     height: 49.2rem;
     width: 100%;
 
+    .no-image {
+        height: auto;
+        width: 100%;
+    }
+
     .project-image {
-        max-width: 100%;
+        width: 100%;
+    }
+
+    @include for-tablet-portrait-up() {
+        height: auto;
+
+        .no-image {
+            height: 50rem;
+            width: 100%;
+        }
     }
 }

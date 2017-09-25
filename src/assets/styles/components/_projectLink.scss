@@ -1,24 +1,55 @@
-.project-link-container {
-    margin-bottom: 5rem;
+.flex-container {
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: auto;
+    width: 100%;
 
-    .project-link {
-        color: $light;
-        text-decoration: none;
+    .project-link-container {
+        height: auto;
+        margin-bottom: 5rem;
+        width: 100%;
 
-        .project-image-container {
-            margin-bottom: 1.2rem;
+        .project-link {
+            color: $light;
+            text-decoration: none;
+
+            .project-image-container {
+                margin-bottom: 1.2rem;
+            }
+
+            .project-client {
+                font-size: 1.7rem;
+                font-weight: 300;
+                margin-bottom: 0.25rem;
+            }
+
+            .project-services {
+                color: $grey;
+                font-size: 1.7rem;
+                font-weight: 300;
+            }
         }
 
-        .project-client {
-            font-size: 1.7rem;
-            font-weight: 300;
-            margin-bottom: 0.25rem;
+        @include for-tablet-portrait-up() {
+            width: 47.5%;
+
+            .project-image-container {
+                height: 30rem;
+            }
         }
 
-        .project-services {
-            color: $grey;
-            font-size: 1.7rem;
-            font-weight: 300;
+        @include for-tablet-landscape-up() {
+            width: 31.5%;
+        }
+
+        @include for-desktop-up() {
+            .project-image-container {
+                height: auto;
+            }
         }
     }
 }

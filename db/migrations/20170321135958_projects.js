@@ -4,7 +4,7 @@ exports.up = function(knex) {
     return knex.schema.createTable('projects', table => {
         table.string('id').notNullable();
         table.string('client').notNullable();
-        table.string('description').notNullable();
+        table.text('description', 'mediumtext').notNullable();
         table.string('long_services').notNullable();
         table.string('name').notNullable();
         table.string('nextProjectLink').notNullable();
