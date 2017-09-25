@@ -1,5 +1,5 @@
 .about {
-    color: $dark;
+    color: $dark-grey;
 
     p {
         font-weight: 300;
@@ -33,11 +33,15 @@
     .contact {
         padding: 5rem 0;
 
-        .img-container {
-            background-color: $grey;
-            height: 32.3rem;
+        .headshot-container {
+            height: auto;
             margin-bottom: 3rem;
             width: 100%;
+
+            .headshot {
+                height: auto;
+                max-width: 100%;
+            }
         }
 
         .contact-tagline {
@@ -65,6 +69,12 @@
                 font-size: 1.8rem;
                 font-weight: 300;
                 margin-right: 1.2rem;
+            }
+        }
+
+        @include for-tablet-portrait-up() {
+            .headshot-container {
+                width: 60%;
             }
         }
     }
