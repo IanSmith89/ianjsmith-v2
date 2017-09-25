@@ -40,7 +40,7 @@ export default class Nav extends Component {
                                 <Link
                                     to="/"
                                     className={cx({
-                                        active: activePathname === '/'
+                                        active: activePathname === '/' || activePathname.indexOf('/projects') !== -1
                                     })}
                                 >
                                     Work
@@ -48,7 +48,7 @@ export default class Nav extends Component {
                                 <Link
                                     to="/about"
                                     className={cx({
-                                        active: activePathname !== '/'
+                                        active: activePathname === '/about'
                                     })}
                                 >
                                     About/Contact

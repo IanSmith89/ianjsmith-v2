@@ -4,11 +4,18 @@ class WorkStore {
     @observable project = {};
     @observable projects = [];
 
-    @action getProjectSuccess(project) {
+    @action
+    clearProject() {
+        this.project = {};
+    }
+
+    @action
+    getProjectByIdSuccess(project) {
         this.project = project;
     }
 
-    @action getProjectsSuccess(projects) {
+    @action
+    getProjectsSuccess(projects) {
         this.projects = projects;
     }
 }

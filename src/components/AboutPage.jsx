@@ -1,13 +1,11 @@
 import React from 'react';
-import { observer } from 'mobx-react';
 
-@observer
 export default class AboutPage extends React.Component {
     render() {
         return (
             <main className="about page">
                 <div className="container">
-                    <div className="row">
+                    <section className="row">
                         <div className="six columns">
                             <h1 className="about-intro">
                                 Hey there,<br />I’m Ian Smith, a creative developer and interactive designer based out
@@ -15,8 +13,8 @@ export default class AboutPage extends React.Component {
                                 frontend developer for High Seas Consulting, Inc.
                             </h1>
                         </div>
-                    </div>
-                    <div className="row">
+                    </section>
+                    <section className="row">
                         <div className="six columns">
                             <div className="list">
                                 <h2 className="section-header">Services</h2>
@@ -25,6 +23,7 @@ export default class AboutPage extends React.Component {
                                 <p>Interaction Design</p>
                                 <p>Information Architecture</p>
                                 <p>Visual Design</p>
+                                <p>Search Engine Optimization</p>
                                 <p>Branding</p>
                                 <p>Illustration</p>
                             </div>
@@ -32,25 +31,30 @@ export default class AboutPage extends React.Component {
                         <div className="six columns">
                             <div className="list">
                                 <h2 className="section-header">Tools &amp; Skills</h2>
-                                <p>JavaScript / Node</p>
-                                <p>React / Angular</p>
-                                <p>HTML / CSS / SCSS</p>
-                                <p>Bootstrap / Materialize</p>
+                                <p>JavaScript - Node</p>
+                                <p>React - Angular</p>
+                                <p>Mobx - Redux</p>
+                                <p>HTML - CSS - SCSS</p>
+                                <p>Bootstrap - Materialize</p>
+                                <p>Illustrator - Photoshop</p>
+                                <p>Sketch</p>
+                                <p>Git - Agile</p>
                                 <p>Express</p>
                                 <p>Postgres</p>
-                                <p>Mocha / Chai</p>
-                                <p>Heroku / Firebase</p>
-                                <p>Git / Agile</p>
-                                <p>Illustrator / Photoshop / InDesign</p>
-                                <p>Sketch</p>
+                                <p>Heroku - Firebase</p>
+                                <p>Mocha - Chai</p>
                             </div>
                         </div>
-                    </div>
-                    <div className="row">
+                    </section>
+                    <section className="row">
                         <div className="six columns">
                             <div className="contact">
-                                <div className="img-container">
-                                    <img src="#" alt="Ian J. Smith" className="self-portrait" />
+                                <div className="headshot-container">
+                                    <img
+                                        src={require('../assets/images/headshot.jpg')}
+                                        alt="Ian J. Smith | Creative Developer and Interactive Designer | Seattle, WA"
+                                        className="headshot"
+                                    />
                                 </div>
                                 <h2 className="section-header">Contact</h2>
                                 <p className="contact-tagline">
@@ -72,7 +76,7 @@ export default class AboutPage extends React.Component {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
                 </div>
             </main>
         );

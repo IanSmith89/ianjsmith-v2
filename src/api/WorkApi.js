@@ -3,7 +3,7 @@ export default class WorkApi {
         this.API = apiCore;
     }
 
-    getProject(id) {
+    getProjectById(id) {
         return this.API.get(`${WorkApi.projectsPath}/${id}`);
     }
 

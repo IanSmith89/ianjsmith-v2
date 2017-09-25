@@ -1,0 +1,24 @@
+.project-link-container {
+    margin-bottom: 5rem;
+
+    .project-link {
+        color: $light;
+        text-decoration: none;
+
+        .project-image-container {
+            margin-bottom: 1.2rem;
+        }
+
+        .project-client {
+            font-size: 1.7rem;
+            font-weight: 300;
+            margin-bottom: 0.25rem;
+        }
+
+        .project-services {
+            color: $grey;
+            font-size: 1.7rem;
+            font-weight: 300;
+        }
+    }
+}
