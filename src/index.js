@@ -1,5 +1,4 @@
 import "./assets/styles/main.scss";
-import "../favicon.ico";
 import React from "react";
 import ReactDOM from "react-dom";
 import { AppContainer } from "react-hot-loader";
