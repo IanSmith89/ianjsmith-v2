@@ -68,6 +68,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new ExtractTextPlugin("assets/styles/styles.css"),
     new HtmlWebpackPlugin({
+      favicon: "./favicon.ico",
       hash: false,
       template: "./index.hbs"
     }),
