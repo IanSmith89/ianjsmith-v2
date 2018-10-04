@@ -19,14 +19,19 @@ exports.seed = function(knex) {
 					},
 					{
 						id: 'astarte',
-						client: 'Astarte Bio',
+						client: 'Astarte Biologics',
 						description:
 							'Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.',
 						long_services:
-							'UX, Visual Design, Full Stack Development',
-						name: 'Astarte Intranet',
+							'UX/UI + Visual Design + Full Stack Development',
+						name: 'Astarte Biologics Intranet',
 						nextProjectLink: '/dreamstream',
 						short_services: 'UX/UI',
+						users: [
+							'Lab Technicians',
+							'System Admins',
+							'Order Fulfillment Personnel'
+						],
 						website_url: '',
 						with: 'High Seas Consulting, Inc.'
 					},

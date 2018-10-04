@@ -1,103 +1,166 @@
 .project {
-    color: $dark-grey;
+	color: $dark-grey;
 
-    .project-description {
-        font-size: 2.2rem;
-        font-weight: 300;
-        margin-bottom: 7rem;
-    }
+	.project-header {
+		text-align: center;
 
-    .project-details-container {
-        margin-bottom: 7rem;
+		.project-title {
+			font-size: type-scale(3);
+			font-weight: 600;
+			margin-bottom: 2.5rem;
+			margin-top: 2.5rem;
+		}
 
-        .project-detail {
-            display: flex;
-            margin-bottom: 2rem;
+		.project-services {
+			font-size: type-scale(-1);
+			margin-bottom: 7.5rem;
+			text-transform: uppercase;
+		}
 
-            .label {
-                font-size: 1.7rem;
-                font-weight: 600;
-                height: auto;
-                width: 30%;
-            }
+		.project-description {
+			font-size: type-scale(0);
+		}
+	}
 
-            .detail {
-                font-size: 1.7rem;
-                font-weight: 300;
-                height: auto;
-                width: 70%;
-            }
-        }
-    }
+	.text-section {
+		border: 0.2rem solid $light-grey;
+		padding: 5rem 0;
+		text-align: center;
 
-    .project-controls {
-        display: flex;
-        font-size: 1.7rem;
-        font-weight: 300;
-        margin-bottom: 2.5rem;
-        text-transform: uppercase;
+		.section-header {
+			font-size: type-scale(2);
+			margin-bottom: 5rem;
+			text-transform: uppercase;
 
-        .to-top,
-        .next-project {
-            align-items: center;
-            color: $dark-grey;
-            display: flex;
-            height: auto;
-            text-decoration: none;
-            width: auto;
+			span {
+				font-weight: 600;
+			}
+		}
 
-            .arrow {
-                height: 1.7rem;
-            }
-        }
+		ul {
+			&.no-style {
+				list-style: none;
+			}
 
-        .to-top {
-            cursor: pointer;
+			li {
+				font-size: type-scale(0);
+			}
+		}
+	}
 
-            .arrow {
-                margin-right: 0.75rem;
-            }
-        }
+	.project-description {
+		font-size: 2.2rem;
+		font-weight: 300;
+		margin-bottom: 7rem;
+	}
 
-        .next-project {
-            margin-left: auto;
+	.project-details-container {
+		margin-bottom: 7rem;
 
-            .arrow {
-                margin-left: 0.75rem;
-                transform: rotate(90deg);
-            }
-        }
-    }
+		.project-detail {
+			display: flex;
+			margin-bottom: 2rem;
 
-    @include for-tablet-portrait-up() {
-        .project-image-container {
-            margin-bottom: 7rem;
-        }
-    }
+			.label {
+				font-size: 1.7rem;
+				font-weight: 600;
+				height: auto;
+				width: 30%;
+			}
+
+			.detail {
+				font-size: 1.7rem;
+				font-weight: 300;
+				height: auto;
+				width: 70%;
+			}
+		}
+	}
+
+	.project-controls {
+		display: flex;
+		font-size: 1.7rem;
+		font-weight: 300;
+		margin-bottom: 2.5rem;
+		text-transform: uppercase;
+
+		.to-top,
+		.next-project {
+			align-items: center;
+			color: $dark-grey;
+			display: flex;
+			height: auto;
+			text-decoration: none;
+			width: auto;
+
+			.arrow {
+				height: 1.7rem;
+			}
+		}
+
+		.to-top {
+			cursor: pointer;
+
+			.arrow {
+				margin-right: 0.75rem;
+			}
+		}
+
+		.next-project {
+			margin-left: auto;
+
+			.arrow {
+				margin-left: 0.75rem;
+				transform: rotate(90deg);
+			}
+		}
+	}
+
+	@include for-tablet-portrait-up() {
+		.project-header {
+			margin: 0 auto;
+			width: 66.66%;
+		}
+
+		.project-image-container {
+			margin-bottom: 7rem;
+		}
+
+		.text-section {
+			margin: 0 auto;
+			width: 66.66%;
+		}
+	}
+
+	@include for-desktop-up() {
+		.text-section {
+			width: 50%;
+		}
+	}
 }
 
 .project-image-container {
-    align-items: center;
-    background-color: $light;
-    display: flex;
-    height: 49.2rem;
-    width: 100%;
+	align-items: center;
+	background-color: $light;
+	display: flex;
+	height: 49.2rem;
+	width: 100%;
 
-    .no-image {
-        height: auto;
-        width: 100%;
-    }
+	.no-image {
+		height: auto;
+		width: 100%;
+	}
 
-    .project-image {
-        width: 100%;
-    }
+	.project-image {
+		width: 100%;
+	}
 
-    @include for-tablet-portrait-up() {
-        height: auto;
+	@include for-tablet-portrait-up() {
+		height: auto;
 
-        .no-image {
-            height: 50rem;
-            width: 100%;
-        }
-    }
+		.no-image {
+			height: 50rem;
+			width: 100%;
+		}
+	}
 }

@@ -1,3 +1,5 @@
+@import 'base/reset';
+
 // Vendors
 @import 'vendors/skeleton';
 
@@ -11,7 +13,6 @@
 @import 'abstracts/zIndex';
 
 // Base
-@import 'base/reset';
 @import 'base/colors';
 @import 'base/base';
 @import 'base/typography';
