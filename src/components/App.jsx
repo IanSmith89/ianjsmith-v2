@@ -3,6 +3,7 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import { observer } from 'mobx-react';
 import LazyRoute from 'lazy-route';
 import cx from 'classnames';
+import Footer from './Footer';
 
 @observer
 export default class App extends Component {
@@ -67,30 +68,7 @@ export default class App extends Component {
 						/>
 					)}
 				/>
-				<Route
-					exact
-					path="/"
-					render={props => (
-						<LazyRoute
-							{...props}
-							actions={this.actions}
-							stores={this.stores}
-							component={import('./Footer')}
-						/>
-					)}
-				/>
-				<Route
-					exact
-					path="/about"
-					render={props => (
-						<LazyRoute
-							{...props}
-							actions={this.actions}
-							stores={this.stores}
-							component={import('./Footer')}
-						/>
-					)}
-				/>
+				<Footer stores={this.stores} />
 			</div>
 		);
 	}

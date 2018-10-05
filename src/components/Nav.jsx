@@ -9,7 +9,6 @@ export default class Nav extends Component {
 		super(props);
 
 		this.actions = props.actions;
-		this.historyAction = props.history.action;
 	}
 
 	componentWillMount() {
@@ -23,7 +22,7 @@ export default class Nav extends Component {
 	}
 
 	componentWillUpdate(nextProps) {
-		if (this.historyAction !== 'POP') {
+		if (nextProps.history.action !== 'POP') {
 			window.scrollTo(0, 0);
 		}
 	}
@@ -55,6 +54,7 @@ export default class Nav extends Component {
 									})}
 								>
 									Work
+									<div className="underline" />
 								</Link>
 								<Link
 									to="/about"
@@ -62,7 +62,8 @@ export default class Nav extends Component {
 										active: activePathname === '/about'
 									})}
 								>
-									About/Contact
+									About
+									<div className="underline" />
 								</Link>
 							</div>
 						</div>

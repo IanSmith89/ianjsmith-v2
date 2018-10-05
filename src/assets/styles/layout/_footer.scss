@@ -1,43 +1,29 @@
 .footer {
-    background-color: $dark;
-    color: $light;
-    height: 4.5rem;
-    width: 100%;
+	background-color: $dark;
+	color: $light;
+	height: 4.5rem;
+	width: 100%;
 
-    &.light {
-        background-color: $light;
-        color: $dark;
+	&.light {
+		background-color: $light;
+		color: $dark-grey;
 
-        .twelve.columns {
-            .mailto-link {
-                a {
-                    color: $dark;
-                }
-            }
-        }
-    }
+		.copyright {
+			border-top: 0.1rem solid $light-grey;
+		}
+	}
 
-    .twelve.columns {
-        align-content: center;
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        height: 4.5rem;
-        justify-content: flex-start;
+	.copyright {
+		align-content: center;
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		height: 4.5rem;
+		justify-content: center;
 
-        small {
-            font-size: 1.4rem;
-        }
-
-        .mailto-link {
-            margin-left: auto;
-
-            a {
-                color: $light;
-                font-size: 1.4rem;
-                text-decoration: none;
-            }
-        }
-    }
+		small {
+			color: $grey;
+			font-size: type-scale(-2);
+		}
+	}
 }

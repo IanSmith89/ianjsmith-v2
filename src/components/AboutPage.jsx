@@ -12,9 +12,10 @@ export default class AboutPage extends React.Component {
 								<br />
 								I’m Ian Smith, a creative developer and
 								interactive designer based out of Seattle. I
-								currently create human-centered experiences and
-								intuitive, responsive interfaces as a frontend
-								developer for High Seas Consulting, Inc.
+								currently build human-centered experiences and
+								intuitive, responsive interfaces as a UX
+								Designer and Front End Developer for High Seas
+								Consulting, Inc.
 							</h1>
 						</div>
 					</section>

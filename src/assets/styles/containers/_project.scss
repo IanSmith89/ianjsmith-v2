@@ -1,75 +1,79 @@
 .project {
 	color: $dark-grey;
 
+	h3 {
+		font-size: type-scale(-1);
+		font-weight: 400;
+		margin-bottom: 0.5rem;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	ul {
+		&.no-style {
+			list-style: none;
+			text-align: center;
+		}
+
+		li {
+			font-size: type-scale(0);
+			font-weight: 300;
+		}
+	}
+
 	.project-header {
 		text-align: center;
 
 		.project-title {
 			font-size: type-scale(3);
 			font-weight: 600;
-			margin-bottom: 2.5rem;
+			margin-bottom: 0;
 			margin-top: 2.5rem;
 		}
 
 		.project-services {
-			font-size: type-scale(-1);
 			margin-bottom: 7.5rem;
-			text-transform: uppercase;
 		}
 
 		.project-description {
 			font-size: type-scale(0);
+			font-weight: 300;
+			margin-bottom: 7.5rem;
 		}
 	}
 
-	.text-section {
-		border: 0.2rem solid $light-grey;
-		padding: 5rem 0;
-		text-align: center;
+	.project-image-container {
+		box-shadow: $drop-shadow;
+		height: auto;
+		width: 100%;
 
-		.section-header {
-			font-size: type-scale(2);
-			margin-bottom: 5rem;
-			text-transform: uppercase;
+		@include for-tablet-portrait-up() {
+			height: auto;
 
-			span {
-				font-weight: 600;
+			.no-image {
+				height: 50rem;
+				width: 100%;
 			}
 		}
-
-		ul {
-			&.no-style {
-				list-style: none;
-			}
-
-			li {
-				font-size: type-scale(0);
-			}
-		}
-	}
-
-	.project-description {
-		font-size: 2.2rem;
-		font-weight: 300;
-		margin-bottom: 7rem;
 	}
 
 	.project-details-container {
-		margin-bottom: 7rem;
+		margin-bottom: 7.5rem;
+		margin-top: 7.5rem;
 
 		.project-detail {
 			display: flex;
 			margin-bottom: 2rem;
 
 			.label {
-				font-size: 1.7rem;
+				font-size: type-scale(0);
 				font-weight: 600;
 				height: auto;
 				width: 30%;
 			}
 
 			.detail {
-				font-size: 1.7rem;
+				font-size: type-scale(0);
 				font-weight: 300;
 				height: auto;
 				width: 70%;
@@ -77,41 +81,164 @@
 		}
 	}
 
+	.sketches {
+		margin-bottom: 12.5rem;
+
+		.full-width-image {
+			max-width: 144rem;
+			margin: 0 auto;
+			width: 100%;
+		}
+	}
+
+	.text-section {
+		box-shadow: $drop-shadow;
+		margin-bottom: 7.5rem;
+		padding: 5rem 0;
+		text-align: center;
+
+		.section-header {
+			font-size: type-scale(2);
+			margin-bottom: 0.5rem;
+			text-transform: uppercase;
+
+			span {
+				font-weight: 600;
+			}
+		}
+
+		&.dark {
+			background-color: $grey;
+			color: $light;
+			margin-bottom: 2.5rem;
+			padding: 10rem 0 8.5rem;
+
+			ul {
+				list-style-position: outside;
+				padding-left: 2rem;
+				text-align: left;
+
+				&.no-style {
+					padding-left: 0;
+					text-align: center;
+				}
+			}
+		}
+
+		&.light {
+			box-shadow: none;
+			margin-bottom: 2.5rem;
+			padding-top: 7.5rem;
+
+			ul {
+				list-style-position: outside;
+				padding-left: 2rem;
+				text-align: left;
+
+				li {
+					box-shadow: $drop-shadow;
+					padding: 1.5rem;
+				}
+			}
+		}
+	}
+
+	.diagonal-stripes {
+		background: url(../../images/diagonal-stripes.png) top right;
+		margin-bottom: 5rem;
+		padding: 17.5rem 0;
+
+		.project-image-container {
+			margin-bottom: 5rem;
+		}
+	}
+
+	.project-features {
+		margin-bottom: 5rem;
+
+		.project-detail-image {
+			width: 100%;
+		}
+
+		.project-feature-description {
+			font-size: type-scale(0);
+			font-weight: 300;
+			text-align: center;
+		}
+	}
+
 	.project-controls {
 		display: flex;
-		font-size: 1.7rem;
+		flex-direction: column;
+		font-size: type-scale(0);
 		font-weight: 300;
 		margin-bottom: 2.5rem;
 		text-transform: uppercase;
 
-		.to-top,
-		.next-project {
+		.to-top {
 			align-items: center;
-			color: $dark-grey;
 			display: flex;
 			height: auto;
+			justify-content: center;
+			margin-bottom: 5rem;
 			text-decoration: none;
 			width: auto;
 
 			.arrow {
+				cursor: pointer;
 				height: 1.7rem;
-			}
-		}
-
-		.to-top {
-			cursor: pointer;
-
-			.arrow {
 				margin-right: 0.75rem;
 			}
+
+			a {
+				color: $dark-grey;
+				cursor: pointer;
+			}
 		}
 
-		.next-project {
-			margin-left: auto;
+		.project-links-container {
+			padding: 0 2rem;
 
-			.arrow {
-				margin-left: 0.75rem;
-				transform: rotate(90deg);
+			li {
+				display: inline-block;
+				margin: 0 1.5rem 1.2rem;
+
+				&:first-of-type {
+					display: block;
+				}
+
+				a {
+					color: $grey;
+					display: inline-block;
+					font-size: type-scale(-2);
+					font-weight: 400;
+					position: relative;
+					text-decoration: none;
+
+					.underline {
+						bottom: -0.3rem;
+						margin: 0;
+						position: absolute;
+						transition: 0.2s width ease-out;
+						width: 0;
+					}
+
+					&:hover {
+						color: $dark-grey;
+					}
+
+					&.active {
+						color: $dark-grey;
+						cursor: auto;
+						font-weight: 600;
+
+						.underline {
+							transition-timing-function: ease-in;
+							transition-duration: 0.3s;
+							width: 100%;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -127,8 +254,13 @@
 		}
 
 		.text-section {
-			margin: 0 auto;
+			margin-left: auto;
+			margin-right: auto;
 			width: 66.66%;
+
+			&.dark {
+				width: 100%;
+			}
 		}
 	}
 
