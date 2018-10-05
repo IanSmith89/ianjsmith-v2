@@ -32,7 +32,7 @@ exports.seed = function(knex) {
 							'System Admins',
 							'Order Fulfillment Personnel'
 						],
-						website_url: '',
+						website_url: 'https://www.astartebio.com',
 						with: 'High Seas Consulting, Inc.'
 					},
 					{
