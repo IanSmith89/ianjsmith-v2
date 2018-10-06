@@ -68,7 +68,17 @@ export default class App extends Component {
 						/>
 					)}
 				/>
-				<Footer stores={this.stores} />
+				<Route
+					path="/"
+					render={props => (
+						<LazyRoute
+							{...props}
+							actions={this.actions}
+							stores={this.stores}
+							component={import('./Footer')}
+						/>
+					)}
+				/>
 			</div>
 		);
 	}

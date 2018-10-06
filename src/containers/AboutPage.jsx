@@ -1,4 +1,5 @@
 import React from 'react';
+import ResumeLink from '../components/ResumeLink';
 
 export default class AboutPage extends React.Component {
 	render() {
@@ -95,6 +96,7 @@ export default class AboutPage extends React.Component {
 							</div>
 						</div>
 					</section>
+					<ResumeLink />
 				</div>
 			</main>
 		);

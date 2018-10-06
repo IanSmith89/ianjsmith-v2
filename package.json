@@ -4,10 +4,12 @@
 	"description": "My portfolio site",
 	"main": "webpack.config.js",
 	"scripts": {
-		"start": "node server/server.js",
-		"start:dev": "env NODE_ENV=development node server/server.js",
 		"build:dev": "rimraf ./dist && webpack --config webpack.config.js",
 		"build:prod": "rm -rf ./dist && webpack --config webpack.config.production.js",
+		"start": "node server/server.js",
+		"start:dev": "env NODE_ENV=development node server/server.js",
+		"deploy:prod": "git push heroku master",
+		"deploy:staging": "git push heroku-staging staging:master",
 		"heroku-postbuild": "npm rebuild node-sass && npm run build:prod",
 		"knex": "knex",
 		"migrate:latest:test": "env NODE_ENV=test knex migrate:latest",
@@ -15,16 +17,14 @@
 		"migrate:rollback:test": "env NODE_ENV=test knex migrate:rollback",
 		"migrate:rollback": "knex migrate:rollback",
 		"nf": "nf start",
-		"deploy": "git push heroku master",
-		"deploy:staging": "git push heroku-staging staging:master",
+		"prettier": "prettier --write --config .prettierrc \"**/*.{js,jsx,ts,tsx,json,css,scss}\"",
 		"resetdb": "npm run migrate:rollback && npm run migrate:latest && npm run seed",
 		"resetdb:test": "npm run migrate:rollback:test && npm run migrate:latest:test && npm run seed:test",
 		"seed:test": "env NODE_ENV=test knex seed:run",
 		"seed": "knex seed:run",
 		"test:server": "mocha test/**/*.test.js --env test",
 		"test": "npm run test:server",
-		"test:push": "npm test && git push origin HEAD",
-		"prettier": "prettier --write --config .prettierrc \"**/*.{js,jsx,ts,tsx,json,css,scss}\""
+		"test:push": "npm test && git push origin HEAD"
 	},
 	"eslintConfig": {
 		"extends": "./eslint.js"

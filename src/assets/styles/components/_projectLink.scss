@@ -1,55 +1,83 @@
 .flex-container {
-    align-content: flex-start;
-    align-items: flex-start;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    height: auto;
-    width: 100%;
+	align-content: flex-start;
+	align-items: flex-start;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	height: auto;
+	margin-bottom: 7.5rem;
+	width: 100%;
+}
 
-    .project-link-container {
-        height: auto;
-        margin-bottom: 5rem;
-        width: 100%;
+.project-link-container {
+	height: auto;
+	margin-bottom: 1.3rem;
+	width: 100%;
 
-        .project-link {
-            color: $light;
-            text-decoration: none;
+	.project-link {
+		color: $light;
+		text-decoration: none;
 
-            .project-image-container {
-                margin-bottom: 1.2rem;
-            }
+		.project-image-container {
+			margin-bottom: 1.2rem;
+			position: relative;
 
-            .project-client {
-                font-size: 1.7rem;
-                font-weight: 300;
-                margin-bottom: 0.25rem;
-            }
+			.hover-overlay {
+				background-image: $yellow-to-orange-low;
+				display: flex;
+				align-items: center;
+				align-content: center;
+				flex-wrap: wrap;
+				height: 100%;
+				justify-content: center;
+				opacity: 0;
+				padding: 1.5rem;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition: 0.3s all ease-out;
+				width: 100%;
 
-            .project-services {
-                color: $grey;
-                font-size: 1.7rem;
-                font-weight: 300;
-            }
-        }
+				.hover-project-name {
+					background-color: $light;
+					box-shadow: $drop-shadow;
+					color: $dark-grey;
+					font-size: type-scale(2);
+					font-weight: 600;
+					padding: 0.5rem 1rem;
+					text-align: center;
+				}
+			}
 
-        @include for-tablet-portrait-up() {
-            width: 47.5%;
+			&:hover,
+			&:active {
+				transition-timing-function: ease-in;
+				transition-duration: 0.2s;
 
-            .project-image-container {
-                height: 30rem;
-            }
-        }
+				.hover-overlay {
+					opacity: 1;
+				}
+			}
+		}
+	}
 
-        @include for-tablet-landscape-up() {
-            width: 31.5%;
-        }
+	@include for-tablet-portrait-up() {
+		margin-bottom: 1.8rem;
+		width: 47.5%;
 
-        @include for-desktop-up() {
-            .project-image-container {
-                height: auto;
-            }
-        }
-    }
+		.project-image-container {
+			height: 30rem;
+		}
+	}
+
+	@include for-tablet-landscape-up() {
+		width: 31.5%;
+	}
+
+	@include for-desktop-up() {
+		.project-image-container {
+			height: auto;
+		}
+	}
 }
