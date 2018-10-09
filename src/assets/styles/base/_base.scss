@@ -21,11 +21,44 @@ body {
 
 .wrapper {
 	min-height: 100vh;
-	transition: 0.5s;
+	transition: $color-change;
 
 	&.light {
 		background-color: $light;
 		color: $dark-grey;
+
+		.top-nav {
+			background-color: $light-low;
+			box-shadow: $drop-shadow;
+
+			.logo {
+				a {
+					color: $dark-grey;
+
+					&:hover {
+						color: $orange;
+					}
+				}
+			}
+
+			.page-links {
+				a {
+					&:hover,
+					&.active {
+						color: $dark-grey;
+					}
+				}
+			}
+		}
+
+		.footer {
+			background-color: $light;
+			color: $dark-grey;
+
+			.copyright {
+				border-top: 0.1rem solid $light-grey;
+			}
+		}
 	}
 }
 

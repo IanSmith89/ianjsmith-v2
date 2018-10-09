@@ -6,12 +6,13 @@ import Scroll from 'react-scroll';
 const ScrollLink = Scroll.Link;
 import ArrowIcon from '../components/ArrowIcon';
 
-@inject('workStore')
+@inject('actions', 'workStore')
 @observer
 class ProjectControls extends React.Component {
 	constructor(props) {
 		super(props);
 
+		this.actions = props.actions;
 		this.pathname = props.location.pathname;
 		this.projectLinks = props.workStore.projectLinks;
 	}
@@ -20,10 +21,6 @@ class ProjectControls extends React.Component {
 		if (this.pathname !== nextProps.location.pathname) {
 			this.pathname = nextProps.location.pathname;
 		}
-	}
-
-	handleClick(e, linkIsActive) {
-		if (linkIsActive) return e.preventDefault();
 	}
 
 	render() {
@@ -49,7 +46,10 @@ class ProjectControls extends React.Component {
 											})}
 											to={link.to}
 											onClick={e =>
-												this.handleClick(e, active)
+												this.actions.handleLinkClick(
+													e,
+													active
+												)
 											}
 										>
 											{link.name}

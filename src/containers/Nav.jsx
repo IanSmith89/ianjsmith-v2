@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import { observer } from 'mobx-react';
+import { inject, observer } from 'mobx-react';
 import cx from 'classnames';
 
+@inject('actions')
 @observer
 class Nav extends Component {
 	constructor(props) {
 		super(props);
 
+		this.actions = props.actions;
 		this.pathname = props.location.pathname;
 	}
 
@@ -23,20 +25,25 @@ class Nav extends Component {
 
 	render() {
 		return (
-			<nav
-				className={cx('top-nav', {
-					light: this.pathname !== '/'
-				})}
-			>
+			<nav className="top-nav">
 				<div className="container">
 					<div className="row">
 						<div className="twelve columns">
 							<div className="logo">
-								<Link to="/">Ian J. Smith</Link>
+								<Link
+									to="/"
+									onClick={e =>
+										this.actions.handleLinkClick(
+											e,
+											this.pathname === '/'
+										)
+									}
+								>
+									Ian J. Smith
+								</Link>
 							</div>
 							<div className="page-links">
 								<Link
-									to="/"
 									className={cx({
 										active:
 											this.pathname === '/' ||
@@ -44,15 +51,28 @@ class Nav extends Component {
 												'/projects'
 											) !== -1
 									})}
+									to="/"
+									onClick={e =>
+										this.actions.handleLinkClick(
+											e,
+											this.pathname === '/'
+										)
+									}
 								>
 									Work
 									<div className="underline" />
 								</Link>
 								<Link
-									to="/about"
 									className={cx({
 										active: this.pathname === '/about'
 									})}
+									to="/about"
+									onClick={e =>
+										this.actions.handleLinkClick(
+											e,
+											this.pathname === '/about'
+										)
+									}
 								>
 									About
 									<div className="underline" />

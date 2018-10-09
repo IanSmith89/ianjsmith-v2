@@ -1,12 +1,14 @@
 import React from 'react';
-import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 import { observer } from 'mobx-react';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import cx from 'classnames';
 import Nav from './Nav';
 import WorkPage from './WorkPage';
 import AboutPage from './AboutPage';
 import ProjectPage from './ProjectPage';
 import NotFound from './NotFound';
+import Footer from './Footer';
 
 @observer
 class Container extends React.Component {
@@ -29,15 +31,27 @@ class Container extends React.Component {
 					light: this.pathname !== '/'
 				})}
 			>
-				<Switch>
-					<Route exact path="/" component={WorkPage} />
-					<Route path="/about" component={AboutPage} />
-					<Route
-						path="/projects/:projectId"
-						component={ProjectPage}
-					/>
-					<Route path="/*" component={NotFound} />
-				</Switch>
+				<Nav />
+				<TransitionGroup>
+					<CSSTransition
+						appear
+						classNames="fade"
+						key={this.props.location.key}
+						timeout={{ enter: 300, exit: 400 }}
+						unmountOnExit
+					>
+						<Switch location={this.props.location}>
+							<Route exact path="/" component={WorkPage} />
+							<Route path="/about" component={AboutPage} />
+							<Route
+								path="/projects/:projectId"
+								component={ProjectPage}
+							/>
+							<Route path="/*" component={NotFound} />
+						</Switch>
+					</CSSTransition>
+				</TransitionGroup>
+				<Footer />
 			</div>
 		);
 	}
