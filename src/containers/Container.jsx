@@ -37,6 +37,7 @@ class Container extends React.Component {
 						appear
 						classNames="fade"
 						key={this.props.location.key}
+						mountOnEnter
 						timeout={{ enter: 300, exit: 400 }}
 						unmountOnExit
 					>

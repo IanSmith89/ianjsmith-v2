@@ -13,7 +13,7 @@ ReactDOM.render(
 
 // Hot Module Replacement API
 if (module.hot) {
-	module.hot.accept('./containers/App', () => {
+	module.hot.accept('./App', () => {
 		ReactDOM.render(
 			<AppContainer>
 				<App />

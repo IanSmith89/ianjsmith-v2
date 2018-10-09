@@ -1,5 +1,8 @@
-import workStore from '../stores/workStore';
 import API from '../api';
+
+export function clearProject(workStore) {
+	return workStore.setProject(_defaultProject());
+}
 
 function _defaultProject() {
 	return {
@@ -22,18 +25,14 @@ export function handleLinkClick(e, linkIsActive) {
 	if (linkIsActive) return e.preventDefault();
 }
 
-export function clearProject() {
-	return workStore.setProject(_defaultProject());
-}
-
-export function getProjectById(id) {
+export function getProjectById(id, workStore) {
 	return API.work
 		.getProjectById(id)
 		.then(res => workStore.setProject(res))
 		.catch(err => console.error(err));
 }
 
-export function getProjects() {
+export function getProjects(workStore) {
 	return API.work
 		.getProjects()
 		.then(res => workStore.setProjects(res))

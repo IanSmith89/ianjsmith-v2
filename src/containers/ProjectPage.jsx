@@ -20,7 +20,7 @@ class ProjectPage extends React.Component {
 	}
 
 	componentDidMount() {
-		this.actions.getProjectById(this.projectId);
+		this.actions.getProjectById(this.projectId, this.workStore);
 	}
 
 	render() {

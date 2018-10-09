@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 @observer
 export default class WorkPage extends React.Component {
 	componentDidMount() {
-		this.props.actions.getProjects();
+		this.props.actions.getProjects(this.props.workStore);
 	}
 
 	render() {
