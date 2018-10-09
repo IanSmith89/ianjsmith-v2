@@ -1,23 +1,67 @@
 import { observable, action } from 'mobx';
 
 class WorkStore {
-    @observable project = {};
-    @observable projects = [];
+	@observable
+	project = {};
+	@observable
+	projects = [];
+	projectLinks = [
+		{
+			name: 'all',
+			to: '/'
+		},
+		{
+			name: 'paragon',
+			to: '/projects/paragon'
+		},
+		{
+			name: 'astarte',
+			to: '/projects/astarte'
+		},
+		{
+			name: 'wa state parks',
+			to: '/projects/wasp'
+		},
+		{
+			name: 'dash',
+			to: '/projects/dash'
+		},
+		{
+			name: 'dreamstream',
+			to: '/projects/dreamstream'
+		},
+		{
+			name: 'salvage',
+			to: '/projects/salvage'
+		},
+		{
+			name: 'cheba hut',
+			to: '/projects/cheba-hut'
+		},
+		{
+			name: 'gig posters',
+			to: '/projects/posters'
+		},
+		{
+			name: 'topshelf',
+			to: '/projects/topshelf'
+		}
+	];
 
-    @action
-    clearProject() {
-        this.project = {};
-    }
+	@action
+	clearProject() {
+		this.project = {};
+	}
 
-    @action
-    getProjectByIdSuccess(project) {
-        this.project = project;
-    }
+	@action
+	getProjectByIdSuccess(project) {
+		this.project = project;
+	}
 
-    @action
-    getProjectsSuccess(projects) {
-        this.projects = projects;
-    }
+	@action
+	getProjectsSuccess(projects) {
+		this.projects = projects;
+	}
 }
 
 const workStore = new WorkStore();

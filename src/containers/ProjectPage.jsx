@@ -1,67 +1,41 @@
 import React from 'react';
-import { observer } from 'mobx-react';
-import { Route, Switch } from 'react-router-dom';
+import { inject, observer } from 'mobx-react';
+import { withRouter } from 'react-router-dom';
 import ProjectHeader from '../components/ProjectHeader';
 import ImageCard from '../components/ImageCard';
 import ProjectDetails from '../components/ProjectDetails';
-import ProjectControls from '../components/ProjectControls';
+import ProjectContent from './ProjectContent';
+import ProjectControls from './ProjectControls';
 import ResumeLink from '../components/ResumeLink';
-import Astarte from './projectContent/Astarte';
-import ChebaHut from './projectContent/ChebaHut';
-import Dash from './projectContent/Dash';
-import DowntownArtery from './projectContent/DowntownArtery';
-import DreamStream from './projectContent/DreamStream';
-import Paragon from './projectContent/Paragon';
-import Salvage from './projectContent/Salvage';
-import Topshelf from './projectContent/Topshelf';
-import WAStateParks from './projectContent/WAStateParks';
 
+@inject('actions', 'workStore')
 @observer
-export default class ProjectPage extends React.Component {
+class ProjectPage extends React.Component {
 	constructor(props) {
 		super(props);
 
+		this.actions = props.actions;
 		this.projectId = props.match.params.projectId;
+		this.workStore = props.workStore;
 	}
 
 	componentDidMount() {
-		this.props.actions.getProjectById(this.projectId);
+		this.actions.getProjectById(this.projectId);
 	}
 
 	componentWillUpdate(nextProps) {
-		const { projectId } = nextProps.match.params;
-
-		if (projectId !== this.projectId) {
-			this.projectId = projectId;
-			this.props.actions.getProjectById(this.projectId);
+		if (this.projectId !== nextProps.match.paramsprojectId) {
+			this.projectId = nextProps.match.paramsprojectId;
 			window.scrollTo(0, 0);
 		}
 	}
 
 	componentWillUnmount() {
-		this.props.actions.clearProject();
-	}
-
-	projectContent() {
-		const { project } = this.props.stores.workStore;
-		const contents = {
-			astarte: <Astarte project={project} />,
-			'cheba-hut': <ChebaHut project={project} />,
-			dash: <Dash project={project} />,
-			posters: <DowntownArtery project={project} />,
-			dreamstream: <DreamStream project={project} />,
-			paragon: <Paragon project={project} />,
-			salvage: <Salvage project={project} />,
-			topshelf: <Topshelf project={project} />,
-			wasp: <WAStateParks project={project} />
-		};
-
-		return contents[this.projectId];
+		this.actions.clearProject();
 	}
 
 	render() {
-		const { activePathname } = this.props.stores.appStore;
-		const { project } = this.props.stores.workStore;
+		const { project } = this.workStore;
 
 		return (
 			<main id="project-top" className="project page">
@@ -79,10 +53,12 @@ export default class ProjectPage extends React.Component {
 					/>
 					<ProjectDetails project={project} />
 				</div>
-				{this.projectContent()}
-				<ProjectControls activePathname={activePathname} />
+				<ProjectContent project={project} />
+				<ProjectControls />
 				<ResumeLink />
 			</main>
 		);
 	}
 }
+
+export default withRouter(ProjectPage);

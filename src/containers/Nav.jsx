@@ -1,39 +1,31 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { observer } from 'mobx-react';
 import cx from 'classnames';
 
 @observer
-export default class Nav extends Component {
+class Nav extends Component {
 	constructor(props) {
 		super(props);
 
-		this.actions = props.actions;
-	}
-
-	componentWillMount() {
-		const { pathname } = this.props.location;
-		this.actions.pageIsActive(pathname);
-	}
-
-	componentWillReceiveProps(nextProps) {
-		const { pathname } = nextProps.location;
-		this.actions.pageIsActive(pathname);
+		this.pathname = props.location.pathname;
 	}
 
 	componentWillUpdate(nextProps) {
 		if (nextProps.history.action !== 'POP') {
 			window.scrollTo(0, 0);
 		}
+
+		if (this.pathname !== nextProps.location.pathname) {
+			this.pathname = nextProps.location.pathname;
+		}
 	}
 
 	render() {
-		const { activePathname } = this.props.stores.appStore;
-
 		return (
 			<nav
 				className={cx('top-nav', {
-					light: activePathname !== '/'
+					light: this.pathname !== '/'
 				})}
 			>
 				<div className="container">
@@ -47,8 +39,8 @@ export default class Nav extends Component {
 									to="/"
 									className={cx({
 										active:
-											activePathname === '/' ||
-											activePathname.indexOf(
+											this.pathname === '/' ||
+											this.pathname.indexOf(
 												'/projects'
 											) !== -1
 									})}
@@ -59,7 +51,7 @@ export default class Nav extends Component {
 								<Link
 									to="/about"
 									className={cx({
-										active: activePathname === '/about'
+										active: this.pathname === '/about'
 									})}
 								>
 									About
@@ -73,3 +65,5 @@ export default class Nav extends Component {
 		);
 	}
 }
+
+export default withRouter(Nav);

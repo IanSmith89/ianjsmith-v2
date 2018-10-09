@@ -1,7 +1,8 @@
 import React from 'react';
-import { observer } from 'mobx-react';
+import { inject, observer } from 'mobx-react';
 import { Link } from 'react-router-dom';
 
+@inject('actions', 'workStore')
 @observer
 export default class WorkPage extends React.Component {
 	componentDidMount() {
@@ -9,7 +10,7 @@ export default class WorkPage extends React.Component {
 	}
 
 	render() {
-		const { projects } = this.props.stores.workStore;
+		const { projects } = this.props.workStore;
 
 		return (
 			<main className="home page">
