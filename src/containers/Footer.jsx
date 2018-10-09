@@ -1,27 +1,38 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { observer } from 'mobx-react';
 import cx from 'classnames';
 
 @observer
-export default class Footer extends Component {
-	render() {
-		const { activePathname } = this.props.stores.appStore;
+class Footer extends Component {
+	constructor(props) {
+		super(props);
 
+		this.pathname = props.location.pathname;
+		this.year = new Date().getFullYear();
+	}
+
+	componentWillUpdate(nextProps) {
+		if (this.pathname !== nextProps.location.pathname) {
+			this.pathname = nextProps.location.pathname;
+		}
+	}
+
+	render() {
 		return (
 			<footer
 				className={cx('footer', {
-					light: activePathname !== '/'
+					light: this.pathname !== '/'
 				})}
 			>
 				<div className="row">
 					<div className="twelve columns copyright">
-						<small>
-							&copy; Ian Smith, {new Date().getFullYear()}
-						</small>
+						<small>&copy; Ian Smith, {this.year}</small>
 					</div>
 				</div>
 			</footer>
 		);
 	}
 }
+
+export default withRouter(Footer);
