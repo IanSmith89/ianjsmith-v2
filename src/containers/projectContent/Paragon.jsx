@@ -18,7 +18,7 @@ export default class Paragon extends React.Component {
 					imageAlt="early sketches"
 					imageSrc="astarte-sketches.jpg"
 					title="early sketches"
-				/>
+				/> */}
 				<TextListCard
 					listItems={project.users || []}
 					title={['Who are the ', <span key="span">users</span>, '?']}
@@ -28,12 +28,17 @@ export default class Paragon extends React.Component {
 						{
 							alt: 'desktop view',
 							className: 'twelve columns',
-							src: 'astarte-desktop.jpg'
+							src: 'paragon-search.jpg'
 						},
 						{
 							alt: 'tablet view',
-							className: 'six columns center',
-							src: 'astarte-tablet.jpg'
+							className: 'six columns no-margin',
+							src: 'paragon-tablet.jpg'
+						},
+						{
+							alt: 'tablet view',
+							className: 'six columns',
+							src: 'paragon-mobile.jpg'
 						}
 					]}
 				/>
@@ -52,21 +57,33 @@ export default class Paragon extends React.Component {
 					items={[
 						{
 							description:
-								'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
-							image: {
-								alt: 'project detail 1',
-								src: 'astarte-project-detail-01.jpg'
-							},
-							title: 'Project Feature 1'
+								'I created text based animations using CSS and scalable vector graphic (SVG) elements. The page was translated into Mandarin and Simplified Chinese, so I researched Chinese calligraphy and made sure the appearance order and stroke direction of each Chinese character was implemented correctly.',
+							images: [
+								{
+									alt: 'animated paragon text',
+									src: 'paragon-choose-paragon.gif'
+								},
+								{
+									alt: 'animated paragon text chinese',
+									src: 'paragon-choose-paragon-chinese.gif'
+								}
+							],
+							title: 'animated chinese characters'
 						},
 						{
 							description:
-								'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
-							image: {
-								alt: 'project detail 2',
-								src: 'astarte-project-detail-02.jpg'
-							},
-							title: 'Project Feature 2'
+								'The neighborhoods section of the site had interactive maps that required responsive hover states. I created it so the user could hover over either the name or region to highlight the neighborhood and made sure the color choices were logical while remaining on brand.',
+							images: [
+								{
+									alt: 'san francisco map names',
+									src: 'paragon-sf-map-names.gif'
+								},
+								{
+									alt: 'san francisco map regions',
+									src: 'paragon-sf-map-places.gif'
+								}
+							],
+							title: 'interactive svg maps'
 						}
 					]}
 				/>
@@ -74,7 +91,7 @@ export default class Paragon extends React.Component {
 					listItems={project.takeaways || []}
 					noStyle
 					title={['project ', <span key="span">takeaways</span>]}
-				/> */}
+				/>
 			</div>
 		);
 	}

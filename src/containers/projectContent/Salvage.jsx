@@ -18,12 +18,12 @@ export default class Salvage extends React.Component {
 					imageAlt="early sketches"
 					imageSrc="astarte-sketches.jpg"
 					title="early sketches"
-				/>
+				/> */}
 				<TextListCard
 					listItems={project.users || []}
 					title={['Who are the ', <span key="span">users</span>, '?']}
 				/>
-				<StripedImageList
+				{/* <StripedImageList
 					images={[
 						{
 							alt: 'desktop view',
@@ -36,7 +36,7 @@ export default class Salvage extends React.Component {
 							src: 'astarte-tablet.jpg'
 						}
 					]}
-				/>
+				/> */}
 				<TextListDark
 					listItems={project.why || []}
 					title={[<span key="span">why</span>, ' is this needed?']}
@@ -48,7 +48,7 @@ export default class Salvage extends React.Component {
 						' is this project used?'
 					]}
 				/>
-				<ImageList
+				{/* <ImageList
 					items={[
 						{
 							description:

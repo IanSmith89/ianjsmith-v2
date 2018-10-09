@@ -3,7 +3,7 @@ import React from 'react';
 const ProjectDetails = ({ project }) => {
 	const _removeProtocol = str => {
 		if (str) {
-			return str.replace(/http?s:\/\//g, '');
+			return str.replace(/https:\/\//g, '').replace(/http:\/\//g, '');
 		}
 	};
 
@@ -22,7 +22,7 @@ const ProjectDetails = ({ project }) => {
 				) : null}
 				{project.techStack ? (
 					<div className="project-detail">
-						<div className="label">Stack:</div>
+						<div className="label">Tech:</div>
 						<div className="detail">
 							{project.techStack.join(', ')}
 						</div>

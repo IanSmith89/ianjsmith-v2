@@ -24,6 +24,14 @@ const ProjectControls = ({ activePathname }) => {
 			to: '/projects/astarte'
 		},
 		{
+			name: 'wa state parks',
+			to: '/projects/wasp'
+		},
+		{
+			name: 'dash',
+			to: '/projects/dash'
+		},
+		{
 			name: 'dreamstream',
 			to: '/projects/dreamstream'
 		},
@@ -36,8 +44,8 @@ const ProjectControls = ({ activePathname }) => {
 			to: '/projects/cheba-hut'
 		},
 		{
-			name: 'downtown artery',
-			to: '/projects/downtown-artery'
+			name: 'gig posters',
+			to: '/projects/posters'
 		},
 		{
 			name: 'topshelf',

@@ -26,12 +26,12 @@ export default class Astarte extends React.Component {
 				<StripedImageList
 					images={[
 						{
-							alt: 'desktop view',
+							alt: 'astarte intranet desktop screenshot',
 							className: 'twelve columns',
 							src: 'astarte-desktop.jpg'
 						},
 						{
-							alt: 'tablet view',
+							alt: 'astarte intranet tablet screenshot',
 							className: 'six columns center',
 							src: 'astarte-tablet.jpg'
 						}
@@ -52,21 +52,25 @@ export default class Astarte extends React.Component {
 					items={[
 						{
 							description:
-								'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
-							image: {
-								alt: 'project detail 1',
-								src: 'astarte-project-detail-01.jpg'
-							},
-							title: 'Project Feature 1'
+								'One of the most common tasks of the lab technicians is moving vials around to various racks and freezers as they go through creation and testing. The staff at Astarte needed visual reference to the vial location, so we used color to delineate between different groups and products that most often looked the exact same in the actual freezers.',
+							images: [
+								{
+									alt: 'project detail 1',
+									src: 'astarte-project-detail-01.jpg'
+								}
+							],
+							title: 'easily moving inventory'
 						},
 						{
 							description:
-								'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
-							image: {
-								alt: 'project detail 2',
-								src: 'astarte-project-detail-02.jpg'
-							},
-							title: 'Project Feature 2'
+								'Recording changes and taking notes was essential and needed to be very flexible and possible for specific vials or groups of vials. It was also important to track the statuses of each vial as they went through testing and update the e-commerce website with each status change.',
+							images: [
+								{
+									alt: 'project detail 2',
+									src: 'astarte-project-detail-02.jpg'
+								}
+							],
+							title: 'updating product information'
 						}
 					]}
 				/>

@@ -8,25 +8,32 @@ import ProjectControls from '../components/ProjectControls';
 import ResumeLink from '../components/ResumeLink';
 import Astarte from './projectContent/Astarte';
 import ChebaHut from './projectContent/ChebaHut';
+import Dash from './projectContent/Dash';
 import DowntownArtery from './projectContent/DowntownArtery';
 import DreamStream from './projectContent/DreamStream';
 import Paragon from './projectContent/Paragon';
 import Salvage from './projectContent/Salvage';
 import Topshelf from './projectContent/Topshelf';
+import WAStateParks from './projectContent/WAStateParks';
 
 @observer
 export default class ProjectPage extends React.Component {
-	componentDidMount() {
-		const { projectId } = this.props.match.params;
+	constructor(props) {
+		super(props);
 
-		this.props.actions.getProjectById(projectId);
+		this.projectId = props.match.params.projectId;
+	}
+
+	componentDidMount() {
+		this.props.actions.getProjectById(this.projectId);
 	}
 
 	componentWillUpdate(nextProps) {
 		const { projectId } = nextProps.match.params;
 
-		if (projectId !== this.props.stores.workStore.project.id) {
-			this.props.actions.getProjectById(projectId);
+		if (projectId !== this.projectId) {
+			this.projectId = projectId;
+			this.props.actions.getProjectById(this.projectId);
 			window.scrollTo(0, 0);
 		}
 	}
@@ -35,20 +42,21 @@ export default class ProjectPage extends React.Component {
 		this.props.actions.clearProject();
 	}
 
-	renderProjectContent() {
-		const { projectId } = this.props.match.params;
+	projectContent() {
 		const { project } = this.props.stores.workStore;
 		const contents = {
 			astarte: <Astarte project={project} />,
 			'cheba-hut': <ChebaHut project={project} />,
-			'downtown-artery': <DowntownArtery project={project} />,
-			'dream-stream': <DreamStream project={project} />,
+			dash: <Dash project={project} />,
+			posters: <DowntownArtery project={project} />,
+			dreamstream: <DreamStream project={project} />,
 			paragon: <Paragon project={project} />,
 			salvage: <Salvage project={project} />,
-			topshelf: <Topshelf project={project} />
+			topshelf: <Topshelf project={project} />,
+			wasp: <WAStateParks project={project} />
 		};
 
-		return contents[projectId];
+		return contents[this.projectId];
 	}
 
 	render() {
@@ -71,7 +79,7 @@ export default class ProjectPage extends React.Component {
 					/>
 					<ProjectDetails project={project} />
 				</div>
-				{this.renderProjectContent()}
+				{this.projectContent()}
 				<ProjectControls activePathname={activePathname} />
 				<ResumeLink />
 			</main>

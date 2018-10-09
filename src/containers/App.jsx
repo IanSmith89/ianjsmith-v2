@@ -3,7 +3,6 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import { observer } from 'mobx-react';
 import LazyRoute from 'lazy-route';
 import cx from 'classnames';
-import Footer from './Footer';
 
 @observer
 export default class App extends Component {
