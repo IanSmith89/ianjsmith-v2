@@ -57,25 +57,25 @@ export default class Dash extends React.Component {
 					items={[
 						{
 							description:
-								'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
+								'The staff and agents at Paragon regularly filter their data to determine trends, analyze performance, and quickly retrieve datasets. I was able to implement modern interface controls that aided in that process and helped users accurately filter information and easily see what were the applied filter constraints.',
 							images: [
 								{
-									alt: 'project detail 1',
+									alt: 'paragon dash filtering',
 									src: 'dash-desktop.jpg'
 								}
 							],
-							title: 'Project Feature 1'
+							title: 'simple data filtering'
 						},
 						{
 							description:
-								'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
+								'I implemented a drag and drop interface that determined the order of featured blog posts on the public website. We fine tuned the functionality with the blog managers and ensured that all of their needs were handled and presented properly.',
 							images: [
 								{
-									alt: 'project detail 2',
+									alt: 'paragon dash blog drag and drop',
 									src: 'dash-trends.jpg'
 								}
 							],
-							title: 'Project Feature 2'
+							title: 'drag & drop blog features'
 						}
 					]}
 				/>

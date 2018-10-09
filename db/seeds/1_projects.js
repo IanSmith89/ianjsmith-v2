@@ -50,7 +50,7 @@ exports.seed = function(knex) {
 						how: [
 							'Lab technicians and office admins need the ability to record donor information and track the raw materials that are used to create a number of various products. Overall we chose to implement a user interface inspired by the ideas and themes of Google Material Design to remain consistent and clean to the end user while providing a familiar framework for our developers.',
 							"Raw materials such as blood and plasma are converted into products that are stored in vials, which in turn are stored in a number of racks in a freezer. After conducting user interviews and watching them work, the interface we came up with was designed in a way that resembled the actual arrangement and appearance of the setup in their lab to help ease the staff's experience with learning the new system.",
-							'The intranet seemlessly connects with an external WordPress eCommerce website for order information and fulfillment, so the personnel responsible for completing the orders need instant access to which freezer, row, and vial a specific item is located. The user interface allows them to easily move and remove vials in the system, find a location for a set of vials, as well as updating details and notes.'
+							'The intranet seamlessly connects with an external WordPress e-commerce website for order information and fulfillment, so the personnel responsible for completing the orders need instant access to which freezer, row, and vial a specific item is located. The user interface allows them to easily move and remove vials in the system, find a location for a set of vials, as well as updating details and notes.'
 						],
 						services: [
 							'Interaction Design',
@@ -73,7 +73,7 @@ exports.seed = function(knex) {
 						why: [
 							'Prior to this project, Astarte had been using a number of different spreadsheets and other documents to keep track of their data with no consistency or definition of how to store their information. They also relied on a handwritten system to track their inventory that resulted in frequent confusion, easy mistakes, and lost time updating for correct information.',
 							"The lab technicians and admins at Astarte deal with potentially thousands of individual vial-based products on a daily basis and needed a system that easily and accurately tracked the location of the vials or vial sets stored in multiple racks within various freezers in their lab. They also required an interface that gave them a familiar and simple method for updating and maintaining the vial information that could handle real-time updates and wouldn't be too challenging to learn.",
-							'Another important issue was maintaining the hundreds of records of donor and product information and how to properly update the data over time. Since the products Astarte creates from donor blood or plasma are often used for research purposes and testing, the contents and donor details of the product had to be correct and trustworthy for the other labs who made purchases through the ecommerce store.'
+							'Another important issue was maintaining the hundreds of records of donor and product information and how to properly update the data over time. Since the products Astarte creates from donor blood or plasma are often used for research purposes and testing, the contents and donor details of the product had to be correct and trustworthy for the other labs who made purchases through the e-commerce store.'
 						],
 						with: 'High Seas Consulting, Inc.'
 					},
@@ -113,13 +113,21 @@ exports.seed = function(knex) {
 						client: 'Paragon Real Estate',
 						description:
 							'Paragon Dash is the internal dashboard that Paragon Real Estate uses to maintain their properties, agents, listings, and blog as well as a custom print marketing material editor. It also has many types of users with varying levels of authentication and completely different experience and interactions depending on the role. Along with the rest of the High Seas team I built the front end of the site and contributed UX analyses of task workflows and visual design for various UI elements and the blog and newsletter management section.',
-						how: [''],
+						how: [
+							'Real Estate Agents and Office Staff at Paragon use Dash to update all listings and property information as well as user settings, blog articles, and resource records. The data on Dash is what shows up on the public website at paragon-re.com.',
+							'Aside from data management, Dash is also used to create print materials that can be customized for individual agents and offices. Agents can choose from pre-approved designs offered by Paragon with final output files available by email or directly sent to a printer.',
+							'Photographers use Dash to upload images for the thousands of Paragon properties, user headshots, and neighborhood photos.'
+						],
 						services: [
 							'Front End Development',
 							'Interaction Design',
 							'Visual Design'
 						],
-						takeaways: [''],
+						takeaways: [
+							'This project was an amazing process and was a worthwhile lesson in the need for constant communication between design and development teams throughout the life of the project. Working as a front end developer and designer for certain sections and pages was also good experience for me.',
+							'I also enjoyed building an internal tool that helped people save time during their own work day. It was a welcome challenge to work with so many different user roles and try to optimize the experience for all of them.',
+							'The integration between this dashboard system and the public facing website was overall an educational project to be a part of, and I look forward to building more enterprise applications like this in the future.'
+						],
 						tech_stack: ['.NET', 'Express', 'React', 'Postgres'],
 						users: [
 							'Real Estate Agents',
@@ -129,7 +137,7 @@ exports.seed = function(knex) {
 						],
 						website_url: 'https://www.paragon-re.com',
 						why: [
-							'Maintaining all the information involved with a real estate compnay can be a daunting task, and Paragon Real Estate invested in the construction of a fully customized system that fit the needs of their entire company. They wanted a dashboard system that would attract new agents and more of a reason to stay with the company for current agents.',
+							'Maintaining all the information involved with a real estate company can be a daunting task, and Paragon Real Estate invested in the construction of a fully customized system that fit the needs of their entire company. They wanted a dashboard system that would attract new agents and more of a reason to stay with the company for current agents.',
 							'The daily tasks of real estate agents and office staff often cause them to use a number of different applications to complete their work. The team at Paragon wanted to centralize as much as they could into one place while linking the data in Paragon Dash with the public facing website.',
 							"Most real estate agents are in charge of creating their own marketing materials and aren't always provided with tools or guidance on how to do it. Paragon wanted a central online hub where their agents could create approved material that was formatted and branded by Paragon's designers."
 						],
@@ -170,7 +178,7 @@ exports.seed = function(knex) {
 						id: 'salvage',
 						name: 'Salvage Native App',
 						description:
-							'Salvage is a food donation and compost app that provides users a resource for locations to drop off donations and a locator for businesses who accept small donations. This project uses Electron to package the underlying Angular app as a native desktop application available for download on OSX, Linux, and Windows. I undertook all aspects of this project including user research, experience and visual design, fullstack development, and user testing.',
+							'Salvage is a food donation and compost app that provides users a resource for locations to drop off donations and a locator for businesses who accept small donations. This project uses Electron to package the underlying Angular app as a native desktop application available for download on OSX, Linux, and Windows. I undertook all aspects of this project including user research, experience and visual design, full stack development, and user testing.',
 						how: [
 							'Compost centers and food shelters can sign up to be collectors of food and compost material and are displayed on a map, letting donors know where and when they can drop off their donations.',
 							'Restaurants and businesses that create food waste can sign up as donors to become donors of compost material. After joining, they have access to food shelters and compost centers who have signed up with information about location, times, and what they accept.',
@@ -208,7 +216,7 @@ exports.seed = function(knex) {
 						id: 'cheba-hut',
 						client: 'Cheba Hut',
 						description:
-							"Cheba Hut is a toasted sandwich restaurant with locations across the Western and Midwestern United States. They target specifically counterculture types and regularly offer events and promotions throughout the year. As a designer at PHOCO, I worked with Cheba Hut to create posters and ads that showcased the company's mission and provided notice of upcoming events. My contributions inlcuded hand drawn illustration and typography, graphic design, and visual branding.",
+							"Cheba Hut is a toasted sandwich restaurant with locations across the Western and Midwestern United States. They target specifically counterculture types and regularly offer events and promotions throughout the year. As a designer at PHOCO, I worked with Cheba Hut to create posters and ads that showcased the company's mission and provided notice of upcoming events. My contributions included hand drawn illustration and typography, graphic design, and visual branding.",
 						services: ['Graphic Design', 'Illustration'],
 						website_url: 'https://www.chebahut.com',
 						with: 'PHOCO'
