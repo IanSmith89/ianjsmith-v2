@@ -2,16 +2,8 @@
 	background-color: $dark;
 	color: $light;
 	height: 4.5rem;
+	transition: $color-change;
 	width: 100%;
-
-	&.light {
-		background-color: $light;
-		color: $dark-grey;
-
-		.copyright {
-			border-top: 0.1rem solid $light-grey;
-		}
-	}
 
 	.copyright {
 		align-content: center;

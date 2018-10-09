@@ -23,17 +23,6 @@ class ProjectPage extends React.Component {
 		this.actions.getProjectById(this.projectId);
 	}
 
-	componentWillUpdate(nextProps) {
-		if (this.projectId !== nextProps.match.paramsprojectId) {
-			this.projectId = nextProps.match.paramsprojectId;
-			window.scrollTo(0, 0);
-		}
-	}
-
-	componentWillUnmount() {
-		this.actions.clearProject();
-	}
-
 	render() {
 		const { project } = this.workStore;
 

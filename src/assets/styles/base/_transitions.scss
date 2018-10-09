@@ -1,0 +1,34 @@
+$color-change: all 750ms ease-in-out;
+
+.fade-enter {
+	opacity: 0.01;
+	transform: translateY(2.5rem);
+}
+
+.fade-enter.fade-enter-active {
+	opacity: 1;
+	transform: translateY(0);
+	transition: all 400ms ease-out;
+}
+
+.fade-exit {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.fade-exit.fade-exit-active {
+	opacity: 0.01;
+	transform: translateY(-2.5rem);
+	transition: all 300ms ease-out;
+}
+
+.fade-appear {
+	opacity: 0.01;
+	transform: translateY(2.5rem);
+}
+
+.fade-appear.fade-appear-active {
+	opacity: 1;
+	transform: translateY(0);
+	transition: all 400ms ease-out;
+}

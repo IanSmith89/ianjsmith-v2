@@ -49,17 +49,12 @@ class WorkStore {
 	];
 
 	@action
-	clearProject() {
-		this.project = {};
-	}
-
-	@action
-	getProjectByIdSuccess(project) {
+	setProject(project) {
 		this.project = project;
 	}
 
 	@action
-	getProjectsSuccess(projects) {
+	setProjects(projects) {
 		this.projects = projects;
 	}
 }

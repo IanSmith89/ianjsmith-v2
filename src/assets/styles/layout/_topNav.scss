@@ -5,32 +5,9 @@
 	padding-top: 1.6rem;
 	position: fixed;
 	top: 0;
+	transition: $color-change;
 	width: 100%;
 	z-index: 100;
-
-	&.light {
-		background-color: $light-low;
-		box-shadow: $drop-shadow;
-
-		.logo {
-			a {
-				color: $dark-grey;
-
-				&:hover {
-					color: $orange;
-				}
-			}
-		}
-
-		.page-links {
-			a {
-				&:hover,
-				&.active {
-					color: $dark-grey;
-				}
-			}
-		}
-	}
 
 	.twelve.columns {
 		display: flex;
