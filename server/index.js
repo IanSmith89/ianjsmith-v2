@@ -16,6 +16,8 @@ const defaultServerPort = 3000;
 const devServerPort = 8000;
 const webpackServerPort = defaultServerPort;
 let expressServerPort = process.env.PORT || defaultServerPort;
+app.set('port', expressServerPort);
+console.log(expressServerPort);
 
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
@@ -114,7 +116,7 @@ app.use((err, _req, res, _next) => {
 	res.sendStatus(500);
 });
 
-app.listen(process.env.PORT || expressServerPort, () => {
+app.listen(app.get('port'), () => {
 	if (process.env.NODE_ENV === 'development') {
 		// eslint-disable-next-line no-console
 		console.log(`API proxy running on localhost:${expressServerPort}`);
