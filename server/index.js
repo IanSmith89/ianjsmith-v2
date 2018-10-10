@@ -1,6 +1,6 @@
 'use strict';
 
-require('babel-core/polyfill');
+require('babel-polyfill');
 
 if (process.env.NODE_ENV !== 'production') {
 	require('dotenv').config({ silent: true });
