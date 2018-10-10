@@ -6,7 +6,7 @@
 	"repository": "https://github.com/IanSmith89/ianjsmith-v2",
 	"success_url": "/",
 	"scripts": {
-		"postdeploy": "npm start"
+		"postdeploy": "yarn start"
 	},
 	"addons": [
 		{
