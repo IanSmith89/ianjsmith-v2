@@ -114,7 +114,7 @@ app.use((err, _req, res, _next) => {
 	res.sendStatus(500);
 });
 
-app.listen(expressServerPort, () => {
+app.listen(process.env.PORT || expressServerPort, () => {
 	if (process.env.NODE_ENV === 'development') {
 		// eslint-disable-next-line no-console
 		console.log(`API proxy running on localhost:${expressServerPort}`);
