@@ -1,4 +1,5 @@
 import React from 'react';
+import ApproachVertical from '../components/ApproachVertical';
 import ResumeLink from '../components/ResumeLink';
 
 export default class AboutPage extends React.Component {
@@ -6,7 +7,7 @@ export default class AboutPage extends React.Component {
 		return (
 			<main className="about page">
 				<div className="container">
-					<section className="row">
+					<div className="row">
 						<div className="six columns">
 							<h1 className="about-intro">
 								Hey there,
@@ -19,8 +20,13 @@ export default class AboutPage extends React.Component {
 								Consulting, Inc.
 							</h1>
 						</div>
-					</section>
-					<section className="row">
+					</div>
+					<div className="row">
+						<div className="six columns">
+							<ApproachVertical />
+						</div>
+					</div>
+					<div className="row">
 						<div className="six columns">
 							<div className="list">
 								<h2 className="section-header">Services</h2>
@@ -52,8 +58,8 @@ export default class AboutPage extends React.Component {
 								<p>Mocha - Chai</p>
 							</div>
 						</div>
-					</section>
-					<section className="row">
+					</div>
+					<div className="row">
 						<div className="six columns">
 							<div className="contact">
 								<div className="headshot-container">
@@ -95,7 +101,7 @@ export default class AboutPage extends React.Component {
 								</div>
 							</div>
 						</div>
-					</section>
+					</div>
 					<ResumeLink />
 				</div>
 			</main>
