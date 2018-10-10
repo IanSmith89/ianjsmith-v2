@@ -16,8 +16,6 @@ const defaultServerPort = 3000;
 const devServerPort = 8000;
 const webpackServerPort = defaultServerPort;
 let expressServerPort = process.env.PORT || defaultServerPort;
-app.set('port', expressServerPort);
-console.log(expressServerPort);
 
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
@@ -65,6 +63,9 @@ if (process.env.NODE_ENV === 'development') {
 		}
 	});
 }
+
+app.set('port', expressServerPort);
+console.log(expressServerPort);
 
 // CSRF protection
 app.use('/api', (req, res, next) => {
