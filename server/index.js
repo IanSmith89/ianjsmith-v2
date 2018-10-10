@@ -4,6 +4,8 @@ if (process.env.NODE_ENV !== 'production') {
 	require('dotenv').config({ silent: true });
 }
 
+console.log(process.env);
+
 const path = require('path');
 const fs = require('fs');
 
