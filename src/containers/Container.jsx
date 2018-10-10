@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch, withRouter } from 'react-router-dom';
+import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
 import { observer } from 'mobx-react';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import cx from 'classnames';
@@ -48,7 +48,8 @@ class Container extends React.Component {
 								path="/projects/:projectId"
 								component={ProjectPage}
 							/>
-							<Route path="/*" component={NotFound} />
+							<Route path="/not-found" component={NotFound} />
+							<Redirect from="/*" to="/not-found" />
 						</Switch>
 					</CSSTransition>
 				</TransitionGroup>
