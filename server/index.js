@@ -4,8 +4,13 @@ if (process.env.NODE_ENV !== 'production') {
 	require('dotenv').config({ silent: true });
 }
 
-const express = require('express');
 const path = require('path');
+const fs = require('fs');
+
+const React = require('react');
+const ReactDOMServer = require('react-dom/server');
+const App = require('../src/App.jsx');
+const express = require('express');
 
 const defaultServerPort = 3000;
 const devServerPort = 8000;
@@ -46,7 +51,7 @@ if (process.env.NODE_ENV === 'development') {
 	const config = require('../webpack.config');
 
 	new WebpackDevServer(webpack(config), {
-		publicPath: config.output.publicPath,
+		publicPath: config[1].output.publicPath,
 		hot: true,
 		historyApiFallback: true,
 		proxy: {
@@ -75,7 +80,19 @@ app.use('/api', routes);
 app.use(express.static(path.resolve(__dirname, '..', 'dist')));
 
 app.get('/*', (_req, res) => {
-	res.sendFile(path.resolve(__dirname, '..', 'dist', 'index.html'));
+	const app = ReactDOMServer.renderToString(<App />);
+	const indexFile = path.resolve(__dirname, '..', 'dist', 'index.html');
+
+	fs.readFile(indexFile, 'utf8', (err, data) => {
+		if (err) {
+			console.error('Something went wrong:', err);
+			return res.status(500).send('Oops, better luck next time!');
+		}
+
+		return res.send(
+			data.replace('<div id="root"></div>', `<div id="root">${app}</div>`)
+		);
+	});
 });
 
 app.use((_req, res) => {
@@ -100,19 +117,8 @@ app.use((err, _req, res, _next) => {
 app.listen(expressServerPort, () => {
 	if (process.env.NODE_ENV === 'development') {
 		// eslint-disable-next-line no-console
-		console.log(
-			'"TAKE THESE API ROUTES OVER TO PORT',
-			expressServerPort,
-			'WILL YA? I WANT \'EM CLEANED UP BEFORE DINNER."'
-		);
-		console.log(
-			'***********************************************************'
-		);
-		console.log(
-			'BUT I WAS GOING INTO PORT',
-			webpackServerPort,
-			'TO PICK UP SOME POWER CONVERTERS!'
-		);
+		console.log(`API proxy running on localhost:${expressServerPort}`);
+		console.log(`app running on localhost:${webpackServerPort}`);
 	}
 });
 
