@@ -1,35 +1,26 @@
 'use strict';
 
+require('babel-polyfill');
+
 if (process.env.NODE_ENV !== 'production') {
 	require('dotenv').config({ silent: true });
 }
 
 const path = require('path');
 const fs = require('fs');
-
 const React = require('react');
 const ReactDOMServer = require('react-dom/server');
 const App = require('../src/App.jsx');
 const express = require('express');
-
-const defaultServerPort = 3000;
-const devServerPort = 8000;
-const webpackServerPort = defaultServerPort;
-let expressServerPort = process.env.PORT || defaultServerPort;
-console.log('process.env.PORT ===', process.env.PORT);
-console.log('expressServerPort ===', expressServerPort);
-
+const routes = require('./routes');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
+const compression = require('compression');
 
 const app = express();
 
-const compression = require('compression');
 app.use(compression());
-
-const routes = require('./routes');
-
 app.disable('x-powered-by');
 
 switch (app.get('env')) {
@@ -44,10 +35,14 @@ switch (app.get('env')) {
 	default:
 }
 
+const PROXY = 8000;
+let PORT = process.env.PORT || 3000;
+
 if (process.env.NODE_ENV === 'development') {
-	console.log('NODE_ENV is development *********** Using Webpack Middleware');
 	console.log('***********************************************************');
-	expressServerPort = devServerPort;
+	console.log('NODE_ENV is development --> Using Webpack Middleware');
+	console.log('***********************************************************');
+
 	const webpack = require('webpack');
 	const WebpackDevServer = require('webpack-dev-server');
 	const config = require('../webpack.config');
@@ -57,12 +52,10 @@ if (process.env.NODE_ENV === 'development') {
 		hot: true,
 		historyApiFallback: true,
 		proxy: {
-			'/api': `http://localhost:${expressServerPort}`
+			'/api': `http://localhost:${PROXY}`
 		}
-	}).listen(webpackServerPort, 'localhost', function(err, result) {
-		if (err) {
-			return console.log(err);
-		}
+	}).listen(PORT, 'localhost', function(err, result) {
+		if (err) return console.log(err);
 	});
 }
 
@@ -116,15 +109,14 @@ app.use((err, _req, res, _next) => {
 	res.sendStatus(500);
 });
 
-app.listen(expressServerPort, () => {
+app.listen(PORT, () => {
 	if (process.env.NODE_ENV === 'development') {
 		// eslint-disable-next-line no-console
-		console.log(`API proxy listening on localhost:${expressServerPort}`);
-		console.log(`listening on localhost:${webpackServerPort}`);
+		console.log(`listening on localhost:${PORT}`);
 	}
 
 	if (process.env.NODE_ENV === 'production') {
-		console.log('listening on PORT', expressServerPort);
+		console.log('listening on PORT', PORT);
 	}
 });
 

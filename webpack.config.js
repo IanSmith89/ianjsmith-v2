@@ -7,15 +7,8 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var nodeExternals = require('webpack-node-externals');
 
 var isProduction = process.env.NODE_ENV === 'production';
-var productionPluginDefine = isProduction
-	? [
-			// new webpack.DefinePlugin({
-			// 	'process.env': { NODE_ENV: JSON.stringify('production') }
-			// })
-	  ]
-	: [];
 var clientLoaders = isProduction
-	? productionPluginDefine.concat([
+	? [
 			new webpack.optimize.OccurrenceOrderPlugin(true),
 			new webpack.optimize.CommonsChunkPlugin({
 				name: 'vendor',
@@ -27,7 +20,7 @@ var clientLoaders = isProduction
 				},
 				sourceMap: false
 			})
-	  ])
+	  ]
 	: [
 			new webpack.NamedModulesPlugin(),
 			new webpack.HotModuleReplacementPlugin(),
@@ -89,7 +82,6 @@ module.exports = [
 			__dirname: false
 		},
 		externals: nodeExternals(),
-		plugins: productionPluginDefine,
 		module: {
 			loaders: commonLoaders
 		},
