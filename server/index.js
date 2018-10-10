@@ -15,7 +15,7 @@ const express = require('express');
 const defaultServerPort = 3000;
 const devServerPort = 8000;
 const webpackServerPort = defaultServerPort;
-let expressServerPort = process.env.PORT || defaultServerPort;
+let expressServerPort = process.env.$PORT || defaultServerPort;
 
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
@@ -63,9 +63,6 @@ if (process.env.NODE_ENV === 'development') {
 		}
 	});
 }
-
-app.set('port', expressServerPort);
-console.log(expressServerPort);
 
 // CSRF protection
 app.use('/api', (req, res, next) => {
@@ -117,7 +114,7 @@ app.use((err, _req, res, _next) => {
 	res.sendStatus(500);
 });
 
-app.listen(app.get('port'), () => {
+app.listen(expressServerPort, () => {
 	if (process.env.NODE_ENV === 'development') {
 		// eslint-disable-next-line no-console
 		console.log(`API proxy running on localhost:${expressServerPort}`);
