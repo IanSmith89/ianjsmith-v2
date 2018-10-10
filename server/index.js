@@ -119,8 +119,12 @@ app.use((err, _req, res, _next) => {
 app.listen(expressServerPort, () => {
 	if (process.env.NODE_ENV === 'development') {
 		// eslint-disable-next-line no-console
-		console.log(`API proxy running on localhost:${expressServerPort}`);
-		console.log(`app running on localhost:${webpackServerPort}`);
+		console.log(`API proxy listening on localhost:${expressServerPort}`);
+		console.log(`listening on localhost:${webpackServerPort}`);
+	}
+
+	if (process.env.NODE_ENV === 'production') {
+		console.log('listening on PORT', expressServerPort);
 	}
 });
 

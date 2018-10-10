@@ -9,9 +9,9 @@ var nodeExternals = require('webpack-node-externals');
 var isProduction = process.env.NODE_ENV === 'production';
 var productionPluginDefine = isProduction
 	? [
-			new webpack.DefinePlugin({
-				'process.env': { NODE_ENV: JSON.stringify('production') }
-			})
+			// new webpack.DefinePlugin({
+			// 	'process.env': { NODE_ENV: JSON.stringify('production') }
+			// })
 	  ]
 	: [];
 var clientLoaders = isProduction
