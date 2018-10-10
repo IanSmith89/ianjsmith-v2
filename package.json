@@ -10,7 +10,7 @@
 		"start:dev": "env NODE_ENV=development nodemon dist/server.js",
 		"deploy:prod": "git push heroku master",
 		"deploy:staging": "git push heroku-staging staging:master",
-		"heroku-postbuild": "npm rebuild node-sass && npm run build",
+		"heroku-postbuild": "npm rebuild node-sass && npm run build && npm run start",
 		"knex": "knex",
 		"migrate:latest:test": "env NODE_ENV=test knex migrate:latest",
 		"migrate:latest": "knex migrate:latest",
