@@ -15,7 +15,7 @@ const express = require('express');
 const defaultServerPort = 3000;
 const devServerPort = 8000;
 const webpackServerPort = defaultServerPort;
-let expressServerPort = process.env.$PORT || defaultServerPort;
+let expressServerPort = process.env.PORT || defaultServerPort;
 
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');

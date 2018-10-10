@@ -107,8 +107,5 @@
 	"repository": {
 		"url": "https://github.com/IanSmith89/ianjsmith-v2.git",
 		"type": "git"
-	},
-	"engines": {
-		"node": "8.4.0"
 	}
 }
