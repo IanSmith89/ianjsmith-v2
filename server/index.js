@@ -1,16 +1,11 @@
 'use strict';
 
-require('babel-polyfill');
-
 if (process.env.NODE_ENV !== 'production') {
 	require('dotenv').config({ silent: true });
 }
 
 const path = require('path');
 const fs = require('fs');
-const React = require('react');
-const ReactDOMServer = require('react-dom/server');
-const App = require('../src/App.jsx');
 const express = require('express');
 const routes = require('./routes');
 const bodyParser = require('body-parser');
@@ -48,12 +43,12 @@ if (process.env.NODE_ENV === 'development') {
 	const config = require('../webpack.config');
 
 	new WebpackDevServer(webpack(config), {
-		publicPath: config[1].output.publicPath,
-		hot: true,
 		historyApiFallback: true,
+		hot: true,
 		proxy: {
 			'/api': `http://localhost:${PROXY}`
-		}
+		},
+		publicPath: config.output.publicPath
 	}).listen(PORT, 'localhost', function(err, result) {
 		if (err) return console.log(err);
 	});
@@ -75,19 +70,7 @@ app.use('/api', routes);
 app.use(express.static(path.resolve(__dirname, '..', 'dist')));
 
 app.get('/*', (_req, res) => {
-	const app = ReactDOMServer.renderToString(<App />);
-	const indexFile = path.resolve(__dirname, '..', 'dist', 'index.html');
-
-	fs.readFile(indexFile, 'utf8', (err, data) => {
-		if (err) {
-			console.error('Something went wrong:', err);
-			return res.status(500).send('Oops, better luck next time!');
-		}
-
-		return res.send(
-			data.replace('<div id="root"></div>', `<div id="root">${app}</div>`)
-		);
-	});
+	res.sendFile(path.resolve(__dirname, '..', 'dist', 'index.html'));
 });
 
 app.use((_req, res) => {
