@@ -15,12 +15,21 @@ class ProjectPage extends React.Component {
 		super(props);
 
 		this.actions = props.actions;
-		this.projectId = props.match.params.projectId;
 		this.workStore = props.workStore;
 	}
 
 	componentDidMount() {
-		this.actions.getProjectById(this.projectId, this.workStore);
+		const { projectId } = this.props.match.params;
+		this.actions.getProjectById(projectId, this.workStore);
+	}
+
+	componentDidUpdate(prevProps) {
+		const { projectId } = this.props.match.params;
+
+		if (projectId !== prevProps.match.params.projectId) {
+			this.actions.clearProject(this.workStore);
+			this.actions.getProjectById(projectId, this.workStore);
+		}
 	}
 
 	render() {

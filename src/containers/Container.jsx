@@ -1,7 +1,13 @@
 import React from 'react';
-import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
+import {
+	matchPath,
+	Redirect,
+	Route,
+	Switch,
+	withRouter
+} from 'react-router-dom';
 import { observer } from 'mobx-react';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import { TransitionGroup, Transition } from 'react-transition-group';
 import cx from 'classnames';
 import Nav from './Nav';
 import WorkPage from './WorkPage';
@@ -9,39 +15,31 @@ import AboutPage from './AboutPage';
 import ProjectPage from './ProjectPage';
 import NotFound from './NotFound';
 import Footer from './Footer';
+import { fadeInUp, fadeOutUp } from '../utils/animations';
 
 @observer
 class Container extends React.Component {
-	constructor(props) {
-		super(props);
-
-		this.pathname = props.location.pathname;
-	}
-
-	componentWillUpdate(nextProps) {
-		if (this.pathname !== nextProps.location.pathname) {
-			this.pathname = nextProps.location.pathname;
-		}
-	}
-
 	render() {
+		const { location } = this.props;
+
 		return (
 			<div
 				className={cx('wrapper', {
-					light: this.pathname !== '/'
+					light: location.pathname !== '/'
 				})}
 			>
 				<Nav />
-				<TransitionGroup>
-					<CSSTransition
-						appear
-						classNames="fade"
-						key={this.props.location.key}
-						mountOnEnter
-						timeout={{ enter: 300, exit: 400 }}
-						unmountOnExit
+				<TransitionGroup appear>
+					<Transition
+						key={'child-' + location.key}
+						timeout={{
+							enter: 500,
+							exit: 300
+						}}
+						onEnter={fadeInUp}
+						onExit={fadeOutUp}
 					>
-						<Switch location={this.props.location}>
+						<Switch location={location}>
 							<Route exact path="/" component={WorkPage} />
 							<Route path="/about" component={AboutPage} />
 							<Route
@@ -51,7 +49,7 @@ class Container extends React.Component {
 							<Route path="/not-found" component={NotFound} />
 							<Redirect from="/*" to="/not-found" />
 						</Switch>
-					</CSSTransition>
+					</Transition>
 				</TransitionGroup>
 				<Footer />
 			</div>
