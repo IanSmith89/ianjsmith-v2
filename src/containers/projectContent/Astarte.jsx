@@ -1,5 +1,6 @@
 import React from 'react';
 import { observer } from 'mobx-react';
+import DigitalProjectHeader from '../../components/DigitalProjectHeader';
 import FullImage from '../../components/FullImage';
 import TextListCard from '../../components/TextListCard';
 import StripedImageList from '../../components/StripedImageList';
@@ -14,9 +15,10 @@ export default class Astarte extends React.Component {
 
 		return (
 			<div>
+				<DigitalProjectHeader project={project} />
 				<FullImage
-					imageAlt="early sketches"
-					imageSrc="astarte-sketches.jpg"
+					alt="early sketches"
+					src="astarte-sketches.jpg"
 					title="early sketches"
 				/>
 				<TextListCard

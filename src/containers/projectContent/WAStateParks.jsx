@@ -1,11 +1,10 @@
 import React from 'react';
 import { observer } from 'mobx-react';
+import DigitalProjectHeader from '../../components/DigitalProjectHeader';
 import FullImage from '../../components/FullImage';
 import TextListCard from '../../components/TextListCard';
-import StripedImageList from '../../components/StripedImageList';
 import TextListDark from '../../components/TextListDark';
 import TextListLight from '../../components/TextListLight';
-import ImageList from '../../components/ImageList';
 
 @observer
 export default class WAStateParks extends React.Component {
@@ -14,23 +13,24 @@ export default class WAStateParks extends React.Component {
 
 		return (
 			<div>
+				<DigitalProjectHeader project={project} />
 				<TextListCard
 					listItems={project.users || []}
 					title={['Who are the ', <span key="span">users</span>, '?']}
 				/>
 				<FullImage
-					imageAlt="early sketches"
-					imageSrc="wasp-sketches.jpg"
+					alt="early sketches"
+					src="wasp-sketches.jpg"
 					title="early sketches"
 				/>
 				<FullImage
-					imageAlt="wireframes"
-					imageSrc="wasp-wires.jpg"
+					alt="wireframes"
+					src="wasp-wires.jpg"
 					title="wireframes"
 				/>
 				<FullImage
-					imageAlt="early sketches"
-					imageSrc="wasp-mocks.jpg"
+					alt="early sketches"
+					src="wasp-mocks.jpg"
 					title="mockups"
 				/>
 				<TextListDark

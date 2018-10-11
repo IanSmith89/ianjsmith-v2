@@ -1,18 +1,20 @@
 import React from 'react';
 
-const FullImage = ({ imageAlt, imageSrc, title }) => {
+const FullImage = ({ alt, src, title }) => {
 	return (
 		<div className="row">
-			<div className="twelve columns">
-				<h3>{title}</h3>
-				<div className="underline" />
-			</div>
+			{title ? (
+				<div className="twelve columns">
+					<h3>{title}</h3>
+					<div className="underline" />
+				</div>
+			) : null}
 			<div className="twelve columns sketches">
-				{imageSrc ? (
+				{src ? (
 					<img
 						className="full-width-image"
-						src={require(`../assets/images/${imageSrc}`)}
-						alt={imageAlt}
+						src={require(`../assets/images/${src}`)}
+						alt={alt}
 					/>
 				) : (
 					<div className="no-image" />

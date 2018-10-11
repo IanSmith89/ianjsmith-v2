@@ -4,7 +4,7 @@ import { Route, Switch, withRouter } from 'react-router-dom';
 import Astarte from './projectContent/Astarte';
 import ChebaHut from './projectContent/ChebaHut';
 import Dash from './projectContent/Dash';
-import DowntownArtery from './projectContent/DowntownArtery';
+import GigPosters from './projectContent/GigPosters';
 import DreamStream from './projectContent/DreamStream';
 import Paragon from './projectContent/Paragon';
 import Salvage from './projectContent/Salvage';
@@ -32,7 +32,7 @@ export default class ProjectContent extends React.Component {
 				/>
 				<Route
 					path="/projects/posters"
-					component={() => <DowntownArtery project={project} />}
+					component={() => <GigPosters project={project} />}
 				/>
 				<Route
 					path="/projects/dreamstream"

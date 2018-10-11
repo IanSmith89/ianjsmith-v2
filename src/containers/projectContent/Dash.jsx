@@ -1,6 +1,6 @@
 import React from 'react';
 import { observer } from 'mobx-react';
-import FullImage from '../../components/FullImage';
+import DigitalProjectHeader from '../../components/DigitalProjectHeader';
 import TextListCard from '../../components/TextListCard';
 import StripedImageList from '../../components/StripedImageList';
 import TextListDark from '../../components/TextListDark';
@@ -14,11 +14,7 @@ export default class Dash extends React.Component {
 
 		return (
 			<div>
-				{/* <FullImage
-					imageAlt="early sketches"
-					imageSrc="astarte-sketches.jpg"
-					title="early sketches"
-				/> */}
+				<DigitalProjectHeader project={project} />
 				<TextListCard
 					listItems={project.users || []}
 					title={['Who are the ', <span key="span">users</span>, '?']}
