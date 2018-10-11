@@ -7,35 +7,68 @@
 
 	.about-intro {
 		color: $dark-grey;
-		font-size: 4.75rem;
-		font-weight: 700;
-		letter-spacing: 0.02rem;
-		line-height: 5.4rem;
-		padding: 5rem 0;
+		font-size: type-scale(4);
+		font-weight: 600;
+		line-height: 5.2rem;
+		margin: 5rem 0 10rem;
 	}
 
-	.section-header {
-		font-size: 2.4rem;
-		font-weight: 700;
-		letter-spacing: 0.05rem;
-		margin-bottom: 2.2rem;
+	.approach-section {
+		margin: 2.5rem auto 5rem;
+
+		.approach {
+			padding-top: 2.5rem;
+
+			&.vertical {
+				display: block;
+			}
+
+			&.horizontal {
+				display: none;
+			}
+		}
 	}
 
 	.list {
 		padding: 5rem 0 0;
+		text-align: center;
 
 		p {
 			font-size: type-scale(0);
-			margin-bottom: 2.4rem;
+			margin: 1.5rem 0;
 		}
 	}
 
 	.contact {
 		padding: 5rem 0;
 
+		.contact-tagline {
+			font-size: type-scale(0);
+			margin: 0 auto 2.5rem;
+			max-width: 42rem;
+			text-align: center;
+			width: 100%;
+		}
+
+		.social-links {
+			text-align: center;
+
+			a {
+				color: $grey;
+				font-size: type-scale(0);
+				font-weight: 400;
+				margin: 0 0.75rem;
+
+				&:hover,
+				&:active {
+					color: $orange;
+				}
+			}
+		}
+
 		.headshot-container {
 			height: auto;
-			margin-bottom: 3rem;
+			margin: 3.5rem auto 2.5rem;
 			width: 100%;
 
 			.headshot {
@@ -43,38 +76,18 @@
 				max-width: 100%;
 			}
 		}
+	}
 
-		.contact-tagline {
-			font-size: 2.2rem;
-			margin-bottom: 3.6rem;
-		}
+	@include for-tablet-portrait-up() {
+		.approach-section {
+			.approach {
+				&.vertical {
+					display: none;
+				}
 
-		.mailto-link {
-			margin-bottom: 3.6rem;
-			text-align: center;
-
-			a {
-				background-color: $light-grey;
-				color: $dark-grey;
-				font-size: 2.2rem;
-				font-weight: 300;
-				padding: 0.5rem 1rem;
-				text-decoration: none;
-			}
-		}
-
-		.social-links {
-			a {
-				color: $dark-grey;
-				font-size: 1.8rem;
-				font-weight: 300;
-				margin-right: 1.2rem;
-			}
-		}
-
-		@include for-tablet-portrait-up() {
-			.headshot-container {
-				width: 60%;
+				&.horizontal {
+					display: block;
+				}
 			}
 		}
 	}

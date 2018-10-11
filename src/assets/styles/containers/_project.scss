@@ -4,6 +4,7 @@
 	h3 {
 		font-size: type-scale(0);
 		font-weight: 600;
+		letter-spacing: 0.01rem;
 		margin-bottom: 0.5rem;
 		text-align: center;
 		text-transform: uppercase;
@@ -108,16 +109,6 @@
 		margin-bottom: 7.5rem;
 		padding: 5rem 0;
 		text-align: center;
-
-		.section-header {
-			font-size: type-scale(2);
-			margin-bottom: 0.5rem;
-			text-transform: uppercase;
-
-			span {
-				font-weight: 600;
-			}
-		}
 
 		&.dark {
 			background-color: $grey;
@@ -382,6 +373,18 @@
 	}
 }
 
+.section-header {
+	font-size: type-scale(2);
+	letter-spacing: 0.025rem;
+	margin-bottom: 0.5rem;
+	text-align: center;
+	text-transform: uppercase;
+
+	span {
+		font-weight: 600;
+	}
+}
+
 .resume-container {
 	color: $dark-grey;
 	text-align: center;
@@ -395,11 +398,12 @@
 
 	h6 {
 		font-size: type-scale(0);
-		font-weight: 400;
+		font-weight: 300;
 		margin-bottom: 5rem;
 
 		a {
 			color: grey;
+			font-weight: 400;
 
 			&:hover {
 				color: $orange;
