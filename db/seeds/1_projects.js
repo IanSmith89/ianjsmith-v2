@@ -212,6 +212,16 @@ exports.seed = function(knex) {
 						with: 'Galvanize'
 					},
 					{
+						name: 'Gig Posters',
+						id: 'posters',
+						client: 'Various',
+						description:
+							"Aside from design and development, I'm incredibly passionate about live music and promoting the arts. I love making concert posters and was lucky enough to work at a music venue in Fort Collins, CO where I produced a number of posters from a wide range of music genres. I like to draw inspiration from the psychadelic movement of the 60's and try to put a modern spin on it using any imagery or themes I can pull from listening to the music or reading about the artists.",
+						services: ['Graphic Design', 'Illustration'],
+						website_url: 'https://www.GigPosters.com',
+						with: 'Freelance'
+					},
+					{
 						name: 'Cheba Hut Events',
 						id: 'cheba-hut',
 						client: 'Cheba Hut',
@@ -220,16 +230,6 @@ exports.seed = function(knex) {
 						services: ['Graphic Design', 'Illustration'],
 						website_url: 'https://www.chebahut.com',
 						with: 'PHOCO'
-					},
-					{
-						name: 'Gig Posters',
-						id: 'posters',
-						client: 'Downtown Artery',
-						description:
-							"Aside from design and development, I'm incredibly passionate about live music and promoting the arts. I love making concert posters and was lucky enough to work at a music venue in Fort Collins, CO where I produced a number of posters from a wide range of music genres. I like to draw inspiration from the psychadelic movement of the 60's and try to put a modern spin on it using any imagery or themes I can pull from listening to the music or reading about the artists.",
-						services: ['Graphic Design', 'Illustration'],
-						website_url: 'https://www.GigPosters.com',
-						with: 'Freelance'
 					},
 					{
 						id: 'topshelf',
