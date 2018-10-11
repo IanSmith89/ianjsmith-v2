@@ -10,20 +10,11 @@ class Nav extends Component {
 		super(props);
 
 		this.actions = props.actions;
-		this.pathname = props.location.pathname;
-	}
-
-	componentWillUpdate(nextProps) {
-		if (nextProps.history.action !== 'POP') {
-			window.scrollTo(0, 0);
-		}
-
-		if (this.pathname !== nextProps.location.pathname) {
-			this.pathname = nextProps.location.pathname;
-		}
 	}
 
 	render() {
+		const { location } = this.props;
+
 		return (
 			<nav className="top-nav">
 				<div className="container">
@@ -35,7 +26,7 @@ class Nav extends Component {
 									onClick={e =>
 										this.actions.handleLinkClick(
 											e,
-											this.pathname === '/'
+											location.pathname === '/'
 										)
 									}
 								>
@@ -46,8 +37,8 @@ class Nav extends Component {
 								<Link
 									className={cx({
 										active:
-											this.pathname === '/' ||
-											this.pathname.indexOf(
+											location.pathname === '/' ||
+											location.pathname.indexOf(
 												'/projects'
 											) !== -1
 									})}
@@ -55,7 +46,7 @@ class Nav extends Component {
 									onClick={e =>
 										this.actions.handleLinkClick(
 											e,
-											this.pathname === '/'
+											location.pathname === '/'
 										)
 									}
 								>
@@ -64,13 +55,13 @@ class Nav extends Component {
 								</Link>
 								<Link
 									className={cx({
-										active: this.pathname === '/about'
+										active: location.pathname === '/about'
 									})}
 									to="/about"
 									onClick={e =>
 										this.actions.handleLinkClick(
 											e,
-											this.pathname === '/about'
+											location.pathname === '/about'
 										)
 									}
 								>

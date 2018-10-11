@@ -9,21 +9,10 @@ import ArrowIcon from '../components/ArrowIcon';
 @inject('actions', 'workStore')
 @observer
 class ProjectControls extends React.Component {
-	constructor(props) {
-		super(props);
-
-		this.actions = props.actions;
-		this.pathname = props.location.pathname;
-		this.projectLinks = props.workStore.projectLinks;
-	}
-
-	componentWillUpdate(nextProps) {
-		if (this.pathname !== nextProps.location.pathname) {
-			this.pathname = nextProps.location.pathname;
-		}
-	}
-
 	render() {
+		const { actions, location, workStore } = this.props;
+		const { projectLinks } = workStore;
+
 		return (
 			<div className="row">
 				<div className="twelve columns project-controls">
@@ -35,8 +24,8 @@ class ProjectControls extends React.Component {
 					</div>
 					<div className="project-links-container">
 						<ul className="no-style">
-							{this.projectLinks.map(link => {
-								const active = this.pathname === link.to;
+							{projectLinks.map(link => {
+								const active = location.pathname === link.to;
 
 								return (
 									<li key={link.name}>
@@ -46,7 +35,7 @@ class ProjectControls extends React.Component {
 											})}
 											to={link.to}
 											onClick={e =>
-												this.actions.handleLinkClick(
+												actions.handleLinkClick(
 													e,
 													active
 												)

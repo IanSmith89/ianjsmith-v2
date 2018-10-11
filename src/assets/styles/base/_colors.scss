@@ -25,3 +25,6 @@ $orange-to-yellow: linear-gradient(to right, $orange, $yellow);
 $drop-shadow: 0 0.3rem 0.9rem 0 rgba(36, 33, 34, 0.06),
 	0 0.3rem 0.2rem -0.2rem rgba(36, 33, 34, 0.08),
 	0 0.2rem 0.6rem 0 rgba(36, 33, 34, 0.12);
+
+// color change transition
+$color-change: background-color 500ms linear, color 500ms linear;
