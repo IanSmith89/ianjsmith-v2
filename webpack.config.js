@@ -37,13 +37,21 @@ module.exports = {
 				vendor: ['react', 'react-dom', 'react-router'],
 				app: ['babel-polyfill', './src/index.js']
 		  }
-		: ['react-hot-loader/patch', 'babel-polyfill', './src/index.js'],
+		: [
+				'react-hot-loader/patch',
+				'babel-polyfill',
+				'whatwg-fetch',
+				'webpack-dev-server/client?http://localhost:3000',
+				'webpack/hot/only-dev-server',
+				'./src/index'
+		  ],
 	output: {
-		chunkFilename: 'static/js/[name].[chunkhash].js',
+		chunkFilename: isProduction ? 'static/js/[name].[chunkhash].js' : '',
 		filename: 'static/js/[name].[hash].js',
-		path: path.join(__dirname, 'dist'),
+		path: path.resolve(__dirname, 'dist'),
 		publicPath: '/'
 	},
+	devtool: isProduction ? 'cheap-module-source-map' : 'eval',
 	module: {
 		loaders: [
 			{

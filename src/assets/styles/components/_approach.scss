@@ -1,0 +1,146 @@
+.approach {
+	&.vertical {
+		.cls-1 {
+			fill: url(#linear-gradient);
+		}
+		.cls-2,
+		.cls-7 {
+			fill: $light;
+		}
+		.cls-3 {
+			fill: url(#linear-gradient-2);
+		}
+		.cls-4 {
+			fill: url(#linear-gradient-3);
+		}
+		.cls-5 {
+			fill: url(#linear-gradient-4);
+		}
+		.cls-6 {
+			fill: url(#linear-gradient-5);
+		}
+	}
+
+	&.horizontal {
+		.cls-1 {
+			fill: url(#linear-gradient-horizontal);
+		}
+		.cls-2,
+		.cls-7 {
+			fill: $light;
+		}
+		.cls-3 {
+			fill: url(#linear-gradient-horizontal-2);
+		}
+		.cls-4 {
+			fill: url(#linear-gradient-horizontal-3);
+		}
+		.cls-5 {
+			fill: url(#linear-gradient-horizontal-4);
+		}
+		.cls-6 {
+			fill: url(#linear-gradient-horizontal-5);
+		}
+	}
+
+	.cls-16,
+	.cls-21,
+	.cls-25,
+	.cls-7 {
+		font-size: type-scale(0);
+		font-weight: 600;
+	}
+	.cls-17,
+	.cls-7 {
+		letter-spacing: 0.0238em;
+	}
+	.cls-8 {
+		letter-spacing: 0.02228em;
+	}
+	.cls-9 {
+		letter-spacing: -0.02029em;
+	}
+	.cls-10 {
+		letter-spacing: -0.04199em;
+	}
+	.cls-11 {
+		letter-spacing: 0.02002em;
+	}
+	.cls-12 {
+		letter-spacing: 0.02148em;
+	}
+	.cls-13 {
+		letter-spacing: 0.01648em;
+	}
+	.cls-14 {
+		letter-spacing: 0.0228em;
+	}
+	.cls-15 {
+		letter-spacing: 0.02502em;
+	}
+	.cls-16,
+	.cls-21,
+	.cls-25,
+	.cls-35 {
+		fill: $orange;
+	}
+	.cls-16 {
+		letter-spacing: 0.02209em;
+	}
+	.cls-18 {
+		letter-spacing: 0.01749em;
+	}
+	.cls-19 {
+		letter-spacing: 0.02179em;
+	}
+	.cls-20 {
+		letter-spacing: 0.02499em;
+	}
+	.cls-21 {
+		letter-spacing: 0.01999em;
+	}
+	.cls-22 {
+		letter-spacing: 0.02213em;
+	}
+	.cls-23 {
+		letter-spacing: 0.0517em;
+	}
+	.cls-24 {
+		letter-spacing: -0.04202em;
+	}
+	.cls-25 {
+		letter-spacing: 0.01349em;
+	}
+	.cls-26 {
+		letter-spacing: 0.01492em;
+	}
+	.cls-27 {
+		letter-spacing: 0.01038em;
+	}
+	.cls-28 {
+		letter-spacing: 0.05823em;
+	}
+	.cls-29 {
+		letter-spacing: 0.02863em;
+	}
+	.cls-30 {
+		letter-spacing: 0.0386em;
+	}
+	.cls-31 {
+		letter-spacing: 0.04208em;
+	}
+	.cls-32 {
+		letter-spacing: 0.02496em;
+	}
+	.cls-33,
+	.cls-34,
+	.cls-36,
+	.cls-37,
+	.cls-38,
+	.cls-39 {
+		fill: none;
+		stroke: $orange;
+		stroke-dasharray: 9 9;
+		stroke-miterlimit: 10;
+	}
+}

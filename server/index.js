@@ -30,14 +30,16 @@ switch (app.get('env')) {
 	default:
 }
 
-const PROXY = 8000;
-const PORT = process.env.PORT || 3000;
+const webpackServerPort = 3000;
+const devServerPort = 8000;
+let expressServerPort = process.env.PORT || webpackServerPort;
 
 if (process.env.NODE_ENV === 'development') {
 	console.log('***********************************************************');
 	console.log('NODE_ENV is development --> Using Webpack Middleware');
 	console.log('***********************************************************');
 
+	expressServerPort = devServerPort;
 	const webpack = require('webpack');
 	const WebpackDevServer = require('webpack-dev-server');
 	const config = require('../webpack.config');
@@ -46,11 +48,13 @@ if (process.env.NODE_ENV === 'development') {
 		historyApiFallback: true,
 		hot: true,
 		proxy: {
-			'/api': `http://localhost:${PROXY}`
+			'/api': `http://localhost:${expressServerPort}`
 		},
 		publicPath: config.output.publicPath
-	}).listen(PORT, 'localhost', function(err, result) {
-		if (err) return console.log(err);
+	}).listen(webpackServerPort, 'localhost', function(err, result) {
+		if (err) {
+			return console.log(err);
+		}
 	});
 }
 
@@ -67,10 +71,10 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 app.use('/api', routes);
-app.use(express.static(path.resolve(__dirname, '..', 'dist')));
+app.use(express.static(path.resolve(__dirname, '../dist')));
 
 app.get('/*', (_req, res) => {
-	res.sendFile(path.resolve(__dirname, '..', 'dist', 'index.html'));
+	res.sendFile(path.resolve(__dirname, '../dist/index.html'));
 });
 
 app.use((_req, res) => {
@@ -92,14 +96,14 @@ app.use((err, _req, res, _next) => {
 	res.sendStatus(500);
 });
 
-app.listen(PORT, () => {
+app.listen(expressServerPort, () => {
 	if (process.env.NODE_ENV === 'development') {
 		// eslint-disable-next-line no-console
-		console.log(`listening on localhost:${PORT}`);
+		console.log(`listening on localhost:${webpackServerPort}`);
 	}
 
 	if (process.env.NODE_ENV === 'production') {
-		console.log('listening on PORT', PORT);
+		console.log('listening on PORT', expressServerPort);
 	}
 });
 
