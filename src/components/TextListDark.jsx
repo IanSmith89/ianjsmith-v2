@@ -7,7 +7,7 @@ const TextListDark = ({ listItems, noStyle, title }) => {
 			<div className="container">
 				<div className="row">
 					<div className="twelve columns">
-						<h3 className="section-header">{title}</h3>
+						<h5 className="section-header">{title}</h5>
 						<div className="underline" />
 						<ul
 							className={cx({

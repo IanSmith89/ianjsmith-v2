@@ -16,6 +16,13 @@
 	.approach-section {
 		margin: 2.5rem auto 5rem;
 
+		.approach-description {
+			margin: 0 auto 1.5rem;
+			max-width: 40rem;
+			text-align: center;
+			width: 100%;
+		}
+
 		.approach {
 			padding-top: 2.5rem;
 
@@ -55,6 +62,7 @@
 
 			a {
 				color: $grey;
+				display: inline-block;
 				font-size: type-scale(0);
 				font-weight: 400;
 				margin: 0 0.75rem;

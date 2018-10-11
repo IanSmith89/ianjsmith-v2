@@ -226,9 +226,8 @@ exports.seed = function(knex) {
 						id: 'posters',
 						client: 'Downtown Artery',
 						description:
-							'The Downtown Artery is a cafe, bar, and music venue in Old Town Fort Collins, CO. Focused on giving artists, musicians, and other creatives a central hub for enjoyment, the Artery regularly hosts music concerts and other performances. As a freelancer, I created a number of event and concert posters with a combination of traditional and digital media.',
+							"Aside from design and development, I'm incredibly passionate about live music and promoting the arts. I love making concert posters and was lucky enough to work at a music venue in Fort Collins, CO where I produced a number of posters from a wide range of music genres. I like to draw inspiration from the psychadelic movement of the 60's and try to put a modern spin on it using any imagery or themes I can pull from listening to the music or reading about the artists.",
 						services: ['Graphic Design', 'Illustration'],
-						users: [],
 						website_url: 'https://www.downtownartery.com',
 						with: 'Freelance'
 					},
