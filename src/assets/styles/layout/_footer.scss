@@ -2,20 +2,31 @@
 	background-color: $dark;
 	color: $light;
 	height: 4.5rem;
+	position: absolute;
+	bottom: 0;
 	transition: $color-change;
 	width: 100%;
 
 	.copyright {
-		align-content: center;
 		align-items: center;
 		display: flex;
-		flex-direction: column;
 		height: 4.5rem;
-		justify-content: center;
 
 		small {
 			color: $grey;
 			font-size: type-scale(-2);
+		}
+
+		a {
+			color: $grey;
+			font-size: type-scale(-2);
+			margin-left: auto;
+			text-decoration: none;
+			text-transform: uppercase;
+
+			&:hover {
+				color: $light-grey;
+			}
 		}
 	}
 }

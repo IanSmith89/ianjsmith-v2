@@ -48,8 +48,8 @@ class Container extends React.Component {
 								path="/projects/:projectId"
 								component={ProjectPage}
 							/>
-							<Route path="/*" component={NotFound} />
-							{/* <Redirect from="/*" to="/not-found" /> */}
+							<Route path="/not-found" component={NotFound} />
+							<Redirect from="/*" to="/not-found" />
 						</Switch>
 					</CSSTransition>
 				</TransitionGroup>

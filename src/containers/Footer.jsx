@@ -13,9 +13,12 @@ export default class Footer extends Component {
 	render() {
 		return (
 			<footer className="footer">
-				<div className="row">
-					<div className="twelve columns copyright">
-						<small>&copy; Ian Smith, {this.year}</small>
+				<div className="container">
+					<div className="row">
+						<div className="twelve columns copyright">
+							<small>&copy; Ian Smith, {this.year}</small>
+							<a href="mailto:iansmith1026@gmail.com">contact</a>
+						</div>
 					</div>
 				</div>
 			</footer>

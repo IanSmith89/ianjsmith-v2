@@ -1,0 +1,20 @@
+.notfound {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+
+	h2 {
+		font-size: type-scale(5);
+		font-weight: 600;
+	}
+
+	img {
+		margin: 2.5rem 0;
+		width: auto;
+	}
+
+	p {
+		font-size: type-scale(0);
+		margin-bottom: 0;
+	}
+}
