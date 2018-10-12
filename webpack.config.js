@@ -62,7 +62,8 @@ module.exports = {
 					presets: [['env', { modules: false }], 'stage-0', 'react'],
 					plugins: [
 						'transform-async-to-generator',
-						'transform-decorators-legacy'
+						'transform-decorators-legacy',
+						'autobind-class-methods'
 					]
 				}
 			},
