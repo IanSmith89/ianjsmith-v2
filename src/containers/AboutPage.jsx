@@ -93,7 +93,7 @@ export default class AboutPage extends React.Component {
 						<div className="four columns">
 							<div className="contact">
 								<h2 className="section-header">
-									my <span>links</span>
+									contact <span>me</span>
 								</h2>
 								<div className="underline" />
 								<p className="contact-tagline">
