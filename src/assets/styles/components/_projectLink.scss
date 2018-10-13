@@ -10,72 +10,6 @@
 	width: 100%;
 }
 
-@keyframes in-top {
-	from {
-		transform: translate(0, -100%);
-	}
-	to {
-		transform: translate(0, 0);
-	}
-}
-@keyframes in-right {
-	from {
-		transform: translate(100%, 0);
-	}
-	to {
-		transform: translate(0, 0);
-	}
-}
-@keyframes in-bottom {
-	from {
-		transform: translate(0, 100%);
-	}
-	to {
-		transform: translate(0, 0);
-	}
-}
-@keyframes in-left {
-	from {
-		transform: translate(-100%, 0);
-	}
-	to {
-		transform: translate(0, 0);
-	}
-}
-
-@keyframes out-top {
-	from {
-		transform: translate(0, 0);
-	}
-	to {
-		transform: translate(0, -100%);
-	}
-}
-@keyframes out-right {
-	from {
-		transform: translate(0, 0);
-	}
-	to {
-		transform: translate(100%, 0);
-	}
-}
-@keyframes out-bottom {
-	from {
-		transform: translate(0, 0);
-	}
-	to {
-		transform: translate(0, 100%);
-	}
-}
-@keyframes out-left {
-	from {
-		transform: translate(0, 0);
-	}
-	to {
-		transform: translate(-100%, 0);
-	}
-}
-
 .project-link-container {
 	height: auto;
 	margin-bottom: 1.3rem;
@@ -91,19 +25,22 @@
 			overflow: hidden;
 
 			.hover-overlay {
-				$duration: 400ms;
-				$timing-fn: ease;
+				animation-duration: 300ms;
+				animation-timing-function: ease-in-out;
+				animation-delay: 0;
+				animation-iteration-count: 1;
+				animation-direction: forwards;
 				background-image: $yellow-to-orange-low;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
-				// opacity: 0;
+				opacity: 0;
 				padding: 2.5rem;
 				position: absolute;
 				top: 0;
 				left: 0;
-				transform: translate(0, 100%);
+				transform: translate(0, 0);
 				width: 100%;
 				height: 100%;
 
@@ -119,48 +56,45 @@
 
 				&.in-top {
 					transform-origin: 50% 0%;
-					animation: in-top $duration $timing-fn 0ms 1 forwards;
+					animation-name: in-top;
 				}
 				&.in-right {
 					transform-origin: 100% 0%;
-					animation: in-right $duration $timing-fn 0ms 1 forwards;
+					animation-name: in-right;
 				}
 				&.in-bottom {
 					transform-origin: 50% 100%;
-					animation: in-bottom $duration $timing-fn 0ms 1 forwards;
+					animation-name: in-bottom;
 				}
 				&.in-left {
 					transform-origin: 0% 0%;
-					animation: in-left $duration $timing-fn 0ms 1 forwards;
+					animation-name: in-left;
 				}
 
 				&.out-top {
 					transform-origin: 50% 0%;
-					animation: out-top $duration $timing-fn 0ms 1 forwards;
+					animation-name: out-top;
 				}
 				&.out-right {
 					transform-origin: 100% 50%;
-					animation: out-right $duration $timing-fn 0ms 1 forwards;
+					animation-name: out-right;
 				}
 				&.out-bottom {
 					transform-origin: 50% 100%;
-					animation: out-bottom $duration $timing-fn 0ms 1 forwards;
+					animation-name: out-bottom;
 				}
 				&.out-left {
 					transform-origin: 0% 0%;
-					animation: out-left $duration $timing-fn 0ms 1 forwards;
+					animation-name: out-left;
 				}
 			}
 
-			// &:hover,
-			// &:active {
-			// transition-timing-function: ease-in;
-			// 	transition-duration: 0.2s;
-			//
-			// 	.hover-overlay {
-			// 		opacity: 1;
-			// 	}
-			// }
+			&:hover,
+			&:active {
+				.hover-overlay {
+					opacity: 1;
+				}
+			}
 		}
 	}
 

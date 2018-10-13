@@ -9,7 +9,7 @@ export default class ProjectLink extends React.Component {
 	@observable
 	hoverClassName = '';
 	directions = { 0: 'top', 1: 'right', 2: 'bottom', 3: 'left' };
-	hoverclassNames = ['in', 'out']
+	hoverClassNames = ['in', 'out']
 		.map(p => Object.values(this.directions).map(d => `${p}-${d}`))
 		.reduce((a, b) => a.concat(b));
 
@@ -17,14 +17,14 @@ export default class ProjectLink extends React.Component {
 		const { width, height, top, left } = this.node.getBoundingClientRect();
 		const l = e.pageX - (left + window.pageXOffset);
 		const t = e.pageY - (top + window.pageYOffset);
-		const x = l - (width / 2) * (width > height ? height / width : 1);
-		const y = t - (height / 2) * (height > width ? width / height : 1);
+		const x = (l - width / 2) * (width > height ? height / width : 1);
+		const y = (t - height / 2) * (height > width ? width / height : 1);
 
 		return Math.round(Math.atan2(y, x) / (Math.PI / 2) + 5) % 4;
 	}
 
 	hoverClassLogic() {
-		return this.hoverclassNames.reduce((acc, className) => {
+		return this.hoverClassNames.reduce((acc, className) => {
 			acc[className] = this.hoverClassName === className;
 			return acc;
 		}, {});
