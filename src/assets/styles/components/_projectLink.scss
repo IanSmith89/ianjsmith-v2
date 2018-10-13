@@ -22,23 +22,27 @@
 		.project-image-container {
 			margin-bottom: 1.2rem;
 			position: relative;
+			overflow: hidden;
 
 			.hover-overlay {
+				animation-duration: 300ms;
+				animation-timing-function: ease-in-out;
+				animation-delay: 0;
+				animation-iteration-count: 1;
+				animation-direction: forwards;
 				background-image: $yellow-to-orange-low;
-				box-shadow: $drop-shadow;
 				display: flex;
+				flex-direction: column;
 				align-items: center;
-				align-content: center;
-				flex-wrap: wrap;
-				height: 100%;
 				justify-content: center;
 				opacity: 0;
-				padding: 1.5rem;
+				padding: 2.5rem;
 				position: absolute;
 				top: 0;
 				left: 0;
-				transition: 0.3s all ease-out;
+				transform: translate(0, 0);
 				width: 100%;
+				height: 100%;
 
 				.hover-project-name {
 					background-color: $light;
@@ -49,13 +53,44 @@
 					padding: 0.5rem 1rem;
 					text-align: center;
 				}
+
+				&.in-top {
+					transform-origin: 50% 0%;
+					animation-name: in-top;
+				}
+				&.in-right {
+					transform-origin: 100% 0%;
+					animation-name: in-right;
+				}
+				&.in-bottom {
+					transform-origin: 50% 100%;
+					animation-name: in-bottom;
+				}
+				&.in-left {
+					transform-origin: 0% 0%;
+					animation-name: in-left;
+				}
+
+				&.out-top {
+					transform-origin: 50% 0%;
+					animation-name: out-top;
+				}
+				&.out-right {
+					transform-origin: 100% 50%;
+					animation-name: out-right;
+				}
+				&.out-bottom {
+					transform-origin: 50% 100%;
+					animation-name: out-bottom;
+				}
+				&.out-left {
+					transform-origin: 0% 0%;
+					animation-name: out-left;
+				}
 			}
 
 			&:hover,
 			&:active {
-				transition-timing-function: ease-in;
-				transition-duration: 0.2s;
-
 				.hover-overlay {
 					opacity: 1;
 				}
