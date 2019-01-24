@@ -16,6 +16,12 @@ export default class WorkPage extends React.Component {
 		return (
 			<main className="home page">
 				<div className="container">
+					<div className="headline-container">
+						<h1 className="headline">
+							I enjoy using design to find deeper meaning in what
+							it is to be human.
+						</h1>
+					</div>
 					<div className="flex-container">
 						{projects.map(project => (
 							<ProjectLink key={project.id} project={project} />

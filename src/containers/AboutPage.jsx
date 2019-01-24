@@ -11,13 +11,11 @@ export default class AboutPage extends React.Component {
 					<div className="row">
 						<div className="six columns">
 							<h1 className="about-intro">
-								Hey there,
+								Hey there.
 								<br />
-								I’m Ian Smith, a creative developer and
-								interactive designer based out of Seattle. I
-								currently build human-centered experiences as a
-								UX Designer and Front End Developer for High
-								Seas Consulting, Inc.
+								I’m Ian Smith, a designer for humans. Currently
+								based out of Seattle, I create human-centered
+								experiences as a UX Designer at Collinear Group.
 							</h1>
 						</div>
 					</div>
@@ -29,25 +27,21 @@ export default class AboutPage extends React.Component {
 								</h2>
 								<div className="underline" />
 								<p className="approach-description">
-									I enjoy taking an agile approach to
-									human-centered design thinking and applying
-									it to any problem I face, whether it be
-									wireframing, development, interaction
-									design, or working with someone else's
-									designs to build a working application. I am
-									not afraid to take a step back in my
-									creative process because I know you rarely
-									get everything right the first time. It's
-									simply human nature.
+									I enjoy applying design thinking to any
+									problem I face. Whether it be information
+									architecture, wireframing, interactions, or
+									visual design. I am not afraid to take a
+									step back in my creative process because I
+									know you rarely get everything right the
+									first time. It's simply human nature.
 								</p>
 								<p className="approach-description">
-									Overall, I believe it is essential to take
-									an iterative approach to creative problem
-									solving. Product design and development
-									benefit from viewing mistakes as positive
-									learning opportunities and moving on to the
-									next idea or a new way of looking at the
-									problem so that it gets solved effectively.
+									It's essential to take an iterative approach
+									to product design. I have learned to view
+									mistakes as positive learning opportunities.
+									I thrive by moving on to the next idea when
+									the time is right so problems turn into
+									solutions.
 								</p>
 								<ApproachVertical />
 								<ApproachHorizontal />
