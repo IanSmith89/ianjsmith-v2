@@ -99,19 +99,17 @@
 	}
 
 	@include for-tablet-portrait-up() {
-		margin-bottom: 1.8rem;
-		width: 47.5%;
+		margin-bottom: 0;
+		width: 49%;
 
 		.project-image-container {
 			height: 30rem;
 		}
 	}
 
-	@include for-tablet-landscape-up() {
-		width: 31.5%;
-	}
-
 	@include for-desktop-up() {
+		margin-bottom: 1%;
+
 		.project-image-container {
 			height: auto;
 		}

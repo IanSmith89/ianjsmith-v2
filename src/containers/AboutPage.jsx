@@ -9,16 +9,24 @@ export default class AboutPage extends React.Component {
 			<main className="about page">
 				<div className="container">
 					<div className="row">
-						<div className="six columns">
+						<div className="eight columns">
 							<h1 className="about-intro">
-								Hey there,
+								Hi there.
 								<br />
-								I’m Ian Smith, a creative developer and
-								interactive designer based out of Seattle. I
-								currently build human-centered experiences as a
-								UX Designer and Front End Developer for High
-								Seas Consulting, Inc.
+								I’m Ian J. Smith, a designer for humans.
+								Currently based out of Seattle, I craft
+								experiences as a UX Designer at Collinear Group.
 							</h1>
+						</div>
+						<div className="four columns">
+							<div className="headshot-container">
+								<img
+									src={require('../assets/images/headshot.jpg')}
+									alt="Ian J. Smith | Creative Developer and Interactive Designer | Seattle, WA"
+									className="headshot"
+								/>
+								<small className="subtext">(MY FACE)</small>
+							</div>
 						</div>
 					</div>
 					<div className="row">
@@ -29,25 +37,22 @@ export default class AboutPage extends React.Component {
 								</h2>
 								<div className="underline" />
 								<p className="approach-description">
-									I enjoy taking an agile approach to
-									human-centered design thinking and applying
-									it to any problem I face, whether it be
-									wireframing, development, interaction
-									design, or working with someone else's
-									designs to build a working application. I am
-									not afraid to take a step back in my
-									creative process because I know you rarely
-									get everything right the first time. It's
-									simply human nature.
+									I like to apply design thinking to any
+									problem I face. Whether it be information
+									architecture, interaction design,
+									prototyping, or cleaning the litter box. I'm
+									not afraid to take a step back in my process
+									because I know you rarely get everything
+									right the first time. It's simply human
+									nature.
 								</p>
 								<p className="approach-description">
-									Overall, I believe it is essential to take
-									an iterative approach to creative problem
-									solving. Product design and development
-									benefit from viewing mistakes as positive
-									learning opportunities and moving on to the
-									next idea or a new way of looking at the
-									problem so that it gets solved effectively.
+									It is essential to take an iterative
+									approach to product design. I've learned to
+									view mistakes as positive learning
+									opportunities. I thrive at moving on to the
+									next idea when the time is right so problems
+									turn into solutions.
 								</p>
 								<ApproachVertical />
 								<ApproachHorizontal />
@@ -58,23 +63,21 @@ export default class AboutPage extends React.Component {
 						<div className="four columns">
 							<div className="list">
 								<h2 className="section-header">
-									my <span>skills</span>
+									my <span>specialties</span>
 								</h2>
 								<div className="underline" />
 								<p>UX / UI Design</p>
 								<p>Information Architecture</p>
-								<p>Visual / Graphic Design</p>
 								<p>Interaction Design</p>
+								<p>Prototyping</p>
+								<p>Visual / Graphic Design</p>
 								<p>Front End Development</p>
-								<p>Branding</p>
-								<p>Illustration</p>
-								<p>Search Engine Optimization</p>
 							</div>
 						</div>
 						<div className="four columns">
 							<div className="list">
 								<h2 className="section-header">
-									my <span>tools</span>
+									my <span>toolbelt</span>
 								</h2>
 								<div className="underline" />
 								<p>XD - Illustrator - Photoshop</p>
@@ -82,12 +85,11 @@ export default class AboutPage extends React.Component {
 								<p>Axure - Balsamiq</p>
 								<p>HTML - CSS - SCSS</p>
 								<p>JavaScript - Node</p>
-								<p>React - Angular</p>
+								<p>React</p>
 								<p>Mobx - Redux</p>
-								<p>Git - CLI - Agile</p>
+								<p>Git - Command Line</p>
 								<p>Express - Postgres</p>
-								<p>Heroku - Firebase</p>
-								<p>Mocha - Chai</p>
+								<p>Heroku</p>
 							</div>
 						</div>
 						<div className="four columns">
@@ -123,13 +125,6 @@ export default class AboutPage extends React.Component {
 									>
 										Facebook
 									</a>
-								</div>
-								<div className="headshot-container">
-									<img
-										src={require('../assets/images/headshot.jpg')}
-										alt="Ian J. Smith | Creative Developer and Interactive Designer | Seattle, WA"
-										className="headshot"
-									/>
 								</div>
 							</div>
 						</div>

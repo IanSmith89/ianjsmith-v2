@@ -7,10 +7,27 @@
 
 	.about-intro {
 		color: $dark-grey;
-		font-size: type-scale(4);
-		font-weight: 600;
-		line-height: 5.2rem;
+		font-size: type-scale(3);
+		line-height: 4.4rem;
+		margin: 5rem 0;
+	}
+
+	.headshot-container {
+		height: auto;
 		margin: 5rem 0 10rem;
+		text-align: center;
+		width: 100%;
+
+		.headshot {
+			height: auto;
+			max-width: 100%;
+		}
+
+		.subtext {
+			font-style: italic;
+			margin: 1.5rem 0 0;
+			width: inherit;
+		}
 	}
 
 	.approach-section {
@@ -24,7 +41,7 @@
 		}
 
 		.approach {
-			padding-top: 2.5rem;
+			padding-top: 5rem;
 
 			&.vertical {
 				display: block;
@@ -73,20 +90,15 @@
 				}
 			}
 		}
-
-		.headshot-container {
-			height: auto;
-			margin: 3.5rem auto 2.5rem;
-			width: 100%;
-
-			.headshot {
-				height: auto;
-				max-width: 100%;
-			}
-		}
 	}
 
 	@include for-tablet-portrait-up() {
+		.about-intro {
+			font-size: type-scale(4);
+			line-height: 5.2rem;
+			margin-bottom: 10rem;
+		}
+
 		.approach-section {
 			.approach {
 				&.vertical {
