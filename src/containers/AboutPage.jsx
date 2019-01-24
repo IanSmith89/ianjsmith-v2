@@ -50,7 +50,7 @@ export default class AboutPage extends React.Component {
 									It is essential to take an iterative
 									approach to product design. I've learned to
 									view mistakes as positive learning
-									opportunities. I thrive by moving on to the
+									opportunities. I thrive at moving on to the
 									next idea when the time is right so problems
 									turn into solutions.
 								</p>

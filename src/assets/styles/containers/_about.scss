@@ -8,7 +8,6 @@
 	.about-intro {
 		color: $dark-grey;
 		font-size: type-scale(3);
-		// font-weight: 600;
 		line-height: 4.4rem;
 		margin: 5rem 0;
 	}
@@ -97,6 +96,7 @@
 		.about-intro {
 			font-size: type-scale(4);
 			line-height: 5.2rem;
+			margin-bottom: 10rem;
 		}
 
 		.approach-section {
