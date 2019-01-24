@@ -18,8 +18,10 @@ export default class WorkPage extends React.Component {
 				<div className="container">
 					<div className="headline-container">
 						<h1 className="headline">
-							I enjoy using design to find deeper meaning in what
-							it is to be human.
+							I'm a technical designer passionate about
+							understanding how others think and feel. I enjoy
+							using design to find deeper meaning in what it is to
+							be human.
 						</h1>
 					</div>
 					<div className="flex-container">

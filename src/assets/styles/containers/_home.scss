@@ -1,2 +1,9 @@
 .home {
+	.headline-container {
+		margin-bottom: 10rem;
+
+		.headline {
+			font-size: type-scale(3);
+		}
+	}
 }
