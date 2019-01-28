@@ -16,7 +16,9 @@ export default class Footer extends Component {
 				<div className="container">
 					<div className="row">
 						<div className="twelve columns copyright">
-							<small>&copy; Ian Smith, {this.year}</small>
+							<small>
+								Copyright &copy; {this.year} Ian Smith
+							</small>
 							<a href="mailto:iansmith1026@gmail.com">contact</a>
 						</div>
 					</div>

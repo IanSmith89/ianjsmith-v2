@@ -31,7 +31,7 @@ class Container extends React.Component {
 	}
 
 	handleScroll() {
-		this.setState({ top: window.pageYOffset });
+		if (this.refs.container) this.setState({ top: window.pageYOffset });
 	}
 
 	render() {
@@ -42,6 +42,7 @@ class Container extends React.Component {
 				className={cx('wrapper', {
 					light: location.pathname !== '/'
 				})}
+				ref="container"
 			>
 				<Nav />
 				<TransitionGroup appear>

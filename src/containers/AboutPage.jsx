@@ -25,7 +25,7 @@ export default class AboutPage extends React.Component {
 									alt="Ian J. Smith | Creative Developer and Interactive Designer | Seattle, WA"
 									className="headshot"
 								/>
-								<small className="subtext">(MY FACE)</small>
+								<small className="subtext">MY FACE</small>
 							</div>
 						</div>
 					</div>
@@ -67,11 +67,18 @@ export default class AboutPage extends React.Component {
 								</h2>
 								<div className="underline" />
 								<p>UX / UI Design</p>
-								<p>Information Architecture</p>
-								<p>Interaction Design</p>
-								<p>Prototyping</p>
+								<p>
+									Information Architecture<span>*</span>
+								</p>
+								<p>
+									Interaction Design<span>*</span>
+								</p>
+								<p>
+									Prototyping<span>*</span>
+								</p>
 								<p>Visual / Graphic Design</p>
 								<p>Front End Development</p>
+								<p>User Research</p>
 							</div>
 						</div>
 						<div className="four columns">
@@ -80,14 +87,24 @@ export default class AboutPage extends React.Component {
 									my <span>toolbelt</span>
 								</h2>
 								<div className="underline" />
-								<p>XD - Illustrator - Photoshop</p>
+								<p>
+									XD - Illustrator - Photoshop<span>*</span>
+								</p>
 								<p>Sketch - Invision</p>
 								<p>Axure - Balsamiq</p>
-								<p>HTML - CSS - SCSS</p>
-								<p>JavaScript - Node</p>
-								<p>React</p>
+								<p>
+									HTML - CSS - SCSS<span>*</span>
+								</p>
+								<p>
+									JavaScript - Node<span>*</span>
+								</p>
+								<p>
+									React<span>*</span>
+								</p>
 								<p>Mobx - Redux</p>
-								<p>Git - Command Line</p>
+								<p>
+									Git - Command Line<span>*</span>
+								</p>
 								<p>Express - Postgres</p>
 								<p>Heroku</p>
 							</div>
@@ -128,6 +145,11 @@ export default class AboutPage extends React.Component {
 								</div>
 							</div>
 						</div>
+					</div>
+					<div className="twelve columns subtext-container">
+						<small className="subtext">
+							<span>*</span>my current favorites
+						</small>
 					</div>
 					<ResumeLink />
 				</div>
