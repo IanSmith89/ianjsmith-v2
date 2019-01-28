@@ -36,7 +36,7 @@ class ProjectPage extends React.Component {
 		const { project } = this.workStore;
 
 		return (
-			<main id="project-top" className="project page">
+			<main id="project-top" className="case-study page">
 				<ProjectContent project={project} />
 				<ProjectControls />
 				<ResumeLink />

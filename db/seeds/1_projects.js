@@ -7,6 +7,7 @@ exports.seed = function(knex) {
 					{
 						id: 'mightyvet',
 						name: 'MightyVet Nonprofit Website',
+						description: '',
 						design_process: [
 							'We began with a heuristic review and surveys to understand how current users felt about the site. The heuristic review highlighted areas of improvement and positive aspects such as the strength of the existing content and a starting point for the visual identity. Information gathered from our user surveys reinforced the need for the features MightyVet asked for. Users needed online mentorship opportunities and options for continuing education credits. We also completed competitive analyses to identify how similar nonprofits presented their goals and composed their sites. From there we were able to start implementing new ideas.',
 							'Before sketching and prototyping, we proposed an updated website structure with a sitemap diagram I created. This guided our decisions for what to focus on for sketches and wireframes. It also informed us about the need for a user profile and dashboard. Without one, managing the functionality they wanted would not have been possible. Next, we all sketched out our ideas and moved on to creating wireframes. As we explored different compositions with our wireframes, we worked together to arrive at our first digital prototype.',
@@ -26,6 +27,7 @@ exports.seed = function(knex) {
 					{
 						id: 'wasp',
 						name: 'WA State Parks Campsite Reservation',
+						description: '',
 						design_process: [
 							'To begin my research I targeted users who identified as outdoor enthusiasts. All the participants reported similar frustrations and had difficulty using the reservation service. My hypothesis was correct. The navigation was confusing. The undertaking of finding a specific campground or state park was almost unusable. Successfully reserving a campsite was unintuitive and required expert knowledge of the site. I compiled the findings from observing participants attempt these essential tasks and incorporated their feedback into my first prototype.',
 							'With paper cutouts and a pen, I created an initial prototype of new screens and workflows. I used these crude mockups to complete another round of usability studies. My study participants confirmed what worked well and what I could revise before I moved to the computer for wireframing. Again I took their comments into consideration while creating the next iteration of my designs.',
@@ -46,6 +48,8 @@ exports.seed = function(knex) {
 					{
 						id: 'astarte',
 						name: 'Astarte Inventory Management',
+						description:
+							'Ensuring accuracy and speed to improve the supervision of thousands of vials for a biotech lab.',
 						design_process: [
 							'I began this project by digesting the research my colleague had completed. By familiarizing with the context I was able to understand where to go next. Since the company lacked organization of their information I created a sitemap to guide the process moving forward. We identified the tasks the company completed on a daily basis to inform our decisions for the information architecture. This allowed our team to decide how to structure the system moving forward.',
 							'Next, I created workflow diagrams to map out how the tasks coincided with each other. By focusing on the essential tasks of the company we established workflow patterns to put in place for similar tasks. The most common tasks were generating records for inventory items and updating their location within their lab. Other tasks included tracking online orders, donors, and product details. After defining all common tasks, we had a good idea of the functionality and relationships of the entire system. Using this knowledge we moved on to wireframes and visual mockups.',
@@ -57,7 +61,7 @@ exports.seed = function(knex) {
 							'This project was a good lesson in how to become an expert in a new domain. Biotechnology was an industry I was unfamiliar with before this project. I learned a lot by taking the time to understand the intricacies of how Astarte created and maintained their products. This demonstrated the importance of understanding context and was a great way to inform my design decisions. It strengthened my ability to use design thinking to solve challenging problems.'
 						],
 						problem:
-							'A biotech company called Astarte Biologics needed of a new inventory management system. Their previous methods for maintaining product supply relied on handwritten notes and excel spreadsheets. They also lacked consistency in how to document and track locations of their products in various freezers in their lab. The owner wanted a reliable digital solution. Trusting product location and availability was essential to the company and their clients. Health regulations were also an important concern, so accuracy between inventory data and the e-commerce website was imperative.',
+							'A biotech company called Astarte Biologics needed a new inventory management system. Their previous methods for maintaining product supply relied on handwritten notes and excel spreadsheets. They also lacked consistency in how to document and track locations of their products in various freezers in their lab. The owner wanted a reliable digital solution. Trusting product location and availability was essential to the company and their clients. Health regulations were also an important concern, so accuracy between inventory data and the e-commerce website was imperative.',
 						solution:
 							'At the end of the six-month project, we delivered the inventory management system Astarte required. Our work improved their process and they were able to abandon their old ways of pen and paper. The interface I designed allowed them to track and locate their products with ease. We also devised meaningful terminology for them to unify how to organize their product offerings.',
 						team_and_role:
@@ -66,6 +70,7 @@ exports.seed = function(knex) {
 					{
 						id: 'ecommerce',
 						name: 'Modern E-Commerce Checkout',
+						description: '',
 						design_process: [
 							"We began the project with competitive analyses of other e-commerce websites. I focused on the essential steps during checkout and how to design an unobtrusive cart. The client's products and packaging served as inspiration for my teammate's visual explorations. I analyzed modern fashion and sports e-commerce websites to establish current trends.",
 							'Aside from our competitive analyses, a great resource I found was an article about best practices for the e-commerce checkout flow. A lot of e-commerce sites use a simple three or four step process. When the customer is ready to check out, ask them for their address and shipping method first. Then move on to payment information. Finish with a review of the information to confirm and place the order. Before starting our design work I also looked into patterns for shopping carts that resulted in higher conversion rates.',

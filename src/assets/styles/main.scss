@@ -21,6 +21,7 @@
 // Components
 @import 'components/dialogBox';
 @import 'components/projectLink';
+@import 'components/projectControls';
 @import 'components/approach';
 
 // Layout
@@ -32,4 +33,5 @@
 @import 'containers/home';
 @import 'containers/about';
 @import 'containers/project';
+@import 'containers/caseStudy';
 @import 'containers/notFound';

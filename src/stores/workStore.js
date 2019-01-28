@@ -11,40 +11,20 @@ class WorkStore {
 			to: '/'
 		},
 		{
-			name: 'paragon',
-			to: '/projects/paragon'
-		},
-		{
-			name: 'astarte',
-			to: '/projects/astarte'
+			name: 'mightyvet',
+			to: '/projects/mightyvet'
 		},
 		{
 			name: 'wa state parks',
 			to: '/projects/wasp'
 		},
 		{
-			name: 'dash',
-			to: '/projects/dash'
+			name: 'astarte',
+			to: '/projects/astarte'
 		},
 		{
-			name: 'dreamstream',
-			to: '/projects/dreamstream'
-		},
-		{
-			name: 'salvage',
-			to: '/projects/salvage'
-		},
-		{
-			name: 'cheba hut',
-			to: '/projects/cheba-hut'
-		},
-		{
-			name: 'gig posters',
-			to: '/projects/posters'
-		},
-		{
-			name: 'topshelf',
-			to: '/projects/topshelf'
+			name: 'ecommerce',
+			to: '/projects/ecommerce'
 		}
 	];
 
