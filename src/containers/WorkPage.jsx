@@ -2,6 +2,7 @@ import React from 'react';
 import { inject, observer } from 'mobx-react';
 import { Link } from 'react-router-dom';
 import ProjectLink from './ProjectLink';
+import ResumeLink from '../components/ResumeLink';
 
 @inject('actions', 'workStore')
 @observer
@@ -29,6 +30,7 @@ export default class WorkPage extends React.Component {
 							<ProjectLink key={project.id} project={project} />
 						))}
 					</div>
+					<ResumeLink />
 				</div>
 			</main>
 		);

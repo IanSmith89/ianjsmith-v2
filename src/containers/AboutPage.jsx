@@ -88,9 +88,10 @@ export default class AboutPage extends React.Component {
 									interaction design, prototyping, information
 									architecture, or visual design. I'm not
 									afraid to take a step back in my process
-									because I know you rarely get everything
-									right the first time. It's simply human
-									nature.
+									because I know you{' '}
+									<span className="strike">rarely</span> never
+									get everything right the first time. It's
+									simply human nature.
 								</p>
 								<p className="approach-description">
 									I've learned to take an iterative approach

@@ -32,6 +32,11 @@
 			margin: 0 auto 1.5rem;
 			max-width: 60rem;
 			width: 100%;
+
+			.strike {
+				text-decoration: line-through;
+				text-decoration-color: $grey;
+			}
 		}
 
 		.approach {
