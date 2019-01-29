@@ -9,7 +9,7 @@ const FullImage = ({ alt, src, title }) => {
 					<div className="underline" />
 				</div>
 			) : null}
-			<div className="twelve columns sketches">
+			<div className="twelve columns full-width-container">
 				{src ? (
 					<img
 						className="full-width-image"

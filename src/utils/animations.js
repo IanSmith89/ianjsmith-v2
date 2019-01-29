@@ -58,7 +58,7 @@ export const fadeInUp = node => {
 	});
 };
 
-export const fadeOutUp = node => {
+export const fadeOutUp = (node, top) => {
 	if (!node) return;
 
 	const width = getTargetWidth(node);
@@ -68,7 +68,7 @@ export const fadeOutUp = node => {
 		ease: 'ease-in',
 		position: 'fixed',
 		width,
-		y: 0
+		y: -top
 	});
 
 	// Animate element
@@ -76,7 +76,7 @@ export const fadeOutUp = node => {
 		autoAlpha: 0,
 		onComplete: handleComplete,
 		onCompleteParams: [node],
-		y: -25
+		y: -top - 25
 		// I put this in here to force you to consider it as a hook
 		// onComplete: () => console.log('Page exit complete.')
 	});

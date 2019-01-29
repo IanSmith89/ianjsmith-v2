@@ -22,22 +22,21 @@
 			height: auto;
 			max-width: 100%;
 		}
-
-		.subtext {
-			font-style: italic;
-			margin: 1.5rem 0 0;
-			width: inherit;
-		}
 	}
 
 	.approach-section {
 		margin: 2.5rem auto 5rem;
 
 		.approach-description {
+			font-size: type-scale(1);
 			margin: 0 auto 1.5rem;
-			max-width: 40rem;
-			text-align: center;
+			max-width: 60rem;
 			width: 100%;
+
+			.strike {
+				text-decoration: line-through;
+				text-decoration-color: $grey;
+			}
 		}
 
 		.approach {
@@ -58,8 +57,33 @@
 		text-align: center;
 
 		p {
-			font-size: type-scale(0);
-			margin: 1.5rem 0;
+			font-size: type-scale(1);
+			margin: 1.2rem 0;
+
+			span {
+				color: $orange;
+				font-weight: 400;
+			}
+		}
+	}
+
+	.subtext-container {
+		margin: 1.5rem 0 7.5rem;
+		text-align: center;
+	}
+
+	.subtext {
+		font-style: italic;
+		margin: 1.5rem 0 0;
+		text-align: center;
+		text-transform: uppercase;
+		width: inherit;
+
+		span {
+			color: $orange;
+			font-size: type-scale(1);
+			font-style: normal;
+			font-weight: 400;
 		}
 	}
 
@@ -67,7 +91,7 @@
 		padding: 5rem 0;
 
 		.contact-tagline {
-			font-size: type-scale(0);
+			font-size: type-scale(1);
 			margin: 0 auto 2.5rem;
 			max-width: 42rem;
 			text-align: center;

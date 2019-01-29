@@ -52,7 +52,7 @@
 /* For devices larger than 550px */
 @media (min-width: 550px) {
 	.container {
-		width: 66.6%;
+		width: 90%;
 	}
 	.column,
 	.columns {
@@ -171,6 +171,12 @@
 	.offset-by-one-half.column,
 	.offset-by-one-half.columns {
 		margin-left: 52%;
+	}
+}
+
+@media (min-width: 769px) {
+	.container {
+		width: 66.6%;
 	}
 }
 

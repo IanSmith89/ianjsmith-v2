@@ -5,241 +5,92 @@ exports.seed = function(knex) {
 			return knex('projects')
 				.insert([
 					{
-						id: 'paragon',
-						name: 'Paragon Real Estate Website',
-						client: 'Paragon Real Estate',
+						id: 'mightyvet',
+						name: 'MightyVet Nonprofit Website',
 						description:
-							'Paragon is a prestigious real estate company based out of the Bay Area in San Francisco. They focus primarily on residential real estate and consistently rank as one of the top companies in the Bay Area. Together with the team at High Seas Consulting, I constructed the front end of their public website. My central responsibilities included frontend architecture and technology choices, SVG animations, and search engine optimization.',
-						how: [
-							'The blog section of paragon-re.com serves as an incredible resource for journalists, bloggers, investors, and other real estate companies for reliable information and trends about the Bay Area. These pages were the most frequently visited and linked to, so it was important to ensure the experience of reading the blog matched the brand and demonstrated wisdom and trustworthiness.',
-							'The biggest group of users are prospective home buyers that use paragon-re.com as a tool to find homes, commercial property, or land in the San Francisco Bay Area. They also can view the agents, locations, and mission of Paragon as a company and educate themselves about the neighborhoods and surrounding areas.',
-							'Paragon Real Estate Agents also use the site as a source of information for work and a place to promote their individual real estate businesses and partners, properties, and open houses. It was very important to Paragon that the online experience was of similar quality as the luxury properties they sold.'
+							'Establishing an online community and tackling difficult issues within the veterinary industry.',
+						design_process: [
+							'We began with a heuristic review and surveys to understand how current users felt about the site. The heuristic review highlighted areas of improvement and positive aspects such as the strength of the existing content and a starting point for the visual identity. Information gathered from our user surveys reinforced the need for the features MightyVet asked for. Users needed online mentorship opportunities and options for continuing education credits. We also completed competitive analyses to identify how similar nonprofits presented their goals and composed their sites. From there we were able to start implementing new ideas.',
+							'Before sketching and prototyping, we proposed an updated website structure with a sitemap diagram I created. This guided our decisions for what to focus on for sketches and wireframes. It also informed us about the need for a user profile and dashboard. Without one, managing the functionality they wanted would not have been possible. Next, we all sketched out our ideas and moved on to creating wireframes. As we explored different compositions with our wireframes, we worked together to arrive at our first digital prototype.',
+							'The collaboration on our wireframes allowed for a smooth transition to higher fidelity mockups. Since we identified visual design strengths in our heuristic review, we borrowed some of the existing color and font choices to create a mood board and style guide. Using those for inspiration, we produced our next prototype iteration. Again we worked together to investigate different visual treatments and ideas. Using feedback from my teammates, I created a dynamic search and filter component with consistent functionality in differing contexts. After critiquing each other’s work and sharing interface solutions, we ended up with a final prototype. Our high-fidelity mockups also served as a visual framework for future pages and interface components.'
 						],
-						services: [
-							'Front End Development',
-							'Animation',
-							'Search Engine Optimization'
+						outcome_and_reflection: [
+							'This project was well-received after our final presentation to MightyVet. They are currently building their new site based on our designs. Future users will have the ability to find or provide mentorship and complete continuing education credits through a single online source. MightyVet now has the means to enact their vision of expanding the community to support those in the veterinary industry.',
+							'As a result of this experience, I learned a lot about communicating with a client and my teammates. One challenge we faced early in the project was gaining access to reliable users to survey. Though we gathered useful information from those we could find, next time I wouldn’t wait as long for the client to suggest users for research. If we could have done something differently, we would have been more proactive in searching for prospective users.'
 						],
-						takeaways: [
-							'I gained a better understanding of a new domain and learned a lot about the power of collaboration with the client. This project was unique because we were lucky enough to work with a visionary client that was very involved throughout design, development, and testing.',
-							'I also enjoyed the challenge of properly translating written animations to Mandarin and Simplified Chinese. It was a fun experience doing a deep dive on the cultural traditions and meaning behind Chinese writing and calligraphy and a great way to practice animation.',
-							'Overall, this project helped me understand how to effectively communicate with all stakeholders in a project, whether they be the client, a colleague, or an outside resource. It was also enjoyable and good experience to work with a remote client in a completely new domain.'
-						],
-						tech_stack: ['.NET', 'Express', 'React', 'Postgres'],
-						users: [
-							'Prospective Home Buyers',
-							'Real Estate Agents',
-							'Office Administrators',
-							'Investors',
-							'Journalists'
-						],
-						website_url: 'https://www.paragon-re.com',
-						why: [
-							'Paragon wanted a public facing website that employed the use of beautiful photography and video content to exemplify the luxurious aspects of their brand while competing with top local San Francisco Real Estate companies as well as national players such as Zillow and Redfin. They wanted an online experience that gave potential homebuyers a sense of trust and knowledge of the market.',
-							'This website serves as an important way to introduce new homebuyers to Paragon as a company and demonstrate what set them apart from others concerning history, market dominance, and the agents who choose to work there. It was essential to create a functional experience and aesthetic that appealed to its users while gaining interest and momentum for the company.',
-							'They also wanted to show to their agents and competitors that they were willing to invest in their agents and give them the best opportunity and tools to succeed. The agent profiles on the public website provides an inside look into who they are as professionals and exists as the first point of contact for many prospective buyers.'
-						],
-						with: 'High Seas Consulting, Inc.'
-					},
-					{
-						id: 'astarte',
-						name: 'Astarte Biologics Intranet',
-						client: 'Astarte Biologics',
-						description:
-							'Astarte Biologics is a Washington based biotech company that conducts research and sells products to other labs for research. With the team at High Seas Consulting I helped design and build an intranet to manage products, donors, inventory, and an ordering system that connected to the Astarte e-commerce site. They needed to upgrade from using excel spreadsheets and handwritten documents for record keeping, so we devised a system that accurately tracked thousands of vials products within their lab while handling constant updates from multiple users.',
-						how: [
-							'Lab technicians and office admins need the ability to record donor information and track the raw materials that are used to create a number of various products. Overall we chose to implement a user interface inspired by the ideas and themes of Google Material Design to remain consistent and clean to the end user while providing a familiar framework for our developers.',
-							"Raw materials such as blood and plasma are converted into products that are stored in vials, which in turn are stored in a number of racks in a freezer. After conducting user interviews and watching them work, the interface we came up with was designed in a way that resembled the actual arrangement and appearance of the setup in their lab to help ease the staff's experience with learning the new system.",
-							'The intranet seamlessly connects with an external WordPress e-commerce website for order information and fulfillment, so the personnel responsible for completing the orders need instant access to which freezer, row, and vial a specific item is located. The user interface allows them to easily move and remove vials in the system, find a location for a set of vials, as well as updating details and notes.'
-						],
-						services: [
-							'Interaction Design',
-							'Visual Design',
-							'Full Stack Development'
-						],
-						takeaways: [
-							'This project was a great exercise in thoroughly understanding the flow of inventory creation and management and how to use that information to create a meaningful and reliable user interface.',
-							"I also learned how important it is to fully understand the domain in which you're working in and to not be afraid to speak up when questions arise. This project faced some unique constraints that resulted in our team having to take a step back and pause development to better understand how the inventory existed.",
-							'In the end, we were able to deliver a huge improvement for Astarte, and this project was a great success and helped them save valuable time and provided ease of mind to them and their customers for accurate and accessible products.'
-						],
-						tech_stack: ['Node', 'Express', 'React', 'Postgres'],
-						users: [
-							'Lab Technicians',
-							'System Admins',
-							'Order Fulfillment Personnel',
-							'Biotech Customers'
-						],
-						website_url: 'https://www.astartebio.com',
-						why: [
-							'Prior to this project, Astarte had been using a number of different spreadsheets and other documents to keep track of their data with no consistency or definition of how to store their information. They also relied on a handwritten system to track their inventory that resulted in frequent confusion, easy mistakes, and lost time updating for correct information.',
-							"The lab technicians and admins at Astarte deal with potentially thousands of individual vial-based products on a daily basis and needed a system that easily and accurately tracked the location of the vials or vial sets stored in multiple racks within various freezers in their lab. They also required an interface that gave them a familiar and simple method for updating and maintaining the vial information that could handle real-time updates and wouldn't be too challenging to learn.",
-							'Another important issue was maintaining the hundreds of records of donor and product information and how to properly update the data over time. Since the products Astarte creates from donor blood or plasma are often used for research purposes and testing, the contents and donor details of the product had to be correct and trustworthy for the other labs who made purchases through the e-commerce store.'
-						],
-						with: 'High Seas Consulting, Inc.'
+						problem:
+							'A vital issue in the veterinary industry is depression and suicide. MightyVet is a nonprofit focused on providing resources and spreading awareness. They are passionate about helping vets and those around them navigate the complex matters they deal with on a daily basis. A single page website stated their mission, but they had the vision to create an online hub for community and mentorship. They needed guidance on improving the usability of their site and were open to a design overhaul.',
+						solution:
+							'By the end of the ten-week project, we created a brand new web experience for them. Our designs included an updated webinar system for completing continuing education credits and new features for mentorship and scheduling office hours. We designed a profile and dashboard that serves as a central source of information and allows MightyVet to manage the different user roles.',
+						team_and_role:
+							'Working with two other students in my SVC capstone class, we completed user research, prototyping, and a visual design refresh. I focused on information architecture and project management, and we collaborated on research, interaction design, and prototyping. My primary responsibilities included meeting coordination and client communication and producing sitemap diagrams, updated search and filter interfaces, and visual design assets.'
 					},
 					{
 						id: 'wasp',
-						name: 'Campsite Reservation Prototype',
-						client: 'WA State Parks',
+						name: 'WA State Parks Campsite Reservation',
 						description:
-							'After experiencing firsthand the struggle and frustration of using online campsite reservation systems, I created a working prototype of a new system for Washington State Parks. I conducted usability studies with paper prototypes, wireframes, and interactive prototypes to discover optimal workflows and process improvements.',
-						how: [
-							'Using existing reservation patterns inspired by sites such as Kayak, Orbitz, and Expedia, I designed and tested low fidelity and high fidelity prototypes to gather user feedback and identify the optimal flow for reserving a campsite.',
-							'I was able to improve the current reservation workflow by creating interactive wireframes and mockups with Adobe XD.'
+							'Examining obstacles and revamping the online campsite reservation system for WA State Parks.',
+						design_process: [
+							'To begin my research I targeted users who identified as outdoor enthusiasts. All the participants reported similar frustrations and had difficulty using the reservation service. My hypothesis was correct. The navigation was confusing. The undertaking of finding a specific campground or state park was almost unusable. Successfully reserving a campsite was unintuitive and required expert knowledge of the site. I compiled the findings from observing participants attempt these essential tasks and incorporated their feedback into my first prototype.',
+							'With paper cutouts and a pen, I created an initial prototype of new screens and workflows. I used these crude mockups to complete another round of usability studies. My study participants confirmed what worked well and what I could revise before I moved to the computer for wireframing. Again I took their comments into consideration while creating the next iteration of my designs.',
+							'Following the paper prototype, my wireframes built upon the feedback from my users. During this phase, I shifted my attention to the task of choosing specific dates to go camping. I experimented with different layouts and interface elements. Inspired by existing reservation patterns, I constructed new components for selecting dates. Once again I tested my designs on users to confirm my choices before moving forward.',
+							'After completing wireframes and user testing I proceeded to higher fidelity mockups. With most of the structure of my pages complete I established a new visual aesthetic to apply to my designs. Throughout testing the research participants requested more up-to-date imagery and color choices. Using this information I picked colors and fonts that built upon the existing Washington State Parks branding. The final designs increased the usage of photography to bolster the appeal of individual campground pages. According to users this new visual presentation and reservation workflow modernized the feel of the service.'
 						],
-						services: [
-							'user research',
-							'prototyping',
-							'information architecture',
-							'visual design'
+						outcome_and_reflection: [
+							"I presented my findings and prototypes to the Washington State Parks Foundation at the end of this project. Though they didn't move forward with my designs because of contractual reasons, my effort and recommendations impressed them. They praised my designs and acknowledged the need for online campsite reservation improvements.",
+							'This project was a great lesson in slowing down and trusting in iteration. Before this experience, I tended to jump into the visual design too early. This often caused me to get distracted with visuals before fleshing out the proper workflows. I enjoyed working through many iterations to arrive at a more thorough solution. In the end, the final designs were stronger because I focused on the process.'
 						],
-						takeaways: [
-							'Building and iterating through multiple prototypes of varying levels of fidelity helped me understand how easily and quickly you can get user feedback to inform design decisions.',
-							'I enjoyed using interactive wireframes and prototypes for the usability tests and it helped eliminate some of the issues and questions that sometime result from a lack of clickability and simple functionality.',
-							'Another important lesson from this project came from actively listening to user feedback. Since I started the project based mostly on my own viewpoint of the experience I gained a lot of valuable input by focusing on what others liked or disliked to prove and add to my hypothesis.'
-						],
-						users: ['Hikers', 'Campers'],
-						website_url:
-							'https://xd.adobe.com/view/77097260-06b0-4df9-4504-3e28ff9ec4a7-0138',
-						why: [
-							'There are many ways to reserve a campsite in Washington state, but the current online reservation system through Washington State Parks is outdated and difficult to use, causing frequent abandonment and frustration.',
-							'Multiple test users reported having used the site before and reported navigation, workflow, and overall design issues that negatively impacted their experience. Fixing these issues could help get more people using the system to book their stays at campsites and state parks.'
-						],
-						with: 'SVC'
+						problem:
+							'The online reservation system for campgrounds in Washington State Parks was frustrating to use. Navigation was a challenge and the interactions were haphazard. The process annoyed me while trying to find and reserve a campsite, and I wanted to see if others felt the same. I saw areas of opportunity to improve the interaction workflow and rejuvenate the visual design of the site.',
+						solution:
+							'After four weeks of design and iteration, I addressed the issues found in usability studies to create a replacement for their campsite reservation system. I improved the interactions involving searching for and selecting a campsite to reserve. By introducing new interface elements to modernize the experience I was also able to refresh the visual design and aesthetic. The end result enhanced the experience with a few minor updates to the interactions and site structure.',
+						team_and_role:
+							'Working alone as part of my SVC prototyping class I conducted user research and created prototypes at varying levels of fidelity. I began this project by conducting usability studies to inform my prototyping process. My initial prototype consisted of sketches and paper. Next, I completed a round of wireframing and concluded with a production ready prototype. While working at High Seas I also presented this case study to show my design process to prospective clients.'
 					},
 					{
-						id: 'dash',
-						name: 'Paragon Dash',
-						client: 'Paragon Real Estate',
+						id: 'astarte',
+						name: 'Astarte Inventory Management',
 						description:
-							'Paragon Dash is the internal dashboard that Paragon Real Estate uses to maintain their properties, agents, listings, and blog as well as a custom print marketing material editor. It also has many types of users with varying levels of authentication and completely different experience and interactions depending on the role. Along with the rest of the High Seas team I built the front end of the site and contributed UX analyses of task workflows and visual design for various UI elements and the blog and newsletter management section.',
-						how: [
-							'Real Estate Agents and Office Staff at Paragon use Dash to update all listings and property information as well as user settings, blog articles, and resource records. The data on Dash is what shows up on the public website at paragon-re.com.',
-							'Aside from data management, Dash is also used to create print materials that can be customized for individual agents and offices. Agents can choose from pre-approved designs offered by Paragon with final output files available by email or directly sent to a printer.',
-							'Photographers use Dash to upload images for the thousands of Paragon properties, user headshots, and neighborhood photos.'
+							'Ensuring accuracy and speed to improve the supervision of thousands of vials for a biotech lab.',
+						design_process: [
+							'I began this project by digesting the research my colleague had completed. By familiarizing with the context I was able to understand where to go next. Since the company lacked organization of their information I created a sitemap to guide the process moving forward. We identified the tasks the company completed on a daily basis to inform our decisions for the information architecture. This allowed our team to decide how to structure the system moving forward.',
+							'Next, I created workflow diagrams to map out how the tasks coincided with each other. By focusing on the essential tasks of the company we established workflow patterns to put in place for similar tasks. The most common tasks were generating records for inventory items and updating their location within their lab. Other tasks included tracking online orders, donors, and product details. After defining all common tasks, we had a good idea of the functionality and relationships of the entire system. Using this knowledge we moved on to wireframes and visual mockups.',
+							"Knowing the location of inventory items in the lab was essential to their staff. Since updating product status and location was a vital repeated task, we based the interface on the physical location of items in their lab. Using the design of their freezers as inspiration we toyed around with ideas for how to represent the inventory on screen. After a few iterations, we decided on a color-coded system to show the product groupings and location. That way the staff could view their inventory on screen in the same orientation within the actual freezers. The reaction to our ideas was positive from the staff. They could find and update a product's location and trust what the interface displayed.",
+							'With the essential tasks considered and defined we moved forward with visual design. I decided to apply a flat aesthetic with a color palette that fit the brand and e-commerce site. Familiar interface components allowed the staff to migrate away from spreadsheets and paper notes without new patterns overwhelming them.'
 						],
-						services: [
-							'Front End Development',
-							'Interaction Design',
-							'Visual Design'
+						outcome_and_reflection: [
+							'After delivering the application to Astarte they were very pleased with the results. They no longer had to rely on paper and spreadsheets without a structure to their inventory data. The coordination with the team in India allowed for smooth integration between our system and the online store. The owner and rest of the staff easily adapted to the new system and began using it right away.',
+							'This project was a good lesson in how to become an expert in a new domain. Biotechnology was an industry I was unfamiliar with before this project. I learned a lot by taking the time to understand the intricacies of how Astarte created and maintained their products. This demonstrated the importance of understanding context and was a great way to inform my design decisions. It strengthened my ability to use design thinking to solve challenging problems.'
 						],
-						takeaways: [
-							'This project was an amazing process and was a worthwhile lesson in the need for constant communication between design and development teams throughout the life of the project. Working as a front end developer and designer for certain sections and pages was also good experience for me.',
-							'I also enjoyed building an internal tool that helped people save time during their own work day. It was a welcome challenge to work with so many different user roles and try to optimize the experience for all of them.',
-							'The integration between this dashboard system and the public facing website was overall an educational project to be a part of, and I look forward to building more enterprise applications like this in the future.'
-						],
-						tech_stack: ['.NET', 'Express', 'React', 'Postgres'],
-						users: [
-							'Real Estate Agents',
-							'Office Managers',
-							'System Admins',
-							'Photographers'
-						],
-						website_url: 'https://www.paragon-re.com',
-						why: [
-							'Maintaining all the information involved with a real estate company can be a daunting task, and Paragon Real Estate invested in the construction of a fully customized system that fit the needs of their entire company. They wanted a dashboard system that would attract new agents and more of a reason to stay with the company for current agents.',
-							'The daily tasks of real estate agents and office staff often cause them to use a number of different applications to complete their work. The team at Paragon wanted to centralize as much as they could into one place while linking the data in Paragon Dash with the public facing website.',
-							"Most real estate agents are in charge of creating their own marketing materials and aren't always provided with tools or guidance on how to do it. Paragon wanted a central online hub where their agents could create approved material that was formatted and branded by Paragon's designers."
-						],
-						with: 'High Seas Consulting, Inc.'
+						problem:
+							'A biotech company called Astarte Biologics needed a new inventory management system. Their previous methods for maintaining product supply relied on handwritten notes and excel spreadsheets. They also lacked consistency in how to document and track locations of their products in various freezers in their lab. The owner wanted a reliable digital solution. Trusting product location and availability was essential to the company and their clients. Health regulations were also an important concern, so accuracy between inventory data and the e-commerce website was imperative.',
+						solution:
+							'At the end of the six-month project, we delivered the inventory management system Astarte required. Our work improved their process and they were able to abandon their old ways of pen and paper. The interface I designed allowed them to track and locate their products with ease. We also devised meaningful terminology for them to unify how to organize their product offerings.',
+						team_and_role:
+							'I worked as a designer and developer with a small team of three other developers at High Seas. We collaborated with an external team in India who built the updated e-commerce site. My areas of focus were information architecture, interaction design, and visual design. One of my teammates completed interviews and user research before I started on the project. I also contributed as a full-stack developer to build the application.'
 					},
 					{
-						id: 'dreamstream',
-						name: 'DreamStream Mobile App',
+						id: 'ecommerce',
+						name: 'Modern E-commerce Checkout',
 						description:
-							"Dream Stream is a mobile application built using the Ionic framework and Angular. The goal of the app is to track people's dreams and analyze their content using IBM Watson to determine recurring words and themes. With a small team of four others, I helped guide the project through completion in a short two week time period. My main tasks included project direction, visual design, and frontend development.",
-						how: [
-							'People can record the content of their dreams via typing or using speech to text through their phone microphone. They also rate how well they slept and the length of time they were asleep.',
-							'Their dream information is recorded and then analyzed by IBM Watson for patterns and repetition of certain words, phrases, or themes. An analysis page shows various metrics such as a word cloud, sleep trends, and word frequency graphs.'
+							'Analyzing current trends to build a modernized and expansive e-commerce checkout process.',
+						design_process: [
+							"We began the project with competitive analyses of other e-commerce websites. I focused on the essential steps during checkout and how to design an unobtrusive cart. The client's products and packaging served as inspiration for my teammate's visual explorations. I analyzed modern fashion and sports e-commerce websites to establish current trends.",
+							'Aside from our competitive analyses, a great resource I found was an article about best practices for the e-commerce checkout flow. A lot of e-commerce sites use a simple three or four step process. When the customer is ready to check out, ask them for their address and shipping method first. Then move on to payment information. Finish with a review of the information to confirm and place the order. Before starting our design work I also looked into patterns for shopping carts that resulted in higher conversion rates.',
+							"We began wireframing with the goal of creating a subtle shopping cart interface. To achieve this goal we designed the cart to slide out from the right side of the user's screen. That way it wouldn't distract from the page content when viewing cart items. Since we didn't have the budget for conventional testing I tested our designs on other colleagues for feedback.",
+							'We presented our progress to the client and moved on to their request for an instant checkout option. To address this we added a "Buy Now" button below images on the product list and on their detail pages. Since most of the products sell individually, this gave users an easy way to proceed straight to checkout without having to add to the cart.',
+							"After another round of feedback from the client, we finalized the checkout experience. The visual elements my teammate designed were extraordinary, but I can't present them here because of an NDA. With that said, our work impressed the client and they approved our designs after a fast four weeks."
 						],
-						services: [
-							'Front End Development',
-							'Visual Design',
-							'Project Management'
+						outcome_and_reflection: [
+							'This project was a great lesson in time management and attention to detail. I loved identifying micro-interactions that would establish trust for online customers. The e-commerce store we designed is currently still under construction, but the client is very happy with the work. They look forward to launching their website soon.',
+							"It was fun and educational to work under an atypical deadline and budget for our team. The amount I learned about the checkout process is something I'll hold onto for the future. If I could have done something differently I would have completed studies with actual users. The feedback I gathered from my peers was still useful but wasn't ideal for proper user tests."
 						],
-						users: ['Anyone who dreams'],
-						tech_stack: [
-							'Node',
-							'Express',
-							'Angular',
-							'Ionic',
-							'Postgres'
-						],
-						website_url:
-							'https://github.com/IanSmith89/dreamStream',
-						why: [
-							"The purpose of this app is to help people remember their dreams in the time in the morning right after they wake up when it's freshest in their minds.",
-							"Most of us have trouble remembering our dreams, and when we do it's oftentimes only for the first 20-30 seconds in the morning.",
-							'We wanted to create a simple way to record your dreams and a tool for analysis for those who are interested in the topic.'
-						],
-						with: 'Galvanize'
-					},
-					{
-						id: 'salvage',
-						name: 'Salvage Native App',
-						description:
-							'Salvage is a food donation and compost app that provides users a resource for locations to drop off donations and a locator for businesses who accept small donations. This project uses Electron to package the underlying Angular app as a native desktop application available for download on OSX, Linux, and Windows. I undertook all aspects of this project including user research, experience and visual design, full stack development, and user testing.',
-						how: [
-							'Compost centers and food shelters can sign up to be collectors of food and compost material and are displayed on a map, letting donors know where and when they can drop off their donations.',
-							'Restaurants and businesses that create food waste can sign up as donors to become donors of compost material. After joining, they have access to food shelters and compost centers who have signed up with information about location, times, and what they accept.',
-							'Individual people can also sign up as donors if they are interested in finding the nearest location of a shelter or compost center.'
-						],
-						services: [
-							'User Research',
-							'Visual Design',
-							'Full Stack Development'
-						],
-						tech_stack: [
-							'Node',
-							'Express',
-							'Angular',
-							'Electron',
-							'Postgres'
-						],
-						users: [
-							'Restaurant Owners',
-							'Compost Centers',
-							'Food Shelters',
-							'Farmers',
-							'Environmentally Focused Individuals'
-						],
-						website_url: 'https://github.com/IanSmith89/salvage',
-						why: [
-							'This project serves the purpose of connecting businesses and restaurants with food shelters and compost centers in areas of the country where centralized compost services are not widespread or available.',
-							'After conducting user research with an initial goal of connecting more businesses with food shelters, I found that many restaurants that were not currently composting their food waste had to processes in place to do so, but lacked a method for getting the food waste to a compost center.',
-							"This app also serves as a resource for individuals who regularly produce food waste or are interested in composting but aren't aware of where to compost. The simple signup process and map interface provides a familiar way to find and connect with local shelters or compost centers."
-						],
-						with: 'Galvanize'
-					},
-					{
-						name: 'Gig Posters',
-						id: 'posters',
-						client: 'Various',
-						description:
-							"Aside from design and development, I'm incredibly passionate about live music and promoting the arts. I love making concert posters and was lucky enough to work at a music venue in Fort Collins, CO where I produced a number of posters from a wide range of music genres. I like to draw inspiration from the psychedelic movement of the 1960's and try to put a modern spin on it using any imagery or themes I can pull from listening to the music or reading about the artists.",
-						services: ['Graphic Design', 'Illustration'],
-						website_url: 'https://www.GigPosters.com',
-						with: 'Freelance'
-					},
-					{
-						name: 'Cheba Hut Events',
-						id: 'cheba-hut',
-						client: 'Cheba Hut',
-						description:
-							"Cheba Hut is a toasted sandwich restaurant with locations across the Western and Midwestern United States. They target specifically counterculture types and regularly offer events and promotions throughout the year. As a designer at PHOCO, I worked with Cheba Hut to create posters and ads that showcased the company's mission and provided notice of upcoming events. My contributions included hand drawn illustration and typography, graphic design, and visual branding.",
-						services: ['Graphic Design', 'Illustration'],
-						website_url: 'https://www.chebahut.com',
-						with: 'PHOCO'
-					},
-					{
-						id: 'topshelf',
-						name: 'Topshelf Shirts',
-						client: 'Topshelf Printers',
-						description:
-							'Topshelf Printers is a successful screen printing and embroidery shop based out of Northern Colorado. They work with companies and customers with jobs sizes ranging from small to multi-thousand industrial scale quantity orders. As a production artist, I created original shirt designs for various customers as well as the Topshelf brand.',
-						services: ['Graphic Design', 'Illustration'],
-						website_url: 'http://www.topshelfprinters.com',
-						with: 'Topshelf Printers'
+						problem:
+							'A new brand was kicking off their online store and wanted a modern e-commerce experience. Time and budget were issues, and the client only had package designs for inspiration. They requested that the online shopping experience reflect the state-of-the-art qualities of their products. Competing with other online retailers upon launch was a must. They also wanted quick shop functionality that offered a fast and simple checkout.',
+						solution:
+							'After the allotted four-week deadline, we delivered the modern e-commerce experience they expected. Our designs evoked the qualities of their cutting edge products and felt contemporary. An unobtrusive cart interface with modern quick-shop options and a logical checkout process combined well with the slick visual design. The cohesive experience was a great starting point for launching their business.',
+						team_and_role:
+							"Working with another designer and a developer at High Seas, my responsibilities included research, interaction design, and prototyping. The main focus of my research and interaction work was on the checkout process. I also collaborated on visual design explorations. Since the budget didn't allow for usability studies, we worked together with the client and my colleagues to test design iterations. I met with the developer throughout the process to ensure a smooth handoff of our designs."
 					}
 				])
 				.returning('*');

@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-	matchPath,
-	Redirect,
-	Route,
-	Switch,
-	withRouter
-} from 'react-router-dom';
+import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
 import { observer } from 'mobx-react';
 import { TransitionGroup, Transition } from 'react-transition-group';
 import cx from 'classnames';
@@ -16,9 +10,30 @@ import ProjectPage from './ProjectPage';
 import NotFound from './NotFound';
 import Footer from './Footer';
 import { fadeInUp, fadeOutUp } from '../utils/animations';
+import throttle from 'lodash.throttle';
 
 @observer
 class Container extends React.Component {
+	state = {
+		top: 0
+	};
+
+	componentDidMount() {
+		window.addEventListener('scroll', throttle(this.handleScroll, 500));
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener('scroll', throttle(this.handleScroll, 500));
+	}
+
+	handleExitTransition(node) {
+		return fadeOutUp(node, this.state.top);
+	}
+
+	handleScroll() {
+		if (this.refs.container) this.setState({ top: window.pageYOffset });
+	}
+
 	render() {
 		const { location } = this.props;
 
@@ -27,6 +42,7 @@ class Container extends React.Component {
 				className={cx('wrapper', {
 					light: location.pathname !== '/'
 				})}
+				ref="container"
 			>
 				<Nav />
 				<TransitionGroup appear>
@@ -37,7 +53,7 @@ class Container extends React.Component {
 							exit: 300
 						}}
 						onEnter={fadeInUp}
-						onExit={fadeOutUp}
+						onExit={this.handleExitTransition}
 					>
 						<Switch location={location}>
 							<Route exact path="/" component={WorkPage} />
