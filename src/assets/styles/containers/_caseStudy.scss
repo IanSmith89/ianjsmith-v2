@@ -14,6 +14,16 @@
 		&.astarte {
 			background-image: url(../../images/astarte-background.jpg);
 		}
+		&.wasp {
+			background-image: url(../../images/wasp-background.jpg);
+			background-position: top center;
+		}
+		&.ecommerce {
+			background-image: url(../../images/ecommerce-background.jpg);
+		}
+		&.mightyvet {
+			background-image: url(../../images/mightyvet-background.jpg);
+		}
 
 		.case-study-hero {
 			position: absolute;
@@ -74,6 +84,7 @@
 
 		.case-study-description {
 			font-size: type-scale(2);
+			text-align: center;
 		}
 	}
 
@@ -117,7 +128,6 @@
 
 			.case-study-description {
 				margin: 0 12.5rem;
-				text-align: center;
 			}
 		}
 	}

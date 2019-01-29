@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import Astarte from './projectContent/Astarte';
 import GigPosters from './projectContent/GigPosters';
 import WAStateParks from './projectContent/WAStateParks';
+import CaseStudy from './projectContent/CaseStudy';
 
 @observer
 export default class ProjectContent extends React.Component {
@@ -14,15 +15,15 @@ export default class ProjectContent extends React.Component {
 			<Switch>
 				<Route
 					path="/projects/astarte"
-					component={() => <Astarte project={project} />}
+					component={() => <CaseStudy project={project} />}
 				/>
 				<Route
 					path="/projects/ecommerce"
-					component={() => <ECommerce project={project} />}
+					component={() => <CaseStudy project={project} />}
 				/>
 				<Route
 					path="/projects/mightyvet"
-					component={() => <MightyVet project={project} />}
+					component={() => <CaseStudy project={project} />}
 				/>
 				<Route
 					path="/projects/posters"
@@ -30,7 +31,7 @@ export default class ProjectContent extends React.Component {
 				/>
 				<Route
 					path="/projects/wasp"
-					component={() => <WAStateParks project={project} />}
+					component={() => <CaseStudy project={project} />}
 				/>
 			</Switch>
 		);

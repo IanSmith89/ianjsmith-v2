@@ -7,7 +7,8 @@ exports.seed = function(knex) {
 					{
 						id: 'mightyvet',
 						name: 'MightyVet Nonprofit Website',
-						description: '',
+						description:
+							'Establishing an online community and tackling difficult issues within the veterinary industry.',
 						design_process: [
 							'We began with a heuristic review and surveys to understand how current users felt about the site. The heuristic review highlighted areas of improvement and positive aspects such as the strength of the existing content and a starting point for the visual identity. Information gathered from our user surveys reinforced the need for the features MightyVet asked for. Users needed online mentorship opportunities and options for continuing education credits. We also completed competitive analyses to identify how similar nonprofits presented their goals and composed their sites. From there we were able to start implementing new ideas.',
 							'Before sketching and prototyping, we proposed an updated website structure with a sitemap diagram I created. This guided our decisions for what to focus on for sketches and wireframes. It also informed us about the need for a user profile and dashboard. Without one, managing the functionality they wanted would not have been possible. Next, we all sketched out our ideas and moved on to creating wireframes. As we explored different compositions with our wireframes, we worked together to arrive at our first digital prototype.',
@@ -27,7 +28,8 @@ exports.seed = function(knex) {
 					{
 						id: 'wasp',
 						name: 'WA State Parks Campsite Reservation',
-						description: '',
+						description:
+							'Examining obstacles and revamping the online campsite reservation system for WA State Parks.',
 						design_process: [
 							'To begin my research I targeted users who identified as outdoor enthusiasts. All the participants reported similar frustrations and had difficulty using the reservation service. My hypothesis was correct. The navigation was confusing. The undertaking of finding a specific campground or state park was almost unusable. Successfully reserving a campsite was unintuitive and required expert knowledge of the site. I compiled the findings from observing participants attempt these essential tasks and incorporated their feedback into my first prototype.',
 							'With paper cutouts and a pen, I created an initial prototype of new screens and workflows. I used these crude mockups to complete another round of usability studies. My study participants confirmed what worked well and what I could revise before I moved to the computer for wireframing. Again I took their comments into consideration while creating the next iteration of my designs.',
@@ -69,8 +71,9 @@ exports.seed = function(knex) {
 					},
 					{
 						id: 'ecommerce',
-						name: 'Modern E-Commerce Checkout',
-						description: '',
+						name: 'Modern E-commerce Checkout',
+						description:
+							'Analyzing current trends to build a modernized and expansive e-commerce checkout process.',
 						design_process: [
 							"We began the project with competitive analyses of other e-commerce websites. I focused on the essential steps during checkout and how to design an unobtrusive cart. The client's products and packaging served as inspiration for my teammate's visual explorations. I analyzed modern fashion and sports e-commerce websites to establish current trends.",
 							'Aside from our competitive analyses, a great resource I found was an article about best practices for the e-commerce checkout flow. A lot of e-commerce sites use a simple three or four step process. When the customer is ready to check out, ask them for their address and shipping method first. Then move on to payment information. Finish with a review of the information to confirm and place the order. Before starting our design work I also looked into patterns for shopping carts that resulted in higher conversion rates.',

@@ -3,7 +3,7 @@ import { observer } from 'mobx-react';
 import CaseStudyHero from '../../components/CaseStudyHero';
 
 @observer
-export default class Astarte extends React.Component {
+export default class CaseStudy extends React.Component {
 	render() {
 		const { project } = this.props;
 
