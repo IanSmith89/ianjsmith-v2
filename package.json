@@ -19,6 +19,8 @@
 		"nf": "nf start",
 		"prettier": "prettier --write --config .prettierrc \"**/*.{js,jsx,ts,tsx,json,css,scss}\"",
 		"resetdb": "yarn migrate:rollback && yarn migrate:latest && yarn seed",
+		"resetdb:heroku:prod": "heroku run --app ianjsmith npm run resetdb",
+		"resetdb:heroku:staging": "heroku run --app ianjsmith-staging npm run resetdb",
 		"resetdb:test": "yarn migrate:rollback:test && yarn migrate:latest:test && yarn seed:test",
 		"seed:test": "NODE_ENV=test knex seed:run",
 		"seed": "knex seed:run",
