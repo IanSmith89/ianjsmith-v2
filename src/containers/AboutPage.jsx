@@ -143,21 +143,21 @@ export default class AboutPage extends React.Component {
 									Illustrator + Photoshop + XD<span>*</span>
 								</p>
 								<p>Sketch + Invision</p>
-								<p>Balsamiq + Axure</p>
+								<p>Draw.io</p>
 								<p>
 									HTML + CSS / SCSS<span>*</span>
 								</p>
 								<p>
-									JavaScript + Node<span>*</span>
+									JavaScript<span>*</span>
 								</p>
 								<p>
 									React<span>*</span>
 								</p>
 								<p>Mobx / Redux</p>
+								<p>Node + Express + Postgres</p>
 								<p>
 									Git + Command Line<span>*</span>
 								</p>
-								<p>Express + Postgres</p>
 								<p>Heroku</p>
 							</div>
 						</div>

@@ -12,17 +12,17 @@
 		overflow-y: hidden;
 
 		&.astarte {
-			background-image: url(../../images/astarte-background.jpg);
+			background-image: url(../../images/astarte-background-gradient.jpg);
 		}
 		&.wasp {
-			background-image: url(../../images/wasp-background.jpg);
+			background-image: url(../../images/wasp-background-gradient.jpg);
 			background-position: top center;
 		}
 		&.ecommerce {
-			background-image: url(../../images/ecommerce-background.jpg);
+			background-image: url(../../images/ecommerce-background-gradient.jpg);
 		}
 		&.mightyvet {
-			background-image: url(../../images/mightyvet-background.jpg);
+			background-image: url(../../images/mightyvet-background-gradient.jpg);
 		}
 
 		.case-study-hero {
@@ -42,20 +42,23 @@
 			display: flex;
 			font-size: type-scale(0);
 			height: auto;
-			margin: 1.5rem 0 3rem;
+			margin: 1.5rem 0 2.8rem;
 			text-transform: uppercase;
 			width: auto;
 
 			a {
+				border-bottom: 0.1rem solid transparent;
 				color: $light;
 				cursor: pointer;
 				display: flex;
 				align-items: center;
 				font-weight: 400;
+				padding-bottom: 0.1rem;
 				text-decoration: none;
 
 				&:hover {
 					color: $light-grey;
+					border-bottom-color: $light-grey;
 
 					.arrow * {
 						stroke: $light-grey;
@@ -119,7 +122,7 @@
 			}
 
 			.back-link {
-				margin-bottom: 10rem;
+				margin-bottom: 9.8rem;
 			}
 
 			.case-study-name {
@@ -135,7 +138,7 @@
 	@include for-desktop-up {
 		.case-study-header {
 			.back-link {
-				margin-bottom: 12.5rem;
+				margin-bottom: 12.3rem;
 			}
 
 			.case-study-description {

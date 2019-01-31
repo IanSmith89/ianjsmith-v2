@@ -314,6 +314,9 @@
 
 			&:hover {
 				color: $orange;
+				background: $yellow-to-orange;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
 			}
 		}
 	}

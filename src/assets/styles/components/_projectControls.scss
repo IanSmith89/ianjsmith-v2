@@ -11,19 +11,22 @@
 		display: flex;
 		height: auto;
 		justify-content: center;
-		margin-bottom: 5rem;
+		margin-bottom: 4.8rem;
 		text-decoration: none;
 		width: auto;
 
 		a {
+			border-bottom: 0.1rem solid transparent;
 			color: $dark-grey;
 			cursor: pointer;
 			display: flex;
 			align-items: center;
+			padding-bottom: 0.1rem;
 			font-weight: 400;
 
 			&:hover {
 				color: $grey;
+				border-bottom-color: $grey;
 
 				.arrow * {
 					stroke: $grey;
