@@ -69,9 +69,7 @@ export default class ProjectLink extends React.Component {
 								this.hoverClassLogic()
 							)}
 						>
-							<h1 className="hover-project-name">
-								{project.name}
-							</h1>
+							<p className="hover-text">{project.description}</p>
 						</div>
 						<img
 							className="project-image"
@@ -82,6 +80,7 @@ export default class ProjectLink extends React.Component {
 						/>
 					</div>
 				</Link>
+				<h3 className="project-name">{project.name}</h3>
 			</div>
 		);
 	}

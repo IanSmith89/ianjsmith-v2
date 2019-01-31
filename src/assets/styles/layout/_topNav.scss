@@ -2,7 +2,7 @@
 	background-color: $dark-grey;
 	color: $light;
 	height: 6rem;
-	padding-top: 1.6rem;
+	padding: 1.5rem 1.6rem 0;
 	position: fixed;
 	top: 0;
 	transition: $color-change;
@@ -17,9 +17,10 @@
 	.logo {
 		a {
 			color: $light;
-			font-size: 2.2rem;
+			font-size: type-scale(2);
 			font-weight: 300;
 			letter-spacing: 0.2rem;
+			line-height: 3rem;
 		}
 	}
 
@@ -66,6 +67,17 @@
 					transition-duration: 0.3s;
 					width: 100%;
 				}
+			}
+		}
+	}
+
+	@include for-tablet-portrait-up {
+		padding-left: 3.2rem;
+		padding-right: 3.2rem;
+
+		.page-links {
+			a {
+				margin-left: 2.5rem;
 			}
 		}
 	}

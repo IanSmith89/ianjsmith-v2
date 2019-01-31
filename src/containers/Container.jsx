@@ -1,6 +1,7 @@
 import React from 'react';
-import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
 import { observer } from 'mobx-react';
+import { action, observable } from 'mobx';
+import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
 import { TransitionGroup, Transition } from 'react-transition-group';
 import cx from 'classnames';
 import Nav from './Nav';
@@ -14,9 +15,8 @@ import throttle from 'lodash.throttle';
 
 @observer
 class Container extends React.Component {
-	state = {
-		top: 0
-	};
+	@observable
+	top = 0;
 
 	componentDidMount() {
 		window.addEventListener('scroll', throttle(this.handleScroll, 500));
@@ -27,11 +27,12 @@ class Container extends React.Component {
 	}
 
 	handleExitTransition(node) {
-		return fadeOutUp(node, this.state.top);
+		return fadeOutUp(node, this.top);
 	}
 
+	@action
 	handleScroll() {
-		if (this.refs.container) this.setState({ top: window.pageYOffset });
+		if (this.refs.container) this.top = window.pageYOffset;
 	}
 
 	render() {

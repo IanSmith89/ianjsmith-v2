@@ -8,7 +8,7 @@ exports.seed = function(knex) {
 						id: 'mightyvet',
 						name: 'MightyVet Nonprofit Website',
 						description:
-							'Establishing an online community and tackling difficult issues within the veterinary industry.',
+							'Tackling difficult issues and establishing an online community within the veterinary industry.',
 						design_process: [
 							'We began with a heuristic review and surveys to understand how current users felt about the site. The heuristic review highlighted areas of improvement and positive aspects such as the strength of the existing content and a starting point for the visual identity. Information gathered from our user surveys reinforced the need for the features MightyVet asked for. Users needed online mentorship opportunities and options for continuing education credits. We also completed competitive analyses to identify how similar nonprofits presented their goals and composed their sites. From there we were able to start implementing new ideas.',
 							'Before sketching and prototyping, we proposed an updated website structure with a sitemap diagram I created. This guided our decisions for what to focus on for sketches and wireframes. It also informed us about the need for a user profile and dashboard. Without one, managing the functionality they wanted would not have been possible. Next, we all sketched out our ideas and moved on to creating wireframes. As we explored different compositions with our wireframes, we worked together to arrive at our first digital prototype.',
@@ -27,7 +27,7 @@ exports.seed = function(knex) {
 					},
 					{
 						id: 'wasp',
-						name: 'WA State Parks Campsite Reservation',
+						name: 'Campsite Reservation Prototype',
 						description:
 							'Examining obstacles and revamping the online campsite reservation system for WA State Parks.',
 						design_process: [
@@ -49,9 +49,9 @@ exports.seed = function(knex) {
 					},
 					{
 						id: 'astarte',
-						name: 'Astarte Inventory Management',
+						name: 'Biotech Inventory Management',
 						description:
-							'Ensuring accuracy and speed to improve the supervision of thousands of vials for a biotech lab.',
+							'Ensuring accuracy and organization to improve the supervision of thousands of vials for a biotech lab.',
 						design_process: [
 							'I began this project by digesting the research my colleague had completed. By familiarizing with the context I was able to understand where to go next. Since the company lacked organization of their information I created a sitemap to guide the process moving forward. We identified the tasks the company completed on a daily basis to inform our decisions for the information architecture. This allowed our team to decide how to structure the system moving forward.',
 							'Next, I created workflow diagrams to map out how the tasks coincided with each other. By focusing on the essential tasks of the company we established workflow patterns to put in place for similar tasks. The most common tasks were generating records for inventory items and updating their location within their lab. Other tasks included tracking online orders, donors, and product details. After defining all common tasks, we had a good idea of the functionality and relationships of the entire system. Using this knowledge we moved on to wireframes and visual mockups.',

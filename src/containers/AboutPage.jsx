@@ -84,11 +84,11 @@ export default class AboutPage extends React.Component {
 								<div className="underline" />
 								<p className="approach-description">
 									I like to apply design thinking to any
-									problem I face. Whether it be user research,
+									problem I face. Whether it's user research,
 									interaction design, prototyping, information
-									architecture, or visual design. I'm not
-									afraid to take a step back in my process
-									because I know you{' '}
+									architecture, or visual design, I'm not
+									afraid to take a step back in my process. I
+									know you{' '}
 									<span className="strike">rarely</span> never
 									get everything right the first time. It's
 									simply human nature.
@@ -97,20 +97,22 @@ export default class AboutPage extends React.Component {
 									I've learned to take an iterative approach
 									to design and to view mistakes as positive
 									learning opportunities. Focusing on process
-									over result has shown me the power of having
-									a growth mindset. If I'm not knowledgable
-									about a problem I know it only takes time
-									and a willingness to learn. I thrive at
-									moving on to the next idea when the time is
-									right so problems turn into solutions.
+									over results has shown me the power of
+									having a growth mindset. If I'm not
+									knowledgable about a problem I know it only
+									takes time and a willingness to learn. I
+									thrive at revisiting ideas or moving on to
+									the next one when the time is right so that
+									problems turn into solutions.
 								</p>
 								<ApproachVertical />
 								<ApproachHorizontal />
+								<small className="subtext">MY MANTRA</small>
 							</div>
 						</div>
 					</div>
 					<div className="row">
-						<div className="four columns">
+						<div className="six columns">
 							<div className="list">
 								<h2 className="section-header">
 									my <span>specialties</span>
@@ -131,7 +133,7 @@ export default class AboutPage extends React.Component {
 								<p>User Research</p>
 							</div>
 						</div>
-						<div className="four columns">
+						<div className="six columns">
 							<div className="list">
 								<h2 className="section-header">
 									my <span>toolbelt</span>
@@ -157,42 +159,6 @@ export default class AboutPage extends React.Component {
 								</p>
 								<p>Express + Postgres</p>
 								<p>Heroku</p>
-							</div>
-						</div>
-						<div className="four columns">
-							<div className="contact">
-								<h2 className="section-header">
-									contact <span>me</span>
-								</h2>
-								<div className="underline" />
-								<p className="contact-tagline">
-									Want to collaborate on your next project or
-									have a cool idea how I can improve this
-									portfolio? Reach out and connect:
-								</p>
-								<div className="social-links">
-									<a href="mailto:iansmith1026@gmail.com">
-										Email
-									</a>
-									<a
-										href="https://www.linkedin.com/in/ian-smith"
-										target="_blank"
-									>
-										LinkedIn
-									</a>
-									<a
-										href="https://github.com/IanSmith89"
-										target="_blank"
-									>
-										GitHub
-									</a>
-									<a
-										href="https://www.facebook.com/ian.smith.3388"
-										target="_blank"
-									>
-										Facebook
-									</a>
-								</div>
 							</div>
 						</div>
 					</div>

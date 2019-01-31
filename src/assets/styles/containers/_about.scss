@@ -26,11 +26,14 @@
 
 	.approach-section {
 		margin: 2.5rem auto 5rem;
+		text-align: center;
 
 		.approach-description {
-			font-size: type-scale(1);
+			font-size: type-scale(0);
+			line-height: 2.88rem;
 			margin: 0 auto 1.5rem;
 			max-width: 60rem;
+			text-align: left;
 			width: 100%;
 
 			.strike {
@@ -40,6 +43,7 @@
 		}
 
 		.approach {
+			margin-bottom: 2.5rem;
 			padding-top: 5rem;
 
 			&.vertical {
@@ -57,7 +61,7 @@
 		text-align: center;
 
 		p {
-			font-size: type-scale(1);
+			font-size: type-scale(0);
 			margin: 1.2rem 0;
 
 			span {
@@ -68,7 +72,7 @@
 	}
 
 	.subtext-container {
-		margin: 1.5rem 0 7.5rem;
+		margin: 1.5rem 0 10rem;
 		text-align: center;
 	}
 
@@ -81,7 +85,7 @@
 
 		span {
 			color: $orange;
-			font-size: type-scale(1);
+			font-size: type-scale(0);
 			font-style: normal;
 			font-weight: 400;
 		}
@@ -91,7 +95,8 @@
 		padding: 5rem 0;
 
 		.contact-tagline {
-			font-size: type-scale(1);
+			font-size: type-scale(0);
+			line-height: 2.88rem;
 			margin: 0 auto 2.5rem;
 			max-width: 42rem;
 			text-align: center;

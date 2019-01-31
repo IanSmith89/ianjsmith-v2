@@ -17,58 +17,56 @@ class Nav extends Component {
 
 		return (
 			<nav className="top-nav">
-				<div className="container">
-					<div className="row">
-						<div className="twelve columns">
-							<div className="logo">
-								<Link
-									to="/"
-									onClick={e =>
-										this.actions.handleLinkClick(
-											e,
-											location.pathname === '/'
-										)
-									}
-								>
-									Ian J. Smith
-								</Link>
-							</div>
-							<div className="page-links">
-								<Link
-									className={cx({
-										active:
-											location.pathname === '/' ||
-											location.pathname.indexOf(
-												'/projects'
-											) !== -1
-									})}
-									to="/"
-									onClick={e =>
-										this.actions.handleLinkClick(
-											e,
-											location.pathname === '/'
-										)
-									}
-								>
-									Work
-									<div className="underline" />
-								</Link>
-								<Link
-									className={cx({
-										active: location.pathname === '/about'
-									})}
-									to="/about"
-									onClick={e =>
-										this.actions.handleLinkClick(
-											e,
-											location.pathname === '/about'
-										)
-									}
-								>
-									About
-									<div className="underline" />
-								</Link>
-							</div>
+				<div className="row">
+					<div className="twelve columns">
+						<div className="logo">
+							<Link
+								to="/"
+								onClick={e =>
+									this.actions.handleLinkClick(
+										e,
+										location.pathname === '/'
+									)
+								}
+							>
+								Ian J. Smith
+							</Link>
+						</div>
+						<div className="page-links">
+							<Link
+								className={cx({
+									active:
+										location.pathname === '/' ||
+										location.pathname.indexOf(
+											'/projects'
+										) !== -1
+								})}
+								to="/"
+								onClick={e =>
+									this.actions.handleLinkClick(
+										e,
+										location.pathname === '/'
+									)
+								}
+							>
+								Work
+								<div className="underline" />
+							</Link>
+							<Link
+								className={cx({
+									active: location.pathname === '/about'
+								})}
+								to="/about"
+								onClick={e =>
+									this.actions.handleLinkClick(
+										e,
+										location.pathname === '/about'
+									)
+								}
+							>
+								About
+								<div className="underline" />
+							</Link>
 						</div>
 					</div>
 				</div>

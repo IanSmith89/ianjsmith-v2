@@ -16,14 +16,27 @@
 		}
 
 		a {
-			color: $grey;
-			font-size: type-scale(-2);
-			margin-left: auto;
-			text-decoration: none;
-			text-transform: uppercase;
+			margin: 0;
+
+			&:first-of-type {
+				margin-left: auto;
+			}
+
+			svg {
+				height: 3.2rem;
+				width: 3.2rem;
+
+				path {
+					fill: $grey;
+				}
+			}
 
 			&:hover {
-				color: $light-grey;
+				svg {
+					path {
+						fill: $orange;
+					}
+				}
 			}
 		}
 	}
