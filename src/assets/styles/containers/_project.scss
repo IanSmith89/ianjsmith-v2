@@ -45,21 +45,6 @@
 		}
 	}
 
-	.project-image-container {
-		box-shadow: $drop-shadow;
-		height: auto;
-		width: 100%;
-
-		@include for-tablet-portrait-up() {
-			height: auto;
-
-			.no-image {
-				height: 50rem;
-				width: 100%;
-			}
-		}
-	}
-
 	.project-details-container {
 		margin-bottom: 7.5rem;
 		margin-top: 7.5rem;

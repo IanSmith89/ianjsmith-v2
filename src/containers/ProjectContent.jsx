@@ -2,6 +2,7 @@ import React from 'react';
 import { observer } from 'mobx-react';
 import { Route, Switch } from 'react-router-dom';
 import Astarte from './projectContent/Astarte';
+import MightyVet from './projectContent/MightyVet';
 import GigPosters from './projectContent/GigPosters';
 import WAStateParks from './projectContent/WAStateParks';
 import CaseStudy from './projectContent/CaseStudy';
@@ -23,7 +24,7 @@ export default class ProjectContent extends React.Component {
 				/>
 				<Route
 					path="/projects/mightyvet"
-					component={() => <CaseStudy project={project} />}
+					component={() => <MightyVet project={project} />}
 				/>
 				<Route
 					path="/projects/posters"

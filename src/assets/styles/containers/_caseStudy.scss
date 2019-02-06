@@ -95,6 +95,7 @@
 		margin: 10rem 0;
 
 		.section-label {
+			color: $text-grey;
 			font-size: type-scale(2);
 			font-weight: 600;
 			letter-spacing: 0.025rem;
@@ -108,8 +109,32 @@
 		}
 
 		.section-content {
+			color: $mid-grey;
 			font-size: type-scale(0);
 			line-height: 2.88rem;
+
+			&.full {
+				margin: 2.5rem 0 5rem;
+
+				@include for-tablet-portrait-up() {
+					margin: 3.5rem 16.66% 10rem;
+				}
+			}
+		}
+	}
+
+	.project-image-container {
+		box-shadow: $drop-shadow;
+		height: auto;
+		width: 100%;
+
+		@include for-tablet-portrait-up() {
+			height: auto;
+
+			.no-image {
+				height: 50rem;
+				width: 100%;
+			}
 		}
 	}
 
