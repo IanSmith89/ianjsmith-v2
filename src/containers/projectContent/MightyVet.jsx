@@ -1,15 +1,103 @@
 import React from 'react';
+import { action, observable } from 'mobx';
 import { observer } from 'mobx-react';
+import Lightbox from 'react-image-lightbox';
 import CaseStudyHero from '../../components/CaseStudyHero';
 import ImageCard from '../../components/ImageCard';
 
 @observer
 export default class MightyVet extends React.Component {
+	@observable
+	photoIndex = 0;
+	@observable
+	isOpen = false;
+	images = [
+		{
+			caption: (
+				<a className="image-lightbox-link" href="#">
+					Link to Heuristic Review
+				</a>
+			),
+			src: require('../../assets/images/MightyVet-heuristic.png')
+		},
+		{
+			caption: (
+				<p className="image-lightbox-caption">Competitive Analysis</p>
+			),
+			src: require('../../assets/images/VetMindMatters-logo.jpg')
+		},
+		{
+			caption: <p className="image-lightbox-caption">Sitemap</p>,
+			src: require('../../assets/images/MightyVet-sitemap.jpg')
+		},
+		{
+			caption: <p className="image-lightbox-caption">Sketches</p>,
+			src: require('../../assets/images/MightyVet-sketches.jpg')
+		},
+		{
+			caption: <p className="image-lightbox-caption">Wireframes</p>,
+			src: require('../../assets/images/MightyVet-wires-02.jpg')
+		},
+		{
+			caption: (
+				<p className="image-lightbox-caption">
+					Dynamic Search Component
+				</p>
+			),
+			src: require('../../assets/images/MightyVet-search.jpg')
+		}
+	];
+
+	openLightbox(photoIndex) {
+		this.setPhotoIndex(photoIndex);
+		this.setIsOpen(true);
+	}
+
+	@action
+	setIsOpen(isOpen) {
+		this.isOpen = isOpen;
+	}
+
+	@action
+	setPhotoIndex(photoIndex) {
+		this.photoIndex = photoIndex;
+	}
+
 	render() {
 		const { project } = this.props;
 
 		return (
 			<div>
+				{this.isOpen && (
+					<Lightbox
+						animationOnKeyInput
+						mainSrc={this.images[this.photoIndex].src}
+						// nextSrc={
+						// 	this.images[
+						// 		(this.photoIndex + 1) % this.images.length
+						// 	].src
+						// }
+						// prevSrc={
+						// 	this.images[
+						// 		(this.photoIndex + this.images.length - 1) %
+						// 			this.images.length
+						// 	].src
+						// }
+						imageCaption={this.images[this.photoIndex].caption}
+						onCloseRequest={() => this.setIsOpen(false)}
+						// onMovePrevRequest={() =>
+						// 	this.setPhotoIndex(
+						// 		(this.photoIndex + this.images.length - 1) %
+						// 			this.images.length
+						// 	)
+						// }
+						// onMoveNextRequest={() =>
+						// 	this.setPhotoIndex(
+						// 		(this.photoIndex + 1) % this.images.length
+						// 	)
+						// }
+					/>
+				)}
 				<CaseStudyHero project={project} />
 				<div className="container">
 					<div className="row text-section">
@@ -65,7 +153,8 @@ export default class MightyVet extends React.Component {
 								<div className="twelve columns">
 									<ImageCard
 										alt="MightyVet Heuristic Analysis"
-										src={require('../../assets/images/MightyVet-heuristic.png')}
+										onClick={() => this.openLightbox(0)}
+										src={this.images[0].src}
 									/>
 								</div>
 							</div>
@@ -88,7 +177,7 @@ export default class MightyVet extends React.Component {
 								<div className="four columns">
 									<ImageCard
 										alt="Vet Mind Matters logo"
-										src={require('../../assets/images/VetMindMatters-logo.jpg')}
+										src={this.images[1].src}
 									/>
 								</div>
 								<div className="four columns">
@@ -123,7 +212,8 @@ export default class MightyVet extends React.Component {
 								<div className="twelve columns">
 									<ImageCard
 										alt="MightyVet Sitemap"
-										src={require('../../assets/images/MightyVet-sitemap.jpg')}
+										onClick={() => this.openLightbox(2)}
+										src={this.images[2].src}
 									/>
 								</div>
 							</div>
@@ -146,7 +236,8 @@ export default class MightyVet extends React.Component {
 								<div className="twelve columns">
 									<ImageCard
 										alt="MightyVet Sketches"
-										src={require('../../assets/images/MightyVet-sketches.jpg')}
+										onClick={() => this.openLightbox(3)}
+										src={this.images[3].src}
 									/>
 								</div>
 							</div>
@@ -161,15 +252,8 @@ export default class MightyVet extends React.Component {
 								<div className="twelve columns">
 									<ImageCard
 										alt="MightyVet Wires 2"
-										src={require('../../assets/images/MightyVet-wires-02.jpg')}
-									/>
-								</div>
-							</div>
-							<div className="row">
-								<div className="twelve columns">
-									<ImageCard
-										alt="MightyVet Wires 1"
-										src={require('../../assets/images/MightyVet-wires-01.jpg')}
+										onClick={() => this.openLightbox(4)}
+										src={this.images[4].src}
 									/>
 								</div>
 							</div>
@@ -192,7 +276,8 @@ export default class MightyVet extends React.Component {
 								<div className="twelve columns">
 									<ImageCard
 										alt="MightyVet search bar"
-										src={require('../../assets/images/MightyVet-search.jpg')}
+										onClick={() => this.openLightbox(5)}
+										src={this.images[5].src}
 									/>
 								</div>
 							</div>

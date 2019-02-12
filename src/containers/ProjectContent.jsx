@@ -1,5 +1,5 @@
 import React from 'react';
-import { observer } from 'mobx-react';
+import { inject, observer } from 'mobx-react';
 import { Route, Switch } from 'react-router-dom';
 import Astarte from './projectContent/Astarte';
 import MightyVet from './projectContent/MightyVet';
@@ -7,10 +7,11 @@ import GigPosters from './projectContent/GigPosters';
 import WAStateParks from './projectContent/WAStateParks';
 import CaseStudy from './projectContent/CaseStudy';
 
+@inject('workStore')
 @observer
 export default class ProjectContent extends React.Component {
 	render() {
-		const { project } = this.props;
+		const { project } = this.props.workStore;
 
 		return (
 			<Switch>

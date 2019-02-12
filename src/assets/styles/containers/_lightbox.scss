@@ -1,0 +1,17 @@
+.ril__captionContent {
+	margin: 0 auto;
+}
+
+.image-lightbox-caption,
+.image-lightbox-link {
+	font-size: type-scale(1);
+	margin: 0;
+}
+
+.image-lightbox-link {
+	color: $orange;
+
+	&:hover {
+		color: $yellow;
+	}
+}

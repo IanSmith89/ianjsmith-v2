@@ -321,6 +321,10 @@
 
 	.project-image {
 		width: 100%;
+
+		&.clickable {
+			cursor: pointer;
+		}
 	}
 
 	@include for-tablet-portrait-up() {
