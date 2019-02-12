@@ -48,18 +48,22 @@ export default class AboutPage extends React.Component {
 									out to be an excellent choice for me.
 								</p>
 								<p className="approach-description">
-									Since graduating in 2013 with my B.F.A. in
+									Since graduating in 2013 with a B.F.A. in
 									Graphic Design I have worked at screen
 									printing and embroidery shops, photography
-									studios, coding bootcamps, and most recently
-									for consulting agencies. I'm fascinated by
-									the variety of industries and people that
-									design has exposed me to. The challenges of
-									trying to understand how others think and
-									feel are what gets me out of bed in the
-									morning. I appreciate the lessons I've
-									learned so far and look forward to the
-									perpetual education that the future holds.
+									studios, coding boot camps, and most
+									recently for consulting agencies. I love
+									taking on the challenges of understanding
+									how others think and feel. With this
+									information, I also enjoy figuring out how
+									to realize meaningful designs by leveraging
+									my experience as a developer. This
+									compliments my design sensibilities while
+									allowing me to effectively communicate with
+									anyone involved in the process. I appreciate
+									the lessons I've learned so far, and I look
+									forward to the perpetual education that the
+									future holds.
 								</p>
 								<p className="approach-description">
 									In my free time, I like to go snowboarding,
