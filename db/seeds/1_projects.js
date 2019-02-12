@@ -50,6 +50,28 @@ exports.seed = function(knex) {
 							"Working with another designer and a developer at High Seas, my responsibilities included research, interaction design, and prototyping. The main focus of my research and interaction work was on the checkout process. I also collaborated on visual design explorations. Since the budget didn't allow for usability studies, we worked together with the client and my colleagues to test design iterations. I met with the developer throughout the process to ensure a smooth handoff of our designs."
 					},
 					{
+						id: 'wasp',
+						name: 'Campsite Reservation Prototype',
+						description:
+							'Examining obstacles and revamping the online campsite reservation system for WA State Parks.',
+						design_process: [
+							'To begin my research I targeted users who identified as outdoor enthusiasts. All the participants reported similar frustrations and had difficulty using the reservation service. My hypothesis was correct. The navigation was confusing. The undertaking of finding a specific campground or state park was almost unusable. Successfully reserving a campsite was unintuitive and required expert knowledge of the site. I compiled the findings from observing participants attempt these essential tasks and incorporated their feedback into my first prototype.',
+							'With paper cutouts and a pen, I created an initial prototype of new screens and workflows. I used these crude mockups to complete another round of usability studies. My study participants confirmed what worked well and what I could revise before I moved to the computer for wireframing. Again I took their comments into consideration while creating the next iteration of my designs.',
+							'Following the paper prototype, my wireframes built upon the feedback from my users. During this phase, I shifted my attention to the task of choosing specific dates to go camping. I experimented with different layouts and interface elements. Inspired by existing reservation patterns, I constructed new components for selecting dates. Once again I tested my designs on users to confirm my choices before moving forward.',
+							'After completing wireframes and user testing I proceeded to higher fidelity mockups. With most of the structure of my pages complete I established a new visual aesthetic to apply to my designs. Throughout testing the research participants requested more up-to-date imagery and color choices. Using this information I picked colors and fonts that built upon the existing Washington State Parks branding. The final designs increased the usage of photography to bolster the appeal of individual campground pages. According to users this new visual presentation and reservation workflow modernized the feel of the service.'
+						],
+						outcome_and_reflection: [
+							"I presented my findings and prototypes to the Washington State Parks Foundation at the end of this project. Though they didn't move forward with my designs because of contractual reasons, my effort and recommendations impressed them. They praised my designs and acknowledged the need for online campsite reservation improvements.",
+							'This project was a great lesson in slowing down and trusting in iteration. Before this experience, I tended to jump into the visual design too early. This often caused me to get distracted with visuals before fleshing out the proper workflows. I enjoyed working through many iterations to arrive at a more thorough solution. In the end, the final designs were stronger because I focused on the process.'
+						],
+						problem:
+							'The online reservation system for campgrounds in Washington State Parks was frustrating to use. Navigation was a challenge and the interactions were haphazard. The process annoyed me while trying to find and reserve a campsite, and I wanted to see if others felt the same. I saw areas of opportunity to improve the interaction workflow and rejuvenate the visual design of the site.',
+						solution:
+							'After four weeks of design and iteration, I addressed the issues found in usability studies to create a replacement for their campsite reservation system. I improved the interactions involving searching for and selecting a campsite to reserve. By introducing new interface elements to modernize the experience I was also able to refresh the visual design and aesthetic. The end result enhanced the experience with a few minor updates to the interactions and site structure.',
+						team_and_role:
+							'Working alone as part of my SVC prototyping class I conducted user research and created prototypes at varying levels of fidelity. I began this project by conducting usability studies to inform my prototyping process. My initial prototype consisted of sketches and paper. Next, I completed a round of wireframing and concluded with a production ready prototype. While working at High Seas I also presented this case study to show my design process to prospective clients.'
+					},
+					{
 						id: 'mightyvet',
 						name: 'MightyVet Nonprofit Website',
 						description:
@@ -72,28 +94,6 @@ exports.seed = function(knex) {
 							'By the end of the eight-week project, we created a brand new web experience for them. Our designs included an updated webinar system for completing continuing education credits and new features for mentorship and scheduling office hours. We designed a profile and dashboard that serves as a central source of information and allows MightyVet to manage the different user roles.',
 						team_and_role:
 							'Working with two other students in my SVC capstone class, we completed user research, prototyping, and a visual design refresh. I focused on information architecture and project management, and we collaborated on research, interaction design, and prototyping. My primary responsibilities included meeting coordination and client communication and producing sitemap diagrams, updated search and filter interfaces, and visual design assets.'
-					},
-					{
-						id: 'wasp',
-						name: 'Campsite Reservation Prototype',
-						description:
-							'Examining obstacles and revamping the online campsite reservation system for WA State Parks.',
-						design_process: [
-							'To begin my research I targeted users who identified as outdoor enthusiasts. All the participants reported similar frustrations and had difficulty using the reservation service. My hypothesis was correct. The navigation was confusing. The undertaking of finding a specific campground or state park was almost unusable. Successfully reserving a campsite was unintuitive and required expert knowledge of the site. I compiled the findings from observing participants attempt these essential tasks and incorporated their feedback into my first prototype.',
-							'With paper cutouts and a pen, I created an initial prototype of new screens and workflows. I used these crude mockups to complete another round of usability studies. My study participants confirmed what worked well and what I could revise before I moved to the computer for wireframing. Again I took their comments into consideration while creating the next iteration of my designs.',
-							'Following the paper prototype, my wireframes built upon the feedback from my users. During this phase, I shifted my attention to the task of choosing specific dates to go camping. I experimented with different layouts and interface elements. Inspired by existing reservation patterns, I constructed new components for selecting dates. Once again I tested my designs on users to confirm my choices before moving forward.',
-							'After completing wireframes and user testing I proceeded to higher fidelity mockups. With most of the structure of my pages complete I established a new visual aesthetic to apply to my designs. Throughout testing the research participants requested more up-to-date imagery and color choices. Using this information I picked colors and fonts that built upon the existing Washington State Parks branding. The final designs increased the usage of photography to bolster the appeal of individual campground pages. According to users this new visual presentation and reservation workflow modernized the feel of the service.'
-						],
-						outcome_and_reflection: [
-							"I presented my findings and prototypes to the Washington State Parks Foundation at the end of this project. Though they didn't move forward with my designs because of contractual reasons, my effort and recommendations impressed them. They praised my designs and acknowledged the need for online campsite reservation improvements.",
-							'This project was a great lesson in slowing down and trusting in iteration. Before this experience, I tended to jump into the visual design too early. This often caused me to get distracted with visuals before fleshing out the proper workflows. I enjoyed working through many iterations to arrive at a more thorough solution. In the end, the final designs were stronger because I focused on the process.'
-						],
-						problem:
-							'The online reservation system for campgrounds in Washington State Parks was frustrating to use. Navigation was a challenge and the interactions were haphazard. The process annoyed me while trying to find and reserve a campsite, and I wanted to see if others felt the same. I saw areas of opportunity to improve the interaction workflow and rejuvenate the visual design of the site.',
-						solution:
-							'After four weeks of design and iteration, I addressed the issues found in usability studies to create a replacement for their campsite reservation system. I improved the interactions involving searching for and selecting a campsite to reserve. By introducing new interface elements to modernize the experience I was also able to refresh the visual design and aesthetic. The end result enhanced the experience with a few minor updates to the interactions and site structure.',
-						team_and_role:
-							'Working alone as part of my SVC prototyping class I conducted user research and created prototypes at varying levels of fidelity. I began this project by conducting usability studies to inform my prototyping process. My initial prototype consisted of sketches and paper. Next, I completed a round of wireframing and concluded with a production ready prototype. While working at High Seas I also presented this case study to show my design process to prospective clients.'
 					}
 				])
 				.returning('*');

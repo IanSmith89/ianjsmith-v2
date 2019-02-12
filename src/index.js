@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import App from './App';
-require('./assets/styles/main.scss');
+import './assets/styles/main.scss';
+import 'react-image-lightbox/style.css';
 
 ReactDOM.render(
 	<AppContainer>

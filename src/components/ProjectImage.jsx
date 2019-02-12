@@ -1,9 +1,19 @@
 import React from 'react';
+import cx from 'classnames';
 
-const ProjectImage = ({ alt, src }) => {
+const ProjectImage = ({ alt, onClick, src }) => {
 	return (
 		<div className="project-image-container">
-			{src ? <img className="project-image" src={src} alt={alt} /> : null}
+			{src ? (
+				<img
+					className={cx('project-image', {
+						clickable: onClick
+					})}
+					src={src}
+					alt={alt}
+					onClick={onClick}
+				/>
+			) : null}
 		</div>
 	);
 };

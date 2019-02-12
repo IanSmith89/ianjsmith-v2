@@ -309,9 +309,8 @@
 
 .project-image-container {
 	align-items: center;
-	background-color: $light;
 	display: flex;
-	height: 49.2rem;
+	height: auto;
 	width: 100%;
 
 	.no-image {
@@ -321,11 +320,13 @@
 
 	.project-image {
 		width: 100%;
+
+		&.clickable {
+			cursor: pointer;
+		}
 	}
 
 	@include for-tablet-portrait-up() {
-		height: auto;
-
 		.no-image {
 			height: 50rem;
 			width: 100%;

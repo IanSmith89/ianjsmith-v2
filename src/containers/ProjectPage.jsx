@@ -11,33 +11,24 @@ import ResumeLink from '../components/ResumeLink';
 @inject('actions', 'workStore')
 @observer
 class ProjectPage extends React.Component {
-	constructor(props) {
-		super(props);
-
-		this.actions = props.actions;
-		this.workStore = props.workStore;
-	}
-
 	componentDidMount() {
 		const { projectId } = this.props.match.params;
-		this.actions.getProjectById(projectId, this.workStore);
+		this.props.actions.getProjectById(projectId, this.props.workStore);
 	}
 
 	componentDidUpdate(prevProps) {
 		const { projectId } = this.props.match.params;
 
 		if (projectId !== prevProps.match.params.projectId) {
-			this.actions.clearProject(this.workStore);
-			this.actions.getProjectById(projectId, this.workStore);
+			this.props.actions.clearProject(this.props.workStore);
+			this.props.actions.getProjectById(projectId, this.props.workStore);
 		}
 	}
 
 	render() {
-		const { project } = this.workStore;
-
 		return (
 			<main id="project-top" className="case-study page">
-				<ProjectContent project={project} />
+				<ProjectContent />
 				<ProjectControls />
 				<ResumeLink />
 			</main>
