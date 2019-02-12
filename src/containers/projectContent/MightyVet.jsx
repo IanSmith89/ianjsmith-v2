@@ -14,7 +14,11 @@ export default class MightyVet extends React.Component {
 	images = [
 		{
 			caption: (
-				<a className="image-lightbox-link" href="#">
+				<a
+					className="image-lightbox-link"
+					href="https://docs.google.com/spreadsheets/d/1Y4gjfmbnQSKE7TDBOpZikFrX_Df4msfs41pXgUC6CX8/edit?usp=sharing"
+					target="_blank"
+				>
 					Link to Heuristic Review
 				</a>
 			),
