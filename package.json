@@ -64,6 +64,7 @@
     "pg": "^6.1.5",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
+    "react-image-lightbox": "^5.1.0",
     "react-router-dom": "^4.0.0",
     "react-scroll": "^1.5.4",
     "react-transition-group": "^2.5.0"
