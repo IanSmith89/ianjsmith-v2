@@ -8,7 +8,7 @@ import ArrowIcon from '../components/ArrowIcon';
 
 @inject('actions', 'workStore')
 @observer
-class ProjectControls extends React.Component {
+class CaseStudyNavigation extends React.Component {
 	render() {
 		const { actions, location, workStore } = this.props;
 		const { projectLinks } = workStore;
@@ -55,4 +55,4 @@ class ProjectControls extends React.Component {
 	}
 }
 
-export default withRouter(ProjectControls);
+export default withRouter(CaseStudyNavigation);

@@ -1,15 +1,15 @@
 export default class WorkApi {
-    constructor(apiCore) {
-        this.API = apiCore;
-    }
+	constructor(apiCore) {
+		this.API = apiCore;
+	}
 
-    getProjectById(id) {
-        return this.API.get(`${WorkApi.projectsPath}/${id}`);
-    }
+	getProjectById(id) {
+		return this.API.get(`${WorkApi.projectsPath}/${id}`);
+	}
 
-    getProjects() {
-        return this.API.get(WorkApi.projectsPath);
-    }
+	getProjects() {
+		return this.API.get(WorkApi.projectsPath);
+	}
 }
 
 WorkApi.projectsPath = '/api/projects';

@@ -7,8 +7,8 @@ import cx from 'classnames';
 import Nav from './Nav';
 import WorkPage from './WorkPage';
 import AboutPage from './AboutPage';
-import ProjectPage from './ProjectPage';
-import NotFound from './NotFound';
+import CaseStudyPage from './CaseStudyPage';
+import NotFoundPage from './NotFoundPage';
 import Footer from './Footer';
 import { fadeInUp, fadeOutUp } from '../utils/animations';
 import throttle from 'lodash.throttle';
@@ -61,9 +61,9 @@ class Container extends React.Component {
 							<Route path="/about" component={AboutPage} />
 							<Route
 								path="/projects/:projectId"
-								component={ProjectPage}
+								component={CaseStudyPage}
 							/>
-							<Route path="/not-found" component={NotFound} />
+							<Route path="/not-found" component={NotFoundPage} />
 							<Redirect from="/*" to="/not-found" />
 						</Switch>
 					</Transition>
