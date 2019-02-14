@@ -1,6 +1,5 @@
 import React from 'react';
 import { inject, observer } from 'mobx-react';
-import PostersHeader from '../components/PostersHeader';
 import FullImage from '../components/FullImage';
 
 @inject('workStore')
