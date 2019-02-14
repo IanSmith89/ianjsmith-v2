@@ -4,7 +4,6 @@ import { Route, Switch } from 'react-router-dom';
 import CaseStudyHero from '../../components/CaseStudyHero';
 import Astarte from './Astarte';
 import MightyVet from './MightyVet';
-import GigPosters from './GigPosters';
 import WAStateParks from './WAStateParks';
 import ECommerce from './ECommerce';
 
@@ -61,10 +60,6 @@ export default class CaseStudyContainer extends Component {
 						<Route
 							path="/projects/mightyvet"
 							component={() => <MightyVet project={project} />}
-						/>
-						<Route
-							path="/projects/posters"
-							component={() => <GigPosters project={project} />}
 						/>
 						<Route
 							path="/projects/wasp"

@@ -22,29 +22,6 @@
 		}
 	}
 
-	.project-header {
-		text-align: center;
-
-		.project-title {
-			font-size: type-scale(3);
-			font-weight: 600;
-			margin-bottom: 0;
-			margin-top: 2.5rem;
-		}
-
-		.project-services {
-			color: $grey;
-			margin-bottom: 7.5rem;
-			font-weight: 600;
-		}
-
-		.project-description {
-			font-size: type-scale(0);
-			font-weight: 300;
-			margin-bottom: 7.5rem;
-		}
-	}
-
 	.project-details-container {
 		margin-bottom: 7.5rem;
 		margin-top: 7.5rem;
@@ -74,18 +51,6 @@
 					}
 				}
 			}
-		}
-	}
-
-	.full-width-container {
-		float: none;
-		max-width: 144rem;
-		margin: 0 auto 12.5rem;
-		width: 100%;
-
-		.full-width-image {
-			margin: 0 auto;
-			width: 100%;
 		}
 	}
 
@@ -175,17 +140,6 @@
 	}
 
 	@include for-tablet-portrait-up() {
-		.project-header {
-			margin: 0 auto;
-			width: 66.66%;
-
-			.project-description {
-				margin-left: auto;
-				margin-right: auto;
-				max-width: 40rem;
-			}
-		}
-
 		.text-list {
 			margin-left: auto;
 			margin-right: auto;
@@ -229,15 +183,6 @@
 	}
 
 	@include for-desktop-up() {
-		.project-header {
-			width: 50%;
-
-			.project-description {
-				margin-left: auto;
-				margin-right: auto;
-			}
-		}
-
 		.text-list {
 			width: 50%;
 
