@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import cx from 'classnames';
 
 @observer
-export default class ProjectLink extends React.Component {
+export default class CaseStudyThumbnail extends React.Component {
 	@observable
 	hoverClassName = '';
 	directions = { 0: 'top', 1: 'right', 2: 'bottom', 3: 'left' };

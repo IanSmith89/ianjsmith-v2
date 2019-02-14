@@ -1,7 +1,7 @@
 import API from '../api';
 
 export function clearProject(workStore) {
-	return workStore.setProject(_defaultProject());
+	workStore.setProject(_defaultProject());
 }
 
 function _defaultProject() {
@@ -21,20 +21,29 @@ function _defaultProject() {
 	};
 }
 
+export async function fetchProjects() {
+	try {
+		const projects = await API.work.getProjects();
+		return projects;
+	} catch (err) {
+		console.error(err);
+	}
+}
+
+export async function getProjectById(id, workStore) {
+	try {
+		const project = await API.work.getProjectById(id);
+		return workStore.setProject(project);
+	} catch (err) {
+		console.error(err);
+	}
+}
+
+export async function getProjects(workStore) {
+	const projects = await fetchProjects();
+	return workStore.setProjects(projects);
+}
+
 export function handleLinkClick(e, linkIsActive) {
 	if (linkIsActive) return e.preventDefault();
-}
-
-export function getProjectById(id, workStore) {
-	return API.work
-		.getProjectById(id)
-		.then(res => workStore.setProject(res))
-		.catch(err => console.error(err));
-}
-
-export function getProjects(workStore) {
-	return API.work
-		.getProjects()
-		.then(res => workStore.setProjects(res))
-		.catch(err => console.error(err));
 }

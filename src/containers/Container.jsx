@@ -1,14 +1,15 @@
 import React from 'react';
 import { observer } from 'mobx-react';
 import { action, observable } from 'mobx';
-import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 import { TransitionGroup, Transition } from 'react-transition-group';
 import cx from 'classnames';
 import Nav from './Nav';
 import WorkPage from './WorkPage';
 import AboutPage from './AboutPage';
-import ProjectPage from './ProjectPage';
-import NotFound from './NotFound';
+import CaseStudyPage from './CaseStudyPage';
+import GigPosters from './GigPosters';
+import NotFoundPage from './NotFoundPage';
 import Footer from './Footer';
 import { fadeInUp, fadeOutUp } from '../utils/animations';
 import throttle from 'lodash.throttle';
@@ -61,10 +62,24 @@ class Container extends React.Component {
 							<Route path="/about" component={AboutPage} />
 							<Route
 								path="/projects/:projectId"
-								component={ProjectPage}
+								render={props => {
+									const ids = [
+										'astarte',
+										'ecommerce',
+										'wasp',
+										'mightyvet'
+									];
+									return ids.includes(
+										props.match.params.projectId
+									) ? (
+										<CaseStudyPage {...props} />
+									) : (
+										<NotFoundPage />
+									);
+								}}
 							/>
-							<Route path="/not-found" component={NotFound} />
-							<Redirect from="/*" to="/not-found" />
+							<Route path="/posters" component={GigPosters} />
+							<Route component={NotFoundPage} />
 						</Switch>
 					</Transition>
 				</TransitionGroup>
