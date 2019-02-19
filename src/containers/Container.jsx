@@ -61,7 +61,7 @@ class Container extends React.Component {
 							<Route exact path="/" component={WorkPage} />
 							<Route path="/about" component={AboutPage} />
 							<Route
-								path="/projects/:projectId"
+								path="/case-study/:projectId"
 								render={props => {
 									const ids = [
 										'astarte',

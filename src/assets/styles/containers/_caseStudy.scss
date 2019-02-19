@@ -107,6 +107,7 @@
 		.underline {
 			margin-left: 0;
 			margin-right: 0;
+			margin-bottom: 2.5rem;
 		}
 
 		.section-content {
@@ -139,6 +140,14 @@
 		}
 	}
 
+	.add-bottom-margin-sm {
+		margin-bottom: 2.5rem;
+	}
+
+	.add-bottom-margin-lg {
+		margin-bottom: 10rem;
+	}
+
 	@include for-tablet-portrait-up() {
 		.case-study-header {
 			height: $lg-height;
@@ -158,6 +167,10 @@
 			.case-study-description {
 				margin: 0 12.5rem;
 			}
+		}
+
+		.add-bottom-margin-sm {
+			margin-bottom: 5rem;
 		}
 	}
 

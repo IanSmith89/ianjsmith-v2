@@ -133,7 +133,7 @@ export default class Astarte extends React.Component {
 					</div>
 				</div>
 				<div className="row">
-					<div className="six columns">
+					<div className="six columns add-bottom-margin-sm">
 						<ImageCard
 							alt="Astarte create lot workflow"
 							onClick={() =>
@@ -142,14 +142,14 @@ export default class Astarte extends React.Component {
 							src={this.images[2].src}
 						/>
 					</div>
-					<div className="six columns">
+					<div className="six columns columns">
 						<p className="section-content">
 							{project.designProcess[2]}
 						</p>
 					</div>
 				</div>
-				<div className="row">
-					<div className="six columns">
+				<div className="row add-bottom-margin-lg">
+					<div className="six columns add-bottom-margin-sm">
 						<ImageCard
 							alt="Astarte create product workflow"
 							onClick={() =>
@@ -176,7 +176,7 @@ export default class Astarte extends React.Component {
 							{project.designProcess[4]}
 						</p>
 					</div>
-					<div className="six columns">
+					<div className="six columns add-bottom-margin-sm">
 						<ImageCard
 							alt="Astarte freezer view"
 							onClick={() =>

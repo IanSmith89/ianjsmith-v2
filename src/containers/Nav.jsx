@@ -6,14 +6,8 @@ import cx from 'classnames';
 @inject('actions')
 @observer
 class Nav extends Component {
-	constructor(props) {
-		super(props);
-
-		this.actions = props.actions;
-	}
-
 	render() {
-		const { location } = this.props;
+		const { actions, location } = this.props;
 
 		return (
 			<nav className="top-nav">
@@ -23,7 +17,7 @@ class Nav extends Component {
 							<Link
 								to="/"
 								onClick={e =>
-									this.actions.handleLinkClick(
+									actions.handleLinkClick(
 										e,
 										location.pathname === '/'
 									)
@@ -38,12 +32,12 @@ class Nav extends Component {
 									active:
 										location.pathname === '/' ||
 										location.pathname.indexOf(
-											'/projects'
+											'/case-study/'
 										) !== -1
 								})}
 								to="/"
 								onClick={e =>
-									this.actions.handleLinkClick(
+									actions.handleLinkClick(
 										e,
 										location.pathname === '/'
 									)
@@ -58,7 +52,7 @@ class Nav extends Component {
 								})}
 								to="/about"
 								onClick={e =>
-									this.actions.handleLinkClick(
+									actions.handleLinkClick(
 										e,
 										location.pathname === '/about'
 									)
