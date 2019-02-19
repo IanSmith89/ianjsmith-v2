@@ -154,7 +154,7 @@ export default class MightyVet extends React.Component {
 				<div className="row">
 					<div className="twelve columns">
 						<h3 className="section-label">
-							Sketching & Prototyping
+							Sketching &amp; Prototyping
 						</h3>
 						<div className="underline" />
 					</div>

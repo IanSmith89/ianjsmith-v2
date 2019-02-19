@@ -29,6 +29,7 @@
 		text-align: center;
 
 		.approach-description {
+			color: $text-grey;
 			font-size: type-scale(0);
 			line-height: 2.88rem;
 			margin: 0 auto 1.5rem;
@@ -61,6 +62,7 @@
 		text-align: center;
 
 		p {
+			color: $text-grey;
 			font-size: type-scale(0);
 			margin: 1.2rem 0;
 
@@ -72,11 +74,12 @@
 	}
 
 	.subtext-container {
-		margin: 1.5rem 0 10rem;
+		margin: 1.5rem 0 12.5rem;
 		text-align: center;
 	}
 
 	.subtext {
+		color: $text-grey;
 		font-style: italic;
 		margin: 1.5rem 0 0;
 		text-align: center;

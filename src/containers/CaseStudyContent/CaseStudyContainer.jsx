@@ -28,7 +28,7 @@ export default class CaseStudyContainer extends Component {
 					</div>
 					<div className="row text-section">
 						<div className="six columns">
-							<h3 className="section-label">Team & Role</h3>
+							<h3 className="section-label">Team &amp; Role</h3>
 							<div className="underline" />
 						</div>
 						<div className="six columns">
@@ -69,7 +69,7 @@ export default class CaseStudyContainer extends Component {
 					<div className="row text-section">
 						<div className="six columns">
 							<h3 className="section-label">
-								Outcome & Reflection
+								Outcome &amp; Reflection
 							</h3>
 							<div className="underline" />
 						</div>
