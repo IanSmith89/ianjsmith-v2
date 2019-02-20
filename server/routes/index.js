@@ -6,6 +6,6 @@ const projectRoutes = require('./projects');
 
 router.route('/projects').get(projectRoutes.getAllProjects);
 
-router.route('/case-study/:id').get(projectRoutes.getProjectById);
+router.route('/projects/:id').get(projectRoutes.getProjectById);
 
 module.exports = router;
