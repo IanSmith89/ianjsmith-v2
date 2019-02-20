@@ -15,7 +15,7 @@ export default class WAStateParks extends React.Component {
 			src: require('../../assets/images/wasp-wires.jpg')
 		},
 		{
-			caption: <p className="image-lightbox-caption">Final Mockups</p>,
+			caption: <p className="image-lightbox-caption">Prototyping</p>,
 			src: require('../../assets/images/wasp-mocks.jpg')
 		}
 	];
@@ -103,7 +103,7 @@ export default class WAStateParks extends React.Component {
 				</div>
 				<div className="row">
 					<div className="twelve columns">
-						<h3 className="section-label">Final Mockups</h3>
+						<h3 className="section-label">Prototyping</h3>
 						<div className="underline" />
 					</div>
 				</div>
