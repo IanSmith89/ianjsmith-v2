@@ -12,19 +12,19 @@ class WorkStore {
 		},
 		{
 			name: 'mightyvet',
-			to: '/projects/mightyvet'
+			to: '/case-study/mightyvet'
 		},
 		{
 			name: 'wa state parks',
-			to: '/projects/wasp'
+			to: '/case-study/wasp'
 		},
 		{
 			name: 'astarte',
-			to: '/projects/astarte'
+			to: '/case-study/astarte'
 		},
 		{
 			name: 'ecommerce',
-			to: '/projects/ecommerce'
+			to: '/case-study/ecommerce'
 		}
 	];
 

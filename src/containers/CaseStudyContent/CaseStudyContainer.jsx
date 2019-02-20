@@ -28,7 +28,7 @@ export default class CaseStudyContainer extends Component {
 					</div>
 					<div className="row text-section">
 						<div className="six columns">
-							<h3 className="section-label">Team & Role</h3>
+							<h3 className="section-label">Team &amp; Role</h3>
 							<div className="underline" />
 						</div>
 						<div className="six columns">
@@ -50,26 +50,26 @@ export default class CaseStudyContainer extends Component {
 					</div>
 					<Switch>
 						<Route
-							path="/projects/astarte"
+							path="/case-study/astarte"
 							component={() => <Astarte project={project} />}
 						/>
 						<Route
-							path="/projects/ecommerce"
+							path="/case-study/ecommerce"
 							component={() => <ECommerce project={project} />}
 						/>
 						<Route
-							path="/projects/mightyvet"
+							path="/case-study/mightyvet"
 							component={() => <MightyVet project={project} />}
 						/>
 						<Route
-							path="/projects/wasp"
+							path="/case-study/wasp"
 							component={() => <WAStateParks project={project} />}
 						/>
 					</Switch>
 					<div className="row text-section">
 						<div className="six columns">
 							<h3 className="section-label">
-								Outcome & Reflection
+								Outcome &amp; Reflection
 							</h3>
 							<div className="underline" />
 						</div>

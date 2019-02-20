@@ -38,7 +38,7 @@ export default class WAStateParks extends React.Component {
 			<div className="text-section">
 				<div className="row">
 					<div className="twelve columns">
-						<h3 className="section-label">Design Process</h3>
+						<h3 className="section-label">My Design Process</h3>
 						<div className="underline" />
 					</div>
 				</div>
@@ -61,8 +61,8 @@ export default class WAStateParks extends React.Component {
 						<div className="underline" />
 					</div>
 				</div>
-				<div className="row">
-					<div className="six columns">
+				<div className="row add-bottom-margin-lg">
+					<div className="six columns add-bottom-margin-sm">
 						<ImageCard
 							alt="WA State Parks sketches"
 							onClick={() =>
@@ -94,7 +94,7 @@ export default class WAStateParks extends React.Component {
 						/>
 					</div>
 				</div>
-				<div className="row">
+				<div className="row add-bottom-margin-lg">
 					<div className="twelve columns">
 						<p className="section-content full">
 							{project.designProcess[2]}

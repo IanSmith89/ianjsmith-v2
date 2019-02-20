@@ -15,7 +15,7 @@ export default class AboutPage extends React.Component {
 								<br />
 								I’m Ian J. Smith, a designer for humans.
 								Currently based out of Seattle, I craft
-								experiences as a UX Designer at Collinear Group.
+								experiences as a UX Designer for Boeing.
 							</h1>
 						</div>
 						<div className="four columns">
@@ -66,15 +66,15 @@ export default class AboutPage extends React.Component {
 									future holds.
 								</p>
 								<p className="approach-description">
-									In my free time, I like to go snowboarding,
-									running, or hiking depending on the season.
-									I grew up playing ice hockey in Colorado, so
-									I'm a huge Avalanche fan. I'm also an
-									unashamed Renaissance art admirer, but I do
-									love a good mosh pit. And in case you were
-									wondering I market myself with a "J."
-									because it rolls off the tongue better than
-									Ian Smith. Also, it's my middle initial.
+									Depending on the season, I like to go
+									snowboarding, running, or hiking in my free
+									time. I grew up playing ice hockey in
+									Colorado, so I'm a huge Avalanche fan. I'm
+									also an unashamed Renaissance art admirer,
+									but I do love a good mosh pit. And in case
+									you were wondering I market myself with a
+									"J." to add a little pizzazz to my somewhat
+									generic name. Also, it's my middle initial.
 								</p>
 							</div>
 						</div>
@@ -102,12 +102,14 @@ export default class AboutPage extends React.Component {
 									to design and to view mistakes as positive
 									learning opportunities. Focusing on process
 									over results has shown me the power of
-									having a growth mindset. If I'm not
-									knowledgable about a problem I know it only
-									takes time and a willingness to learn. I
-									thrive at revisiting ideas or moving on to
-									the next one when the time is right so that
-									problems turn into solutions.
+									having a growth mindset. Working through
+									ambiguity is one of my strengths because I
+									know it only takes time and a willingness to
+									learn when it comes to an unfamiliar
+									challenge. I thrive at revisiting ideas or
+									moving on to the next one when the time is
+									right so that problems end up turning into
+									solutions.
 								</p>
 								<ApproachVertical />
 								<ApproachHorizontal />
@@ -124,13 +126,16 @@ export default class AboutPage extends React.Component {
 								<div className="underline" />
 								<p>UX / UI Design</p>
 								<p>
-									Information Architecture<span>*</span>
+									Information Architecture
+									<span>*</span>
 								</p>
 								<p>
-									Interaction Design<span>*</span>
+									Interaction Design
+									<span>*</span>
 								</p>
 								<p>
-									Prototyping<span>*</span>
+									Prototyping
+									<span>*</span>
 								</p>
 								<p>Visual / Graphic Design</p>
 								<p>Front End Development</p>
@@ -144,23 +149,28 @@ export default class AboutPage extends React.Component {
 								</h2>
 								<div className="underline" />
 								<p>
-									Illustrator + Photoshop + XD<span>*</span>
+									Illustrator + Photoshop + XD
+									<span>*</span>
 								</p>
 								<p>Sketch + Invision</p>
 								<p>Draw.io</p>
 								<p>
-									HTML + CSS / SCSS<span>*</span>
+									HTML + CSS / SCSS
+									<span>*</span>
 								</p>
 								<p>
-									JavaScript<span>*</span>
+									JavaScript
+									<span>*</span>
 								</p>
 								<p>
-									React<span>*</span>
+									React
+									<span>*</span>
 								</p>
 								<p>Mobx / Redux</p>
 								<p>Node + Express + Postgres</p>
 								<p>
-									Git + Command Line<span>*</span>
+									Git + Command Line
+									<span>*</span>
 								</p>
 								<p>Heroku</p>
 							</div>
@@ -168,7 +178,8 @@ export default class AboutPage extends React.Component {
 					</div>
 					<div className="twelve columns subtext-container">
 						<small className="subtext">
-							<span>*</span>my current favorites
+							<span>*</span>
+							my current favorites
 						</small>
 					</div>
 					<ResumeLink />

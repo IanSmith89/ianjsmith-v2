@@ -56,7 +56,7 @@ export default class CaseStudyThumbnail extends React.Component {
 
 		return (
 			<div className="project-link-container">
-				<Link className="project-link" to={`/projects/${project.id}`}>
+				<Link className="project-link" to={`/case-study/${project.id}`}>
 					<div
 						className="project-image-container"
 						onMouseEnter={this.handleMouseOver}
