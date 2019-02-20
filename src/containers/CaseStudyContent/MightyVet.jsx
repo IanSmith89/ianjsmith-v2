@@ -22,7 +22,7 @@ export default class MightyVet extends React.Component {
 			caption: (
 				<p className="image-lightbox-caption">Competitive Analysis</p>
 			),
-			src: require('../../assets/images/VetMindMatters-logo.jpg')
+			src: require('../../assets/images/mightyvet-competitive-analysis.jpg')
 		},
 		{
 			caption: <p className="image-lightbox-caption">Sitemap</p>,
@@ -64,7 +64,7 @@ export default class MightyVet extends React.Component {
 			<div className="text-section">
 				<div className="row">
 					<div className="twelve columns">
-						<h3 className="section-label">Design Process</h3>
+						<h3 className="section-label">My Design Process</h3>
 						<div className="underline" />
 					</div>
 				</div>
@@ -99,22 +99,13 @@ export default class MightyVet extends React.Component {
 					</div>
 				</div>
 				<div className="row">
-					<div className="four columns">
+					<div className="twelve columns">
 						<ImageCard
-							alt="Vet Mind Matters logo"
+							alt="MightyVet competitive analysis"
+							onClick={() =>
+								actions.openLightbox(lightboxStore, 1)
+							}
 							src={this.images[1].src}
-						/>
-					</div>
-					<div className="four columns">
-						<ImageCard
-							alt="iMentor logo"
-							src={require('../../assets/images/iMentor-logo.jpg')}
-						/>
-					</div>
-					<div className="four columns">
-						<ImageCard
-							alt="Feeding America logo"
-							src={require('../../assets/images/FeedingAmerica-logo.jpg')}
 						/>
 					</div>
 				</div>

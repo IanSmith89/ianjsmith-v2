@@ -7,14 +7,14 @@ import ImageCard from '../../components/ImageCard';
 export default class Astarte extends React.Component {
 	images = [
 		{
-			caption: <p className="image-lightbox-caption">Sitemap</p>,
-			src: require('../../assets/images/astarte-sitemap.png')
-		},
-		{
 			caption: (
 				<p className="image-lightbox-caption">Whiteboarding Session</p>
 			),
 			src: require('../../assets/images/astarte-sketches.jpg')
+		},
+		{
+			caption: <p className="image-lightbox-caption">Sitemap</p>,
+			src: require('../../assets/images/astarte-sitemap.png')
 		},
 		{
 			caption: (
@@ -70,14 +70,14 @@ export default class Astarte extends React.Component {
 			<div className="text-section">
 				<div className="row">
 					<div className="twelve columns">
-						<h3 className="section-label">Design Process</h3>
+						<h3 className="section-label">My Design Process</h3>
 						<div className="underline" />
 					</div>
 				</div>
 				<div className="row">
 					<div className="twelve columns">
 						<h3 className="section-label">
-							Information Architecture
+							Sketching &amp; Brainstorming
 						</h3>
 						<div className="underline" />
 					</div>
@@ -85,7 +85,7 @@ export default class Astarte extends React.Component {
 				<div className="row">
 					<div className="twelve columns">
 						<ImageCard
-							alt="Astarte sitemap"
+							alt="Astarte whiteboarding session"
 							onClick={() =>
 								actions.openLightbox(lightboxStore, 0)
 							}
@@ -103,7 +103,7 @@ export default class Astarte extends React.Component {
 				<div className="row">
 					<div className="twelve columns">
 						<h3 className="section-label">
-							Sketching &amp; Brainstorming
+							Information Architecture
 						</h3>
 						<div className="underline" />
 					</div>
@@ -111,7 +111,7 @@ export default class Astarte extends React.Component {
 				<div className="row">
 					<div className="twelve columns">
 						<ImageCard
-							alt="Astarte whiteboarding session"
+							alt="Astarte sitemap"
 							onClick={() =>
 								actions.openLightbox(lightboxStore, 1)
 							}
