@@ -1,55 +1,131 @@
 .flex-container {
-    align-content: flex-start;
-    align-items: flex-start;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    height: auto;
-    width: 100%;
+	align-content: flex-start;
+	align-items: flex-start;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	height: auto;
+	margin-bottom: 10rem;
+	width: 100%;
+}
 
-    .project-link-container {
-        height: auto;
-        margin-bottom: 5rem;
-        width: 100%;
+.project-link-container {
+	height: auto;
+	margin-bottom: 1.3rem;
+	width: 100%;
 
-        .project-link {
-            color: $light;
-            text-decoration: none;
+	.project-link {
+		color: $light;
+		text-decoration: none;
 
-            .project-image-container {
-                margin-bottom: 1.2rem;
-            }
+		.project-image-container {
+			overflow: hidden;
+			position: relative;
+		}
 
-            .project-client {
-                font-size: 1.7rem;
-                font-weight: 300;
-                margin-bottom: 0.25rem;
-            }
+		.hover-overlay {
+			animation-duration: 300ms;
+			animation-timing-function: ease-in-out;
+			animation-delay: 0;
+			animation-iteration-count: 1;
+			animation-direction: forwards;
+			background-image: $yellow-to-orange-low;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			opacity: 0;
+			padding: 2.5rem;
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform: translate(0, 0);
+			width: 100%;
+			height: 100%;
 
-            .project-services {
-                color: $grey;
-                font-size: 1.7rem;
-                font-weight: 300;
-            }
-        }
+			.hover-text {
+				background-color: $light;
+				box-shadow: $drop-shadow;
+				color: $dark-grey;
+				font-size: type-scale(0);
+				font-weight: 400;
+				text-align: center;
+				width: 100%;
+				margin: 0;
+				padding: 1rem 5rem;
+			}
 
-        @include for-tablet-portrait-up() {
-            width: 47.5%;
+			&.in-top {
+				transform-origin: 50% 0%;
+				animation-name: in-top;
+			}
+			&.in-right {
+				transform-origin: 100% 0%;
+				animation-name: in-right;
+			}
+			&.in-bottom {
+				transform-origin: 50% 100%;
+				animation-name: in-bottom;
+			}
+			&.in-left {
+				transform-origin: 0% 0%;
+				animation-name: in-left;
+			}
 
-            .project-image-container {
-                height: 30rem;
-            }
-        }
+			&.out-top {
+				transform-origin: 50% 0%;
+				animation-name: out-top;
+			}
+			&.out-right {
+				transform-origin: 100% 50%;
+				animation-name: out-right;
+			}
+			&.out-bottom {
+				transform-origin: 50% 100%;
+				animation-name: out-bottom;
+			}
+			&.out-left {
+				transform-origin: 0% 0%;
+				animation-name: out-left;
+			}
+		}
 
-        @include for-tablet-landscape-up() {
-            width: 31.5%;
-        }
+		&:hover,
+		&:active {
+			.hover-overlay {
+				opacity: 1;
+			}
+		}
+	}
 
-        @include for-desktop-up() {
-            .project-image-container {
-                height: auto;
-            }
-        }
-    }
+	.project-name {
+		color: $light-grey;
+		font-size: type-scale(1);
+		margin: 0.75rem 0 2.5rem;
+	}
+
+	@include for-tablet-portrait-up() {
+		margin-bottom: 0;
+		width: 48.5%;
+
+		.project-link {
+			.hover-overlay {
+				.hover-text {
+					padding-left: 2.5rem;
+					padding-right: 2.5rem;
+				}
+			}
+		}
+	}
+
+	@include for-desktop-up() {
+		margin-bottom: 1%;
+
+		.project-link {
+			.hover-overlay {
+				padding: 10rem;
+			}
+		}
+	}
 }

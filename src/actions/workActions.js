@@ -1,20 +1,49 @@
-import workStore from '../stores/workStore';
 import API from '../api';
 
-export function clearProject() {
-    return workStore.clearProject();
+export function clearProject(workStore) {
+	workStore.setProject(_defaultProject());
 }
 
-export function getProjectById(id) {
-    return API.work
-        .getProjectById(id)
-        .then(res => workStore.getProjectByIdSuccess(res))
-        .catch(err => console.error(err));
+function _defaultProject() {
+	return {
+		id: '',
+		name: '',
+		client: '',
+		description: '',
+		how: [],
+		services: [],
+		takeaways: [],
+		techStack: [],
+		users: [],
+		websiteUrl: '',
+		why: [],
+		with: ''
+	};
 }
 
-export function getProjects() {
-    return API.work
-        .getProjects()
-        .then(res => workStore.getProjectsSuccess(res))
-        .catch(err => console.error(err));
+export async function fetchProjects() {
+	try {
+		const projects = await API.work.getProjects();
+		return projects;
+	} catch (err) {
+		console.error(err);
+	}
+}
+
+export async function getProjectById(id, workStore) {
+	try {
+		const project = await API.work.getProjectById(id);
+		return workStore.setProject(project);
+	} catch (err) {
+		console.error(err);
+	}
+}
+
+export async function getProjects(workStore) {
+	const projects = await fetchProjects();
+	return workStore.setProjects(projects);
+}
+
+export function handleLinkClick(e, linkIsActive) {
+	if (linkIsActive) return e.preventDefault();
 }

@@ -1,28 +1,40 @@
-html {
+body {
 	font-family: $primary-font-stack;
-	font-size: 62.5%;
 	font-style: normal;
 	font-weight: normal;
+	line-height: 1.333;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 }
 
-body {
-	line-height: 1.333;
+h1 {
+	font-size: type-scale(5);
 }
 
-h1 {font-size: type-scale(5)}
+h2 {
+	font-size: type-scale(4);
+}
 
-h2 {font-size: type-scale(4)}
+h3 {
+	font-size: type-scale(3);
+}
 
-h3 {font-size: type-scale(3)}
+h4 {
+	font-size: type-scale(2);
+}
 
-h4 {font-size: type-scale(2)}
+h5 {
+	font-size: type-scale(1);
+}
 
-h5 {font-size: type-scale(1)}
+h6 {
+	font-size: type-scale(0);
+}
 
-h6 {font-size: type-scale(0)}
+p {
+	font-size: type-scale(0);
+}
 
-p {font-size: type-scale(0)}
-
-small {font-size: type-scale(-3)}
+small {
+	font-size: type-scale(-3);
+}

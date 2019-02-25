@@ -1,3 +1,5 @@
+@import 'base/reset';
+
 // Vendors
 @import 'vendors/skeleton';
 
@@ -11,14 +13,16 @@
 @import 'abstracts/zIndex';
 
 // Base
-@import 'base/reset';
 @import 'base/colors';
 @import 'base/base';
 @import 'base/typography';
+@import 'base/animations';
 
 // Components
 @import 'components/dialogBox';
 @import 'components/projectLink';
+@import 'components/projectControls';
+@import 'components/approach';
 
 // Layout
 @import 'layout/footer';
@@ -29,3 +33,7 @@
 @import 'containers/home';
 @import 'containers/about';
 @import 'containers/project';
+@import 'containers/caseStudy';
+@import 'containers/notFound';
+@import 'containers/lightbox';
+@import 'containers/posters';

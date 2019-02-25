@@ -1,0 +1,188 @@
+.case-study {
+	$sm-height: 40rem;
+	$lg-height: 50rem;
+	color: $dark-grey;
+	padding-top: 6rem;
+
+	.case-study-header {
+		background-position: center center;
+		background-size: cover;
+		color: $light;
+		height: $sm-height;
+		overflow-y: hidden;
+
+		&.astarte {
+			background-image: url(../../images/astarte-background-gradient.jpg);
+		}
+		&.wasp {
+			background-image: url(../../images/wasp-background-gradient.jpg);
+			background-position: top center;
+		}
+		&.ecommerce {
+			background-image: url(../../images/ecommerce-background-gradient.jpg);
+		}
+		&.mightyvet {
+			background-image: url(../../images/mightyvet-background-gradient.jpg);
+			background-position: top left;
+		}
+
+		.case-study-hero {
+			position: absolute;
+			width: 100%;
+		}
+
+		.dark-overlay {
+			background-color: $dark-low;
+			position: absolute;
+			height: $sm-height;
+			width: 100%;
+		}
+
+		.back-link {
+			align-items: center;
+			display: flex;
+			font-size: type-scale(0);
+			height: auto;
+			margin: 1.5rem 0 2.8rem;
+			text-transform: uppercase;
+			width: auto;
+
+			a {
+				border-bottom: 0.1rem solid transparent;
+				color: $light;
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				font-weight: 400;
+				padding-bottom: 0.1rem;
+				text-decoration: none;
+
+				&:hover {
+					color: $light-grey;
+					border-bottom-color: $light-grey;
+
+					.arrow * {
+						stroke: $light-grey;
+					}
+				}
+
+				.arrow {
+					height: 1.7rem;
+					margin-right: 0.8rem;
+					transform: rotate(-90deg);
+
+					* {
+						fill: none;
+						stroke: $light;
+						stroke-miterlimit: 10;
+					}
+				}
+			}
+		}
+
+		.case-study-name {
+			font-size: type-scale(3);
+			font-weight: 400;
+			text-align: center;
+		}
+
+		.case-study-description {
+			font-size: type-scale(2);
+			text-align: center;
+		}
+	}
+
+	.text-section {
+		margin: 10rem 0;
+
+		.section-label {
+			color: $text-grey;
+			font-size: type-scale(2);
+			font-weight: 600;
+			letter-spacing: 0.025rem;
+			margin-bottom: 0.5rem;
+			text-transform: uppercase;
+		}
+
+		.underline {
+			margin-left: 0;
+			margin-right: 0;
+			margin-bottom: 2.5rem;
+		}
+
+		.section-content {
+			color: $mid-grey;
+			font-size: type-scale(0);
+			line-height: 2.88rem;
+
+			&.full {
+				margin: 2.5rem 0 5rem;
+
+				@include for-tablet-portrait-up() {
+					margin: 3.5rem 16.66% 10rem;
+				}
+			}
+		}
+	}
+
+	.project-image-container {
+		box-shadow: $drop-shadow;
+		height: auto;
+		width: 100%;
+
+		@include for-tablet-portrait-up() {
+			height: auto;
+
+			.no-image {
+				height: 50rem;
+				width: 100%;
+			}
+		}
+	}
+
+	.add-bottom-margin-sm {
+		margin-bottom: 2.5rem;
+	}
+
+	.add-bottom-margin-lg {
+		margin-bottom: 10rem;
+	}
+
+	@include for-tablet-portrait-up() {
+		.case-study-header {
+			height: $lg-height;
+
+			.dark-overlay {
+				height: $lg-height;
+			}
+
+			.back-link {
+				margin-bottom: 9.8rem;
+			}
+
+			.case-study-name {
+				font-size: type-scale(4);
+			}
+
+			.case-study-description {
+				margin: 0 12.5rem;
+			}
+		}
+
+		.add-bottom-margin-sm {
+			margin-bottom: 5rem;
+		}
+	}
+
+	@include for-desktop-up {
+		.case-study-header {
+			.back-link {
+				margin-bottom: 12.3rem;
+			}
+
+			.case-study-description {
+				margin: 0 10rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+.not-found {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 5rem;
+
+	h1 {
+		font-size: type-scale(5);
+		font-weight: 600;
+	}
+
+	h2 {
+		font-size: type-scale(2);
+		font-weight: 600;
+	}
+
+	img {
+		margin: 2.5rem 0 1.5rem;
+		width: auto;
+	}
+
+	p {
+		font-size: type-scale(0);
+		margin-bottom: 0;
+	}
+}

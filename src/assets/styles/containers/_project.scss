@@ -1,103 +1,280 @@
 .project {
-    color: $dark-grey;
+	color: $dark-grey;
 
-    .project-description {
-        font-size: 2.2rem;
-        font-weight: 300;
-        margin-bottom: 7rem;
-    }
+	h3 {
+		font-size: type-scale(0);
+		font-weight: 600;
+		letter-spacing: 0.01rem;
+		margin-bottom: 0.5rem;
+		text-align: center;
+		text-transform: uppercase;
+	}
 
-    .project-details-container {
-        margin-bottom: 7rem;
+	ul {
+		&.no-style {
+			list-style: none;
+			text-align: center;
+		}
 
-        .project-detail {
-            display: flex;
-            margin-bottom: 2rem;
+		li {
+			font-size: type-scale(0);
+			font-weight: 300;
+		}
+	}
 
-            .label {
-                font-size: 1.7rem;
-                font-weight: 600;
-                height: auto;
-                width: 30%;
-            }
+	.project-details-container {
+		margin-bottom: 7.5rem;
+		margin-top: 7.5rem;
 
-            .detail {
-                font-size: 1.7rem;
-                font-weight: 300;
-                height: auto;
-                width: 70%;
-            }
-        }
-    }
+		.project-detail {
+			display: flex;
+			margin-bottom: 2rem;
 
-    .project-controls {
-        display: flex;
-        font-size: 1.7rem;
-        font-weight: 300;
-        margin-bottom: 2.5rem;
-        text-transform: uppercase;
+			.label {
+				font-size: type-scale(0);
+				font-weight: 600;
+				height: auto;
+				width: 30%;
+			}
 
-        .to-top,
-        .next-project {
-            align-items: center;
-            color: $dark-grey;
-            display: flex;
-            height: auto;
-            text-decoration: none;
-            width: auto;
+			.detail {
+				font-size: type-scale(0);
+				font-weight: 300;
+				height: auto;
+				width: 70%;
 
-            .arrow {
-                height: 1.7rem;
-            }
-        }
+				a {
+					color: $grey;
 
-        .to-top {
-            cursor: pointer;
+					&:hover {
+						color: $orange;
+					}
+				}
+			}
+		}
+	}
 
-            .arrow {
-                margin-right: 0.75rem;
-            }
-        }
+	.text-list {
+		box-shadow: $drop-shadow;
+		margin-bottom: 7.5rem;
+		padding: 5rem 0;
+		text-align: center;
 
-        .next-project {
-            margin-left: auto;
+		&.dark {
+			background-color: $grey;
+			box-shadow: none;
+			color: $light;
+			margin-bottom: 2.5rem;
+			padding: 10rem 0 9rem;
 
-            .arrow {
-                margin-left: 0.75rem;
-                transform: rotate(90deg);
-            }
-        }
-    }
+			h3 {
+				font-weight: 300;
+			}
 
-    @include for-tablet-portrait-up() {
-        .project-image-container {
-            margin-bottom: 7rem;
-        }
-    }
+			ul {
+				list-style-position: outside;
+				padding-left: 2rem;
+				text-align: left;
+
+				&.no-style {
+					padding-left: 0;
+					text-align: center;
+				}
+			}
+		}
+
+		&.light {
+			box-shadow: none;
+			margin-bottom: 2.5rem;
+			padding-top: 7.5rem;
+
+			ul {
+				text-align: left;
+
+				li {
+					box-shadow: $drop-shadow;
+					padding: 1.5rem;
+				}
+			}
+		}
+	}
+
+	.diagonal-stripes {
+		// background: url(../../images/diagonal-stripes.png) top right;
+		margin: 0 auto 5rem;
+		max-width: 144rem;
+		padding: 17.5rem 0;
+		width: 100%;
+
+		.center {
+			float: none;
+			margin: 0 auto;
+		}
+
+		.no-margin {
+			margin-left: 0;
+		}
+
+		.project-image-container {
+			margin-bottom: 5rem;
+		}
+	}
+
+	.project-features {
+		margin-bottom: 5rem;
+
+		.project-detail-image {
+			width: 100%;
+		}
+
+		.project-feature-description {
+			font-size: type-scale(0);
+			font-weight: 300;
+			margin-bottom: 7.5rem;
+			text-align: center;
+		}
+
+		.margin-bottom {
+			margin-bottom: 2.5rem;
+		}
+	}
+
+	@include for-tablet-portrait-up() {
+		.text-list {
+			margin-left: auto;
+			margin-right: auto;
+			width: 66.66%;
+
+			&.dark {
+				width: 100%;
+
+				ul {
+					margin: 0 auto;
+					max-width: 42rem;
+				}
+			}
+
+			&.light {
+				ul {
+					margin-left: auto;
+					margin-right: auto;
+					max-width: 48rem;
+
+					li {
+						padding: 2.5rem 3rem;
+					}
+				}
+			}
+		}
+
+		.project-features {
+			.project-feature-description {
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 42rem;
+			}
+		}
+
+		.diagonal-stripes {
+			margin-bottom: 0;
+			padding-top: 10rem;
+			padding-bottom: 10rem;
+		}
+	}
+
+	@include for-desktop-up() {
+		.text-list {
+			width: 50%;
+
+			&.dark {
+				padding-bottom: 11rem;
+				padding-top: 12rem;
+			}
+
+			&.light {
+				ul {
+					max-width: 57rem;
+
+					li {
+						padding: 2.5rem 7.5rem;
+					}
+				}
+			}
+		}
+
+		.diagonal-stripes {
+			padding-top: 15rem;
+			padding-bottom: 15rem;
+		}
+	}
+}
+
+.section-header {
+	font-size: type-scale(2);
+	letter-spacing: 0.025rem;
+	margin-bottom: 0.5rem;
+	text-align: center;
+	text-transform: uppercase;
+
+	span {
+		font-weight: 600;
+	}
+}
+
+.resume-container {
+	color: $dark-grey;
+	text-align: center;
+
+	h5 {
+		font-size: type-scale(2);
+		font-weight: 300;
+		margin-bottom: 1rem;
+		text-transform: uppercase;
+	}
+
+	h6 {
+		font-size: type-scale(0);
+		font-weight: 300;
+		margin-bottom: 10rem;
+
+		a {
+			color: grey;
+			font-size: type-scale(0);
+			font-weight: 400;
+
+			&:hover {
+				color: $orange;
+				background: $yellow-to-orange;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+	}
 }
 
 .project-image-container {
-    align-items: center;
-    background-color: $light;
-    display: flex;
-    height: 49.2rem;
-    width: 100%;
+	align-items: center;
+	display: flex;
+	height: auto;
+	width: 100%;
 
-    .no-image {
-        height: auto;
-        width: 100%;
-    }
+	.no-image {
+		height: auto;
+		width: 100%;
+	}
 
-    .project-image {
-        width: 100%;
-    }
+	.project-image {
+		width: 100%;
 
-    @include for-tablet-portrait-up() {
-        height: auto;
+		&.clickable {
+			cursor: pointer;
+		}
+	}
 
-        .no-image {
-            height: 50rem;
-            width: 100%;
-        }
-    }
+	@include for-tablet-portrait-up() {
+		.no-image {
+			height: 50rem;
+			width: 100%;
+		}
+	}
 }

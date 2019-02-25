@@ -1,81 +1,146 @@
 .about {
-    color: $dark-grey;
+	color: $dark-grey;
 
-    p {
-        font-weight: 300;
-    }
+	p {
+		font-weight: 300;
+	}
 
-    .about-intro {
-        color: $dark-grey;
-        font-size: 4.75rem;
-        font-weight: 700;
-        letter-spacing: 0.02rem;
-        line-height: 5.4rem;
-        padding: 5rem 0;
-    }
+	.about-intro {
+		color: $dark-grey;
+		font-size: type-scale(3);
+		line-height: 4.4rem;
+		margin: 5rem 0;
+	}
 
-    .section-header {
-        font-size: 2.4rem;
-        font-weight: 700;
-        letter-spacing: 0.05rem;
-        margin-bottom: 2.2rem;
-    }
+	.headshot-container {
+		height: auto;
+		margin: 5rem 0 10rem;
+		text-align: center;
+		width: 100%;
 
-    .list {
-        padding: 5rem 0 0;
+		.headshot {
+			height: auto;
+			max-width: 100%;
+		}
+	}
 
-        p {
-            font-size: 1.8rem;
-            margin-bottom: 2.4rem;
-        }
-    }
+	.approach-section {
+		margin: 2.5rem auto 5rem;
+		text-align: center;
 
-    .contact {
-        padding: 5rem 0;
+		.approach-description {
+			color: $text-grey;
+			font-size: type-scale(0);
+			line-height: 2.88rem;
+			margin: 0 auto 1.5rem;
+			max-width: 60rem;
+			text-align: left;
+			width: 100%;
 
-        .headshot-container {
-            height: auto;
-            margin-bottom: 3rem;
-            width: 100%;
+			.strike {
+				text-decoration: line-through;
+				text-decoration-color: $grey;
+			}
+		}
 
-            .headshot {
-                height: auto;
-                max-width: 100%;
-            }
-        }
+		.approach {
+			margin-bottom: 2.5rem;
+			padding-top: 5rem;
 
-        .contact-tagline {
-            font-size: 2.2rem;
-            margin-bottom: 3.6rem;
-        }
+			&.vertical {
+				display: block;
+			}
 
-        .mailto-link {
-            margin-bottom: 3.6rem;
-            text-align: center;
+			&.horizontal {
+				display: none;
+			}
+		}
+	}
 
-            a {
-                background-color: $light-grey;
-                color: $dark-grey;
-                font-size: 2.2rem;
-                font-weight: 300;
-                padding: 0.5rem 1rem;
-                text-decoration: none;
-            }
-        }
+	.list {
+		padding: 5rem 0 0;
+		text-align: center;
 
-        .social-links {
-            a {
-                color: $dark-grey;
-                font-size: 1.8rem;
-                font-weight: 300;
-                margin-right: 1.2rem;
-            }
-        }
+		p {
+			color: $text-grey;
+			font-size: type-scale(0);
+			margin: 1.2rem 0;
 
-        @include for-tablet-portrait-up() {
-            .headshot-container {
-                width: 60%;
-            }
-        }
-    }
+			span {
+				color: $orange;
+				font-weight: 400;
+			}
+		}
+	}
+
+	.subtext-container {
+		margin: 1.5rem 0 12.5rem;
+		text-align: center;
+	}
+
+	.subtext {
+		color: $text-grey;
+		font-style: italic;
+		margin: 1.5rem 0 0;
+		text-align: center;
+		text-transform: uppercase;
+		width: inherit;
+
+		span {
+			color: $orange;
+			font-size: type-scale(0);
+			font-style: normal;
+			font-weight: 400;
+		}
+	}
+
+	.contact {
+		padding: 5rem 0;
+
+		.contact-tagline {
+			font-size: type-scale(0);
+			line-height: 2.88rem;
+			margin: 0 auto 2.5rem;
+			max-width: 42rem;
+			text-align: center;
+			width: 100%;
+		}
+
+		.social-links {
+			text-align: center;
+
+			a {
+				color: $grey;
+				display: inline-block;
+				font-size: type-scale(0);
+				font-weight: 400;
+				margin: 0 0.75rem;
+
+				&:hover,
+				&:active {
+					color: $orange;
+				}
+			}
+		}
+	}
+
+	@include for-tablet-portrait-up() {
+		.about-intro {
+			font-size: type-scale(4);
+			line-height: 5.2rem;
+			margin-bottom: 10rem;
+		}
+
+		.approach-section {
+			.approach {
+				&.vertical {
+					display: none;
+				}
+
+				&.horizontal {
+					display: block;
+				}
+			}
+		}
+	}
 }

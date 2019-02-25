@@ -1,23 +1,42 @@
 import { observable, action } from 'mobx';
 
 class WorkStore {
-    @observable project = {};
-    @observable projects = [];
+	@observable
+	project = {};
+	@observable
+	projects = [];
+	projectLinks = [
+		{
+			name: 'all',
+			to: '/'
+		},
+		{
+			name: 'mightyvet',
+			to: '/case-study/mightyvet'
+		},
+		{
+			name: 'wa state parks',
+			to: '/case-study/wasp'
+		},
+		{
+			name: 'astarte',
+			to: '/case-study/astarte'
+		},
+		{
+			name: 'ecommerce',
+			to: '/case-study/ecommerce'
+		}
+	];
 
-    @action
-    clearProject() {
-        this.project = {};
-    }
+	@action
+	setProject(project) {
+		this.project = project;
+	}
 
-    @action
-    getProjectByIdSuccess(project) {
-        this.project = project;
-    }
-
-    @action
-    getProjectsSuccess(projects) {
-        this.projects = projects;
-    }
+	@action
+	setProjects(projects) {
+		this.projects = projects;
+	}
 }
 
 const workStore = new WorkStore();

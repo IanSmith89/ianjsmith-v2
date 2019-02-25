@@ -1,43 +1,43 @@
 .footer {
-    background-color: $dark;
-    color: $light;
-    height: 4.5rem;
-    width: 100%;
+	background-color: $dark;
+	color: $light;
+	height: 4.5rem;
+	transition: $color-change;
+	width: 100%;
 
-    &.light {
-        background-color: $light;
-        color: $dark;
+	.copyright {
+		align-items: center;
+		display: flex;
+		height: 4.5rem;
 
-        .twelve.columns {
-            .mailto-link {
-                a {
-                    color: $dark;
-                }
-            }
-        }
-    }
+		small {
+			color: $grey;
+			font-size: type-scale(-2);
+		}
 
-    .twelve.columns {
-        align-content: center;
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        height: 4.5rem;
-        justify-content: flex-start;
+		a {
+			margin: 0;
 
-        small {
-            font-size: 1.4rem;
-        }
+			&:first-of-type {
+				margin-left: auto;
+			}
 
-        .mailto-link {
-            margin-left: auto;
+			svg {
+				height: 3.2rem;
+				width: 3.2rem;
 
-            a {
-                color: $light;
-                font-size: 1.4rem;
-                text-decoration: none;
-            }
-        }
-    }
+				path {
+					fill: $grey;
+				}
+			}
+
+			&:hover {
+				svg {
+					path {
+						fill: $orange;
+					}
+				}
+			}
+		}
+	}
 }

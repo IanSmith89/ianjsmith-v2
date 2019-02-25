@@ -1,37 +1,86 @@
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 html {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-    background-color: $dark-grey;
-    color: $light;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding: 0;
-    margin: 0;
-    overflow-y: scroll;
+	background-color: $dark-grey;
+	color: $light;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	padding: 0;
+	margin: 0;
+	overflow-y: scroll;
 }
 
 .wrapper {
-    min-height: 100vh;
-    transition: 0.5s;
+	min-height: 100vh;
+	position: relative;
+	transition: $color-change;
 
-    &.light {
-        background-color: $light;
-    }
+	&.light {
+		background-color: $light;
+		color: $dark-grey;
+
+		.top-nav {
+			background-color: $light;
+			box-shadow: $drop-shadow;
+
+			.logo {
+				a {
+					color: $dark-grey;
+
+					&:hover {
+						color: $orange;
+						background: $yellow-to-orange;
+						-webkit-background-clip: text;
+						-webkit-text-fill-color: transparent;
+					}
+				}
+			}
+
+			.page-links {
+				a {
+					&:hover,
+					&.active {
+						color: $dark-grey;
+					}
+				}
+			}
+		}
+
+		.footer {
+			background-color: $light;
+			border-top: 0.1rem solid $light-grey;
+			color: $dark-grey;
+
+			.copyright {
+				a {
+					&:hover {
+						color: $dark-grey;
+					}
+				}
+			}
+		}
+	}
 }
 
 #root,
 .wrapper,
 .page {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.full-width {
+	background-color: $grey;
+	color: $light;
+	padding: 5rem 0;
 }

@@ -1,0 +1,42 @@
+.full-width-container {
+	max-width: 144rem;
+	margin: 0 auto 12.5rem;
+	width: 100%;
+
+	.full-width-image {
+		margin: 0 auto;
+		width: 100%;
+	}
+}
+
+.posters-header {
+	text-align: center;
+
+	.project-title {
+		font-size: type-scale(3);
+		font-weight: 600;
+		margin-bottom: 0;
+		margin-top: 2.5rem;
+	}
+
+	.project-description {
+		font-size: type-scale(0);
+		font-weight: 300;
+		margin-bottom: 7.5rem;
+	}
+
+	@include for-tablet-portrait-up() {
+		margin: 0 auto;
+		width: 66.66%;
+
+		.project-description {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 40rem;
+		}
+	}
+
+	@include for-desktop-up() {
+		width: 50%;
+	}
+}
