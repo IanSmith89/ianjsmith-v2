@@ -38,12 +38,6 @@ export default class WAStateParks extends React.Component {
 			<div className="text-section">
 				<div className="row">
 					<div className="twelve columns">
-						<h3 className="section-label">My Design Process</h3>
-						<div className="underline" />
-					</div>
-				</div>
-				<div className="row">
-					<div className="twelve columns">
 						<h3 className="section-label">User Research</h3>
 						<div className="underline" />
 					</div>

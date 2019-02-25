@@ -70,12 +70,6 @@ export default class Astarte extends React.Component {
 			<div className="text-section">
 				<div className="row">
 					<div className="twelve columns">
-						<h3 className="section-label">My Design Process</h3>
-						<div className="underline" />
-					</div>
-				</div>
-				<div className="row">
-					<div className="twelve columns">
 						<h3 className="section-label">
 							Sketching &amp; Brainstorming
 						</h3>
