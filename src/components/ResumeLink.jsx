@@ -9,7 +9,7 @@ const ResumeLink = () => {
 					Download my{' '}
 					<a
 						target="_blank"
-						href="https://drive.google.com/file/d/1kI4rj_TsAw1RDEcgb9L6y1Qy2Vda-LMT/view?usp=sharing"
+						href="https://drive.google.com/open?id=1UlRhZvOZ_tkm23OVgqf3S5ubjKMl79pU"
 					>
 						r&eacute;sum&eacute;
 					</a>

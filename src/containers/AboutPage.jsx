@@ -145,7 +145,7 @@ export default class AboutPage extends React.Component {
 						<div className="six columns">
 							<div className="list">
 								<h2 className="section-header">
-									my <span>toolbelt</span>
+									my <span>tool belt</span>
 								</h2>
 								<div className="underline" />
 								<p>
