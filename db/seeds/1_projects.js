@@ -5,6 +5,17 @@ exports.seed = function(knex) {
 			return knex('projects')
 				.insert([
 					{
+						id: 'starbucks',
+						name: 'Starbucks',
+						description:
+							'Work protected by an NDA. Please contact me to learn more about my private projects.',
+						design_process: [],
+						outcome_and_reflection: [''],
+						problem: '',
+						solution: '',
+						team_and_role: ''
+					},
+					{
 						id: 'astarte',
 						name: 'Biotech Inventory Management',
 						description:

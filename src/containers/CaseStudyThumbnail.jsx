@@ -38,6 +38,26 @@ export default class CaseStudyThumbnail extends React.Component {
 		this.update(e, 'out');
 	}
 
+	renderProjectImage(project) {
+		return (
+			<div
+				className="project-image-container"
+				onMouseEnter={this.handleMouseOver}
+				onMouseLeave={this.handleMouseOut}
+				ref={this.setRef}
+			>
+				<div className={cx('hover-overlay', this.hoverClassLogic())}>
+					<p className="hover-text">{project.description}</p>
+				</div>
+				<img
+					className="project-image"
+					src={require(`../assets/images/${project.id}-cover.jpg`)}
+					alt="project"
+				/>
+			</div>
+		);
+	}
+
 	setRef(node) {
 		this.node = node;
 	}
@@ -56,30 +76,18 @@ export default class CaseStudyThumbnail extends React.Component {
 
 		return (
 			<div className="project-link-container">
-				<Link className="project-link" to={`/case-study/${project.id}`}>
-					<div
-						className="project-image-container"
-						onMouseEnter={this.handleMouseOver}
-						onMouseLeave={this.handleMouseOut}
-						ref={this.setRef}
-					>
-						<div
-							className={cx(
-								'hover-overlay',
-								this.hoverClassLogic()
-							)}
-						>
-							<p className="hover-text">{project.description}</p>
-						</div>
-						<img
-							className="project-image"
-							src={require(`../assets/images/${
-								project.id
-							}-cover.jpg`)}
-							alt="project"
-						/>
+				{project.id === 'starbucks' ? (
+					<div className="project-link">
+						{this.renderProjectImage(project, true)}
 					</div>
-				</Link>
+				) : (
+					<Link
+						className="project-link"
+						to={`/case-study/${project.id}`}
+					>
+						{this.renderProjectImage(project)}
+					</Link>
+				)}
 				<h3 className="project-name">{project.name}</h3>
 			</div>
 		);

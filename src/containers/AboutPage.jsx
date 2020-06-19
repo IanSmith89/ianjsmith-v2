@@ -15,7 +15,7 @@ export default class AboutPage extends React.Component {
 								<br />
 								I’m Ian J. Smith, a designer for humans.
 								Currently based out of Seattle, I craft
-								experiences as a UX Designer for Boeing.
+								experiences as a UX Designer for Starbucks.
 							</h1>
 						</div>
 						<div className="four columns">
@@ -126,7 +126,7 @@ export default class AboutPage extends React.Component {
 								<div className="underline" />
 								<p>UX / UI Design</p>
 								<p>
-									Information Architecture
+									Prototyping
 									<span>*</span>
 								</p>
 								<p>
@@ -134,11 +134,10 @@ export default class AboutPage extends React.Component {
 									<span>*</span>
 								</p>
 								<p>
-									Prototyping
-									<span>*</span>
+									Front End Development <span>*</span>
 								</p>
 								<p>Visual / Graphic Design</p>
-								<p>Front End Development</p>
+								<p>Information Architecture</p>
 								<p>User Research</p>
 							</div>
 						</div>
@@ -164,15 +163,16 @@ export default class AboutPage extends React.Component {
 								</p>
 								<p>
 									React
-									<span>*</span>
+									<span>*</span> / React Native
 								</p>
-								<p>Mobx / Redux</p>
-								<p>Node + Express + Postgres</p>
+								<p>Redux / Mobx / Context API</p>
 								<p>
 									Git + Command Line
 									<span>*</span>
 								</p>
-								<p>Heroku</p>
+								<p>Node + Express + Postgres</p>
+								<p>REST / GraphQL</p>
+								<p>Azure / AWS / Heroku</p>
 							</div>
 						</div>
 					</div>

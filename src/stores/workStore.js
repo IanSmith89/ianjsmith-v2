@@ -25,6 +25,10 @@ class WorkStore {
 		{
 			name: 'ecommerce',
 			to: '/case-study/ecommerce'
+		},
+		{
+			name: 'starbucks',
+			to: '/'
 		}
 	];
 

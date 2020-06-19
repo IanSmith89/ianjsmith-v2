@@ -48,6 +48,21 @@ class Nav extends Component {
 							</Link>
 							<Link
 								className={cx({
+									active: location.pathname === '/posters'
+								})}
+								to="/posters"
+								onClick={e =>
+									actions.handleLinkClick(
+										e,
+										location.pathname === '/posters'
+									)
+								}
+							>
+								Fun
+								<div className="underline" />
+							</Link>
+							<Link
+								className={cx({
 									active: location.pathname === '/about'
 								})}
 								to="/about"
