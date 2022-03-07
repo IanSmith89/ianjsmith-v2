@@ -4,29 +4,6 @@ const precss = require('precss');
 const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const isProduction = process.env.NODE_ENV === 'production';
-
-const pluginsDefine = isProduction
-	? [
-			new webpack.DefinePlugin({
-				'process.env': {
-					NODE_ENV: JSON.stringify('production')
-				}
-			}),
-			new webpack.optimize.OccurrenceOrderPlugin(true),
-			new webpack.optimize.CommonsChunkPlugin({
-				name: 'vendor',
-				minChunks: Infinity
-			}),
-			new webpack.optimize.UglifyJsPlugin({
-				compress: {
-					warnings: false
-				},
-				sourceMap: false
-			})
-	  ]
-	: [];
-
 module.exports = {
 	entry: {
 		vendor: ['react', 'react-dom', 'react-router'],
@@ -34,8 +11,7 @@ module.exports = {
 	},
 	output: {
 		filename: 'static/js/[name].[contenthash].js',
-		path: path.resolve(__dirname, 'dist'),
-		assetModuleFilename: 'assets/images/[contenthash].[ext]'
+		assetModuleFilename: 'assets/images/[contenthash][ext]'
 	},
 	mode: process.env.NODE_ENV,
 	resolve: {
@@ -76,7 +52,7 @@ module.exports = {
 			}
 		]
 	},
-	plugins: pluginsDefine.concat([
+	plugins: [
 		new HtmlWebpackPlugin({
 			favicon: './favicon.ico',
 			hash: false,
@@ -95,5 +71,5 @@ module.exports = {
 				}
 			}
 		})
-	])
+	]
 };

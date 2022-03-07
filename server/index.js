@@ -35,6 +35,7 @@ const devServerPort = 8000;
 let expressServerPort = process.env.PORT || webpackServerPort;
 
 if (process.env.NODE_ENV === 'development') {
+	expressServerPort = devServerPort;
 	const Webpack = require('webpack');
 	const WebpackDevServer = require('webpack-dev-server');
 	const webpackConfig = require('../webpack.config');
@@ -45,7 +46,7 @@ if (process.env.NODE_ENV === 'development') {
 		historyApiFallback: true,
 		open: true,
 		port: webpackServerPort,
-		proxy: { '/api': `http://localhost:${devServerPort}` }
+		proxy: { '/api': `http://localhost:${expressServerPort}` }
 	};
 	const server = new WebpackDevServer(devServerOptions, compiler);
 
