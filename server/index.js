@@ -35,27 +35,27 @@ const devServerPort = 8000;
 let expressServerPort = process.env.PORT || webpackServerPort;
 
 if (process.env.NODE_ENV === 'development') {
-	console.log('***********************************************************');
-	console.log('NODE_ENV is development --> Using Webpack Middleware');
-	console.log('***********************************************************');
-
-	expressServerPort = devServerPort;
-	const webpack = require('webpack');
+	const Webpack = require('webpack');
 	const WebpackDevServer = require('webpack-dev-server');
-	const config = require('../webpack.config');
+	const webpackConfig = require('../webpack.config');
 
-	new WebpackDevServer(webpack(config), {
+	const compiler = Webpack(webpackConfig);
+	const devServerOptions = {
+		compress: true,
 		historyApiFallback: true,
-		hot: true,
-		proxy: {
-			'/api': `http://localhost:${expressServerPort}`
-		},
-		publicPath: config.output.publicPath
-	}).listen(webpackServerPort, 'localhost', function(err, result) {
-		if (err) {
-			return console.log(err);
-		}
-	});
+		open: true,
+		port: webpackServerPort,
+		proxy: { '/api': `http://localhost:${devServerPort}` }
+	};
+	const server = new WebpackDevServer(devServerOptions, compiler);
+
+	const runServer = async () => {
+		console.log('Starting development server...');
+
+		await server.start();
+	};
+
+	runServer();
 }
 
 // CSRF protection

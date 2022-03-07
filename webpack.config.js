@@ -1,12 +1,12 @@
-var path = require('path');
-var webpack = require('webpack');
-var precss = require('precss');
-var autoprefixer = require('autoprefixer');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
+const precss = require('precss');
+const autoprefixer = require('autoprefixer');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-var isProduction = process.env.NODE_ENV === 'production';
-var pluginsDefine = isProduction
+const isProduction = process.env.NODE_ENV === 'production';
+
+const pluginsDefine = isProduction
 	? [
 			new webpack.DefinePlugin({
 				'process.env': {
@@ -25,68 +25,58 @@ var pluginsDefine = isProduction
 				sourceMap: false
 			})
 	  ]
-	: [
-			new webpack.NamedModulesPlugin(),
-			new webpack.HotModuleReplacementPlugin(),
-			new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /nb/)
-	  ];
+	: [];
 
 module.exports = {
-	entry: isProduction
-		? {
-				vendor: ['react', 'react-dom', 'react-router'],
-				app: ['babel-polyfill', './src/index.js']
-		  }
-		: [
-				'react-hot-loader/patch',
-				'babel-polyfill',
-				'whatwg-fetch',
-				'webpack-dev-server/client?http://localhost:3000',
-				'webpack/hot/only-dev-server',
-				'./src/index'
-		  ],
-	output: {
-		chunkFilename: isProduction ? 'static/js/[name].[chunkhash].js' : '',
-		filename: 'static/js/[name].[hash].js',
-		path: path.resolve(__dirname, 'dist'),
-		publicPath: '/'
+	entry: {
+		vendor: ['react', 'react-dom', 'react-router'],
+		app: ['babel-polyfill', './src/index.js']
 	},
-	devtool: isProduction ? 'cheap-module-source-map' : 'eval',
+	output: {
+		filename: 'static/js/[name].[contenthash].js',
+		path: path.resolve(__dirname, 'dist'),
+		assetModuleFilename: 'assets/images/[contenthash].[ext]'
+	},
+	mode: process.env.NODE_ENV,
+	resolve: {
+		extensions: ['.js', '.jsx']
+	},
 	module: {
-		loaders: [
+		rules: [
 			{
 				test: /\.js|.jsx$/,
 				exclude: /node_modules/,
-				loader: 'babel-loader',
-				query: {
-					presets: [['env', { modules: false }], 'stage-0', 'react'],
-					plugins: [
-						'transform-async-to-generator',
-						'transform-decorators-legacy',
-						'autobind-class-methods'
-					]
+				use: {
+					loader: 'babel-loader'
 				}
 			},
 			{
 				test: /\.scss|css$/,
-				loader:
-					'style-loader!css-loader!postcss-loader!resolve-url-loader!sass-loader?sourceMap'
+				use: [
+					'style-loader',
+					{
+						loader: 'css-loader',
+						options: {
+							sourceMap: true
+						}
+					},
+					'postcss-loader',
+					'resolve-url-loader',
+					{
+						loader: 'sass-loader',
+						options: {
+							sourceMap: true
+						}
+					}
+				]
 			},
 			{
 				test: /\.(jpe?g|png|gif|svg)$/i,
-				loaders: [
-					'file-loader?hash=sha512&digest=hex&name=assets/images/[hash].[ext]',
-					'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
-				]
+				type: 'asset/resource'
 			}
 		]
 	},
-	node: {
-		fs: 'empty',
-		net: 'empty'
-	},
 	plugins: pluginsDefine.concat([
-		new ExtractTextPlugin('assets/styles/styles.css'),
 		new HtmlWebpackPlugin({
 			favicon: './favicon.ico',
 			hash: false,
@@ -105,8 +95,5 @@ module.exports = {
 				}
 			}
 		})
-	]),
-	resolve: {
-		extensions: ['.js', '.jsx']
-	}
+	])
 };
